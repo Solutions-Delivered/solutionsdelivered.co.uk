@@ -45,7 +45,7 @@
     <!-- Schema.org JSON-LD Markup -->
     <script type="application/ld+json">
     {
-        "@@context": "https://schema.org",
+        "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Solutions Delivered",
         "url": "{{ url('/') }}",
@@ -66,7 +66,7 @@
 
     <script type="application/ld+json">
     {
-        "@@context": "https://schema.org",
+        "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Solutions Delivered",
         "url": "{{ url('/') }}",

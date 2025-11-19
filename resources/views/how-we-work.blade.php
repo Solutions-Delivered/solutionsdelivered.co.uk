@@ -5,11 +5,32 @@
 
 @section('content')
 <!-- Page Header -->
-<section class="bg-gradient-to-r from-[#198fd9] to-[#D65FCB] text-white py-16 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">How We Work</h1>
-        <p class="text-xl md:text-2xl max-w-3xl">
-            A transparent, collaborative approach to delivering your solutions
+<section class="relative overflow-hidden bg-gradient-to-br from-[#198fd9] via-[#1a7fc7] to-[#0f6ba8] text-white py-20 px-4 sm:px-6 lg:px-8">
+    <!-- Decorative background elements -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+        <div class="absolute top-10 right-20 w-72 h-72 bg-white opacity-10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 left-10 w-96 h-96 bg-white opacity-5 rounded-full blur-3xl"></div>
+        <div class="absolute inset-0 bg-white opacity-5 transform -skew-y-3 origin-top-right"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto">
+        <!-- Breadcrumb badge -->
+        <div class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-medium mb-6">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            How We Work
+        </div>
+
+        <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            Our Collaborative
+            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-100 to-gray-200 mt-1">
+                Approach to Success
+            </span>
+        </h1>
+
+        <p class="text-xl md:text-2xl max-w-3xl text-gray-100 leading-relaxed">
+            A transparent, collaborative approach to delivering your solutions with clear communication every step of the way
         </p>
     </div>
 </section>
@@ -30,51 +51,84 @@
 </section>
 
 <!-- Engagement Process Section -->
-<section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50" aria-labelledby="process-heading">
-    <div class="max-w-7xl mx-auto">
-        <h2 id="process-heading" class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-            Our Process
-        </h2>
+<section class="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white" aria-labelledby="process-heading">
+    <!-- Decorative background -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+        <div class="absolute top-1/2 left-1/4 w-96 h-96 bg-[#198fd9] opacity-5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-[#0f6ba8] opacity-5 rounded-full blur-3xl"></div>
+    </div>
 
-        <div class="grid md:grid-cols-4 gap-8">
-            <div class="text-center">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-[#198fd9] text-white rounded-full mb-4 text-2xl font-bold" aria-hidden="true">
-                    1
+    <div class="relative max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <div class="inline-flex items-center px-4 py-2 rounded-full bg-[#198fd9]/10 border border-[#198fd9]/20 text-sm font-medium text-[#198fd9] mb-4">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+                Our Process
+            </div>
+            <h2 id="process-heading" class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                How We Engage
+            </h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                A simple, transparent four-step process to turn your vision into reality
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-6">
+            <div class="relative bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-200">
+                <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
+                    <div class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-[#198fd9] to-[#1a7fc7] text-white rounded-xl shadow-lg text-xl font-bold" aria-hidden="true">
+                        1
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Initial Discussion</h3>
-                <p class="text-gray-700">
-                    We start with a conversation to understand your needs, challenges, and objectives. No sales pitch—just genuine discovery.
-                </p>
+                <div class="mt-8 text-center">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Initial Discussion</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        We start with a conversation to understand your needs, challenges, and objectives. No sales pitch—just genuine discovery.
+                    </p>
+                </div>
             </div>
 
-            <div class="text-center">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-[#D65FCB] text-white rounded-full mb-4 text-2xl font-bold" aria-hidden="true">
-                    2
+            <div class="relative bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-200">
+                <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
+                    <div class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-[#1a7fc7] to-[#0f6ba8] text-white rounded-xl shadow-lg text-xl font-bold" aria-hidden="true">
+                        2
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Proposal & Planning</h3>
-                <p class="text-gray-700">
-                    We provide a clear proposal outlining scope, approach, timeline, and costs. No hidden surprises.
-                </p>
+                <div class="mt-8 text-center">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Proposal & Planning</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        We provide a clear proposal outlining scope, approach, timeline, and costs. No hidden surprises.
+                    </p>
+                </div>
             </div>
 
-            <div class="text-center">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-[#198fd9] text-white rounded-full mb-4 text-2xl font-bold" aria-hidden="true">
-                    3
+            <div class="relative bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-200">
+                <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
+                    <div class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-[#0f6ba8] to-[#198fd9] text-white rounded-xl shadow-lg text-xl font-bold" aria-hidden="true">
+                        3
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Collaborative Delivery</h3>
-                <p class="text-gray-700">
-                    Regular check-ins, continuous feedback, and iterative development ensure we stay aligned with your vision.
-                </p>
+                <div class="mt-8 text-center">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Collaborative Delivery</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Regular check-ins, continuous feedback, and iterative development ensure we stay aligned with your vision.
+                    </p>
+                </div>
             </div>
 
-            <div class="text-center">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-[#D65FCB] text-white rounded-full mb-4 text-2xl font-bold" aria-hidden="true">
-                    4
+            <div class="relative bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-200">
+                <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
+                    <div class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-[#198fd9] to-[#0f6ba8] text-white rounded-xl shadow-lg text-xl font-bold" aria-hidden="true">
+                        4
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Handover & Support</h3>
-                <p class="text-gray-700">
-                    Comprehensive handover with documentation and ongoing support options to ensure long-term success.
-                </p>
+                <div class="mt-8 text-center">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Handover & Support</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Comprehensive handover with documentation and ongoing support options to ensure long-term success.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -88,29 +142,36 @@
         </h2>
 
         <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-gray-50 rounded-lg p-8">
-                <h3 class="text-xl font-bold text-gray-900 mb-4">Communication</h3>
+            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-gradient-to-br from-[#198fd9] to-[#1a7fc7] rounded-xl flex items-center justify-center mr-4 shadow-md" aria-hidden="true">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900">Communication</h3>
+                </div>
                 <ul class="space-y-3 text-gray-700">
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#198fd9] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span>Direct access—no account managers or layers of bureaucracy</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#198fd9] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span>Response within 24 hours during working days</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#198fd9] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span>Regular progress updates and check-ins</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#198fd9] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span>Clear, jargon-free explanations</span>
@@ -118,29 +179,36 @@
                 </ul>
             </div>
 
-            <div class="bg-gray-50 rounded-lg p-8">
-                <h3 class="text-xl font-bold text-gray-900 mb-4">Delivery</h3>
+            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-gradient-to-br from-[#1a7fc7] to-[#0f6ba8] rounded-xl flex items-center justify-center mr-4 shadow-md" aria-hidden="true">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900">Delivery</h3>
+                </div>
                 <ul class="space-y-3 text-gray-700">
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#198fd9] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span>Quality over speed—we won't rush to meet arbitrary deadlines</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#198fd9] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span>Realistic timelines set upfront</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#198fd9] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span>Iterative delivery with opportunities for feedback</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#198fd9] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span>Comprehensive documentation and handover</span>
@@ -148,29 +216,36 @@
                 </ul>
             </div>
 
-            <div class="bg-gray-50 rounded-lg p-8">
-                <h3 class="text-xl font-bold text-gray-900 mb-4">Pricing</h3>
+            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-gradient-to-br from-[#0f6ba8] to-[#198fd9] rounded-xl flex items-center justify-center mr-4 shadow-md" aria-hidden="true">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900">Pricing</h3>
+                </div>
                 <ul class="space-y-3 text-gray-700">
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#198fd9] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span>Fixed-price for defined scope or day-rate for flexible work</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#198fd9] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span>Transparent pricing with no hidden costs</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#198fd9] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span>Flexible payment terms for ongoing engagements</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#198fd9] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span>Value-focused—competitive rates without compromising quality</span>
@@ -178,29 +253,36 @@
                 </ul>
             </div>
 
-            <div class="bg-gray-50 rounded-lg p-8">
-                <h3 class="text-xl font-bold text-gray-900 mb-4">Working Arrangements</h3>
+            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-gradient-to-br from-[#198fd9] to-[#0f6ba8] rounded-xl flex items-center justify-center mr-4 shadow-md" aria-hidden="true">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900">Working Arrangements</h3>
+                </div>
                 <ul class="space-y-3 text-gray-700">
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#198fd9] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span>Remote-first, UK-based</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#198fd9] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span>Flexible scheduling to accommodate your availability</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#198fd9] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span>On-site visits available for local clients when needed</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#198fd9] mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span>Tools and platforms of your choice</span>
@@ -256,17 +338,49 @@
 </section>
 
 <!-- Call to Action -->
-<section class="py-16 px-4 sm:px-6 lg:px-8 bg-[#198fd9] text-white" aria-labelledby="cta-heading">
-    <div class="max-w-4xl mx-auto text-center">
-        <h2 id="cta-heading" class="text-3xl md:text-4xl font-bold mb-6">
+<section class="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#198fd9] via-[#1a7fc7] to-[#0f6ba8] text-white" aria-labelledby="cta-heading">
+    <!-- Decorative background elements -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-white opacity-10 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-24 -left-24 w-[500px] h-[500px] bg-white opacity-5 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="relative max-w-4xl mx-auto text-center">
+        <!-- Eyebrow -->
+        <div class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-medium mb-6">
+            <svg class="w-4 h-4 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+            </svg>
             Ready to Get Started?
+        </div>
+
+        <h2 id="cta-heading" class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            Let's Start a Conversation
         </h2>
-        <p class="text-xl mb-8">
-            Let's have an initial conversation about your needs—no obligation, no pressure.
+        <p class="text-xl md:text-2xl mb-12 text-gray-100 max-w-2xl mx-auto leading-relaxed">
+            No obligation, no pressure—just an honest discussion about your needs and how we can help
         </p>
-        <a href="{{ route('get-started') }}" class="inline-block bg-white text-[#198fd9] hover:bg-gray-100 px-8 py-4 rounded-md text-lg font-semibold transition-colors duration-200 shadow-lg">
-            Get in Touch
-        </a>
+
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+            <a href="{{ route('get-started') }}" class="group relative inline-flex items-center justify-center bg-white text-[#198fd9] px-10 py-5 rounded-xl text-lg font-semibold shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-200 overflow-hidden">
+                <!-- Shimmer effect -->
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-gray-100 to-transparent opacity-0 group-hover:opacity-100 transform -skew-x-12 group-hover:translate-x-full transition-all duration-700" aria-hidden="true"></div>
+                <span class="relative z-10 flex items-center">
+                    Get in Touch
+                    <svg class="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                </span>
+            </a>
+        </div>
+
+        <!-- Trust indicator -->
+        <div class="mt-12 flex items-center justify-center text-sm text-gray-200">
+            <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+            </svg>
+            <span>Free consultation • 24 hour response time • No commitment required</span>
+        </div>
     </div>
 </section>
 @endsection
