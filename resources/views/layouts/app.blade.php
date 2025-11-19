@@ -94,8 +94,13 @@
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
-                    <a href="{{ route('home') }}" class="text-2xl font-bold text-[#198fd9] hover:text-[#D65FCB] transition-colors duration-200" aria-label="Solutions Delivered Home">
-                        Solutions Delivered
+                    <a href="{{ route('home') }}" class="block transition-opacity duration-200 hover:opacity-80" aria-label="Solutions Delivered Home">
+                        <img src="{{ asset('logo.png') }}"
+                             srcset="{{ asset('logo.png') }} 1x, {{ asset('logo@2x.png') }} 2x"
+                             alt="Solutions Delivered Logo"
+                             width="185"
+                             height="60"
+                             class="h-12 w-auto">
                     </a>
                 </div>
 
