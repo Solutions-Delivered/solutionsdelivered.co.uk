@@ -26,10 +26,26 @@
             Our Core Services
         </h2>
 
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Service Management -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Web Development -->
             <article class="bg-gray-50 rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow duration-200">
                 <div class="text-[#198bd9] mb-4" aria-hidden="true">
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Web Development</h3>
+                <p class="text-gray-700 mb-4">
+                    Bespoke Laravel-based web systems built for accessibility, efficiency, and value. No bloat, just solutions.
+                </p>
+                <a href="{{ route('solutions') }}#web-development" class="text-[#198bd9] hover:text-[#65bd7d] font-medium transition-colors duration-200">
+                    Learn more <span aria-hidden="true">→</span>
+                </a>
+            </article>
+
+            <!-- Service Management -->
+            <article class="bg-gray-50 rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow duration-200">
+                <div class="text-[#65bd7d] mb-4" aria-hidden="true">
                     <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
                     </svg>
@@ -38,14 +54,14 @@
                 <p class="text-gray-700 mb-4">
                     Customized internal process optimization working directly with client teams to enhance efficiency and effectiveness.
                 </p>
-                <a href="{{ route('solutions') }}" class="text-[#198bd9] hover:text-[#65bd7d] font-medium transition-colors duration-200">
+                <a href="{{ route('solutions') }}#service-management" class="text-[#198bd9] hover:text-[#65bd7d] font-medium transition-colors duration-200">
                     Learn more <span aria-hidden="true">→</span>
                 </a>
             </article>
 
             <!-- Project Management -->
             <article class="bg-gray-50 rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow duration-200">
-                <div class="text-[#65bd7d] mb-4" aria-hidden="true">
+                <div class="text-[#198bd9] mb-4" aria-hidden="true">
                     <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                     </svg>
@@ -54,14 +70,14 @@
                 <p class="text-gray-700 mb-4">
                     Risk mitigation and delivery oversight for complex projects, ensuring successful outcomes on time and within budget.
                 </p>
-                <a href="{{ route('solutions') }}" class="text-[#198bd9] hover:text-[#65bd7d] font-medium transition-colors duration-200">
+                <a href="{{ route('solutions') }}#project-management" class="text-[#198bd9] hover:text-[#65bd7d] font-medium transition-colors duration-200">
                     Learn more <span aria-hidden="true">→</span>
                 </a>
             </article>
 
             <!-- Business Change -->
             <article class="bg-gray-50 rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow duration-200">
-                <div class="text-[#198bd9] mb-4" aria-hidden="true">
+                <div class="text-[#65bd7d] mb-4" aria-hidden="true">
                     <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                     </svg>
@@ -70,7 +86,7 @@
                 <p class="text-gray-700 mb-4">
                     Leadership support for organizational transformation initiatives, guiding teams through successful change management.
                 </p>
-                <a href="{{ route('solutions') }}" class="text-[#198bd9] hover:text-[#65bd7d] font-medium transition-colors duration-200">
+                <a href="{{ route('solutions') }}#business-change" class="text-[#198bd9] hover:text-[#65bd7d] font-medium transition-colors duration-200">
                     Learn more <span aria-hidden="true">→</span>
                 </a>
             </article>

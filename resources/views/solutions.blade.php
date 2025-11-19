@@ -14,8 +14,70 @@
     </div>
 </section>
 
+<!-- Web Development Section -->
+<section id="web-development" class="py-16 px-4 sm:px-6 lg:px-8 bg-white" aria-labelledby="web-development-heading">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-[#198bd9] text-white rounded-full mb-6" aria-hidden="true">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                    </svg>
+                </div>
+                <h2 id="web-development-heading" class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    Web Development
+                </h2>
+                <p class="text-lg text-gray-700 mb-4">
+                    We build bespoke web systems using Laravel that are tailored precisely to your business needs. Unlike off-the-shelf solutions laden with unnecessary features, we create streamlined, efficient systems that do exactly what you need—nothing more, nothing less.
+                </p>
+                <p class="text-lg text-gray-700 mb-4">
+                    Every system we develop is built with WCAG 2.2 compliance at its core, ensuring your digital presence is accessible to all users. We believe accessibility isn't optional—it's essential for modern web applications.
+                </p>
+                <p class="text-lg text-gray-700 mb-6">
+                    Our focus on clean code and minimal bloat means your systems run faster, cost less to maintain, and are easier for your team to use. We deliver professional solutions without the enterprise price tag.
+                </p>
+            </div>
+            <div class="bg-gray-50 rounded-lg p-8">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">What You Get</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-[#65bd7d] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700"><strong>Laravel-based systems</strong> – Modern, secure, and maintainable</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-[#65bd7d] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700"><strong>WCAG 2.2 compliance</strong> – Accessible to all users by default</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-[#65bd7d] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700"><strong>No-bloat philosophy</strong> – Only the features you actually need</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-[#65bd7d] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700"><strong>Cost-effective solutions</strong> – Professional quality without excessive costs</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-[#65bd7d] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700"><strong>Direct collaboration</strong> – Work directly with the developer</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Service Management Section -->
-<section class="py-16 px-4 sm:px-6 lg:px-8 bg-white" aria-labelledby="service-management-heading">
+<section id="service-management" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50" aria-labelledby="service-management-heading">
     <div class="max-w-7xl mx-auto">
         <div class="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -68,7 +130,7 @@
 </section>
 
 <!-- Project Management Section -->
-<section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50" aria-labelledby="project-management-heading">
+<section id="project-management" class="py-16 px-4 sm:px-6 lg:px-8 bg-white" aria-labelledby="project-management-heading">
     <div class="max-w-7xl mx-auto">
         <div class="grid md:grid-cols-2 gap-12 items-center">
             <div class="order-2 md:order-1 bg-white rounded-lg p-8">
@@ -121,7 +183,7 @@
 </section>
 
 <!-- Business Change Section -->
-<section class="py-16 px-4 sm:px-6 lg:px-8 bg-white" aria-labelledby="business-change-heading">
+<section id="business-change" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50" aria-labelledby="business-change-heading">
     <div class="max-w-7xl mx-auto">
         <div class="grid md:grid-cols-2 gap-12 items-center">
             <div>

@@ -22,6 +22,11 @@ class PageController extends Controller
         return view('solutions');
     }
 
+    public function howWeWork()
+    {
+        return view('how-we-work');
+    }
+
     public function careers()
     {
         return view('careers');
@@ -30,6 +35,16 @@ class PageController extends Controller
     public function getStarted()
     {
         return view('get-started');
+    }
+
+    public function privacy()
+    {
+        return view('privacy');
+    }
+
+    public function terms()
+    {
+        return view('terms');
     }
 
     public function contact(Request $request)

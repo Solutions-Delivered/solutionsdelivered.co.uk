@@ -27,7 +27,7 @@
                 </div>
 
                 <!-- Desktop Navigation -->
-                <div class="hidden md:flex md:items-center md:space-x-8">
+                <div class="hidden md:flex md:items-center md:space-x-6">
                     <a href="{{ route('home') }}" class="text-gray-700 hover:text-[#198bd9] px-3 py-2 text-sm font-medium transition-colors duration-200 {{ request()->routeIs('home') ? 'border-b-2 border-[#198bd9]' : '' }}" {{ request()->routeIs('home') ? 'aria-current=page' : '' }}>
                         Home
                     </a>
@@ -36,6 +36,9 @@
                     </a>
                     <a href="{{ route('solutions') }}" class="text-gray-700 hover:text-[#198bd9] px-3 py-2 text-sm font-medium transition-colors duration-200 {{ request()->routeIs('solutions') ? 'border-b-2 border-[#198bd9]' : '' }}" {{ request()->routeIs('solutions') ? 'aria-current=page' : '' }}>
                         Solutions
+                    </a>
+                    <a href="{{ route('how-we-work') }}" class="text-gray-700 hover:text-[#198bd9] px-3 py-2 text-sm font-medium transition-colors duration-200 {{ request()->routeIs('how-we-work') ? 'border-b-2 border-[#198bd9]' : '' }}" {{ request()->routeIs('how-we-work') ? 'aria-current=page' : '' }}>
+                        How We Work
                     </a>
                     <a href="{{ route('careers') }}" class="text-gray-700 hover:text-[#198bd9] px-3 py-2 text-sm font-medium transition-colors duration-200 {{ request()->routeIs('careers') ? 'border-b-2 border-[#198bd9]' : '' }}" {{ request()->routeIs('careers') ? 'aria-current=page' : '' }}>
                         Careers
@@ -68,6 +71,7 @@
                                         <a href="{{ route('home') }}" class="text-base font-medium text-gray-700 hover:text-[#198bd9]" {{ request()->routeIs('home') ? 'aria-current=page' : '' }}>Home</a>
                                         <a href="{{ route('about') }}" class="text-base font-medium text-gray-700 hover:text-[#198bd9]" {{ request()->routeIs('about') ? 'aria-current=page' : '' }}>About</a>
                                         <a href="{{ route('solutions') }}" class="text-base font-medium text-gray-700 hover:text-[#198bd9]" {{ request()->routeIs('solutions') ? 'aria-current=page' : '' }}>Solutions</a>
+                                        <a href="{{ route('how-we-work') }}" class="text-base font-medium text-gray-700 hover:text-[#198bd9]" {{ request()->routeIs('how-we-work') ? 'aria-current=page' : '' }}>How We Work</a>
                                         <a href="{{ route('careers') }}" class="text-base font-medium text-gray-700 hover:text-[#198bd9]" {{ request()->routeIs('careers') ? 'aria-current=page' : '' }}>Careers</a>
                                         <a href="{{ route('get-started') }}" class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#198bd9] hover:bg-[#65bd7d]">Get Started</a>
                                     </nav>
@@ -105,6 +109,7 @@
                             <li><a href="{{ route('home') }}" class="text-gray-300 hover:text-[#65bd7d] text-sm transition-colors duration-200">Home</a></li>
                             <li><a href="{{ route('about') }}" class="text-gray-300 hover:text-[#65bd7d] text-sm transition-colors duration-200">About</a></li>
                             <li><a href="{{ route('solutions') }}" class="text-gray-300 hover:text-[#65bd7d] text-sm transition-colors duration-200">Solutions</a></li>
+                            <li><a href="{{ route('how-we-work') }}" class="text-gray-300 hover:text-[#65bd7d] text-sm transition-colors duration-200">How We Work</a></li>
                             <li><a href="{{ route('careers') }}" class="text-gray-300 hover:text-[#65bd7d] text-sm transition-colors duration-200">Careers</a></li>
                             <li><a href="{{ route('get-started') }}" class="text-gray-300 hover:text-[#65bd7d] text-sm transition-colors duration-200">Get Started</a></li>
                         </ul>
@@ -123,10 +128,16 @@
                 </div>
             </div>
 
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p class="text-gray-400 text-sm">
-                    &copy; {{ date('Y') }} Solutions Delivered. All rights reserved.
-                </p>
+            <div class="border-t border-gray-700 mt-8 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        &copy; {{ date('Y') }} Solutions Delivered. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="{{ route('privacy') }}" class="text-gray-400 hover:text-[#65bd7d] text-sm transition-colors duration-200">Privacy Policy</a>
+                        <a href="{{ route('terms') }}" class="text-gray-400 hover:text-[#65bd7d] text-sm transition-colors duration-200">Terms of Service</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
