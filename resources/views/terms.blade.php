@@ -5,7 +5,7 @@
 
 @section('content')
 <!-- Page Header -->
-<section class="bg-gradient-to-r from-[#198fd9] to-[#D65FCB] text-white py-16 px-4 sm:px-6 lg:px-8">
+<section class="bg-gradient-to-r from-[#198fd9] to-[#0f6ba8] text-white py-16 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto">
         <h1 class="text-4xl md:text-5xl font-bold mb-4">Terms of Service</h1>
         <p class="text-xl md:text-2xl max-w-3xl">
@@ -118,7 +118,7 @@
 
         <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">8. Data Protection</h2>
         <p class="text-gray-700 mb-4">
-            We process personal data in accordance with UK GDPR and our <a href="{{ route('privacy') }}" class="text-[#198fd9] hover:text-[#D65FCB]">Privacy Policy</a>. For client engagements, data processing terms will be specified in separate Data Processing Agreements as required.
+            We process personal data in accordance with UK GDPR and our <a href="{{ route('privacy') }}" class="text-[#198fd9] hover:text-[#0f6ba8]">Privacy Policy</a>. For client engagements, data processing terms will be specified in separate Data Processing Agreements as required.
         </p>
 
         <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">9. Indemnification</h2>
@@ -158,10 +158,10 @@
         <div class="bg-gray-50 rounded-lg p-6">
             <p class="text-gray-900 font-medium mb-2">Solutions Delivered</p>
             <p class="text-gray-700">
-                Email: <a href="mailto:info@solutionsdelivered.co.uk" class="text-[#198fd9] hover:text-[#D65FCB]">info@solutionsdelivered.co.uk</a>
+                Email: <a href="mailto:info@solutionsdelivered.co.uk" class="text-[#198fd9] hover:text-[#0f6ba8]">info@solutionsdelivered.co.uk</a>
             </p>
             <p class="text-gray-700 mt-2">
-                Or use our <a href="{{ route('get-started') }}" class="text-[#198fd9] hover:text-[#D65FCB]">contact form</a>.
+                Or use our <a href="{{ route('get-started') }}" class="text-[#198fd9] hover:text-[#0f6ba8]">contact form</a>.
             </p>
         </div>
     </div>
