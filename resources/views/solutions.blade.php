@@ -79,12 +79,12 @@
 
     <div class="relative max-w-7xl mx-auto">
         <!-- Breadcrumb/tag -->
-        <div class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-medium mb-6">
-            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <x-badge.breadcrumb class="mb-6">
+            <x-slot:icon>
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-            </svg>
+            </x-slot:icon>
             Our Services
-        </div>
+        </x-badge.breadcrumb>
 
         <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
             Our
@@ -330,12 +330,12 @@
 
     <div class="relative max-w-4xl mx-auto text-center">
         <!-- Eyebrow -->
-        <div class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-medium mb-6">
+        <x-badge.breadcrumb class="mb-6 text-green-400">
             <svg class="w-4 h-4 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
             </svg>
             Let's Work Together
-        </div>
+        </x-badge.breadcrumb>
 
         <h2 id="cta-heading" class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
             Ready to Get Started?
@@ -356,11 +356,8 @@
         </a>
 
         <!-- Trust indicator -->
-        <div class="mt-12 flex items-center justify-center text-sm text-gray-200">
-            <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
-            </svg>
-            <span>No commitment required • Free initial consultation</span>
+        <div class="mt-12 flex items-center justify-center text-gray-200">
+            <x-trust-indicator>No commitment required • Free initial consultation</x-trust-indicator>
         </div>
     </div>
 </section>

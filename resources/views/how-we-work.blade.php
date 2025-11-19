@@ -15,12 +15,12 @@
 
     <div class="relative max-w-7xl mx-auto">
         <!-- Breadcrumb badge -->
-        <div class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-medium mb-6">
-            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <x-badge.breadcrumb class="mb-6">
+            <x-slot:icon>
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
+            </x-slot:icon>
             How We Work
-        </div>
+        </x-badge.breadcrumb>
 
         <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
             Our Collaborative
@@ -60,12 +60,12 @@
 
     <div class="relative max-w-7xl mx-auto">
         <div class="text-center mb-16">
-            <div class="inline-flex items-center px-4 py-2 rounded-full bg-[#198fd9]/10 border border-[#198fd9]/20 text-sm font-medium text-[#198fd9] mb-4">
-                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <x-badge.breadcrumb class="mb-4">
+                <x-slot:icon>
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                </svg>
+                </x-slot:icon>
                 Our Process
-            </div>
+            </x-badge.breadcrumb>
             <h2 id="process-heading" class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 How We Engage
             </h2>
@@ -375,11 +375,8 @@
         </div>
 
         <!-- Trust indicator -->
-        <div class="mt-12 flex items-center justify-center text-sm text-gray-200">
-            <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
-            </svg>
-            <span>Free consultation • 24 hour response time • No commitment required</span>
+        <div class="mt-12 flex items-center justify-center">
+            <x-trust-indicator>Free consultation • 24 hour response time • No commitment required</x-trust-indicator>
         </div>
     </div>
 </section>

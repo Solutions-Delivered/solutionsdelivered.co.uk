@@ -32,12 +32,12 @@
 
     <div class="relative max-w-7xl mx-auto">
         <!-- Breadcrumb badge -->
-        <div class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-medium mb-6">
-            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <x-badge.breadcrumb class="mb-6">
+            <x-slot:icon>
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
+            </x-slot:icon>
             Get Started
-        </div>
+        </x-badge.breadcrumb>
 
         <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
             Let's Start Your
@@ -52,24 +52,9 @@
 
         <!-- Trust indicators -->
         <div class="flex flex-wrap gap-6 mt-8">
-            <div class="flex items-center text-sm">
-                <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
-                </svg>
-                <span>24 hour response time</span>
-            </div>
-            <div class="flex items-center text-sm">
-                <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
-                </svg>
-                <span>Free initial consultation</span>
-            </div>
-            <div class="flex items-center text-sm">
-                <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
-                </svg>
-                <span>No obligation proposal</span>
-            </div>
+            <x-trust-indicator>24 hour response time</x-trust-indicator>
+            <x-trust-indicator>Free initial consultation</x-trust-indicator>
+            <x-trust-indicator>No obligation proposal</x-trust-indicator>
         </div>
     </div>
 </section>

@@ -15,12 +15,12 @@
 
     <div class="relative max-w-7xl mx-auto">
         <!-- Breadcrumb badge -->
-        <div class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-medium mb-6">
-            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <x-badge.breadcrumb class="mb-6">
+            <x-slot:icon>
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
+            </x-slot:icon>
             Careers
-        </div>
+        </x-badge.breadcrumb>
 
         <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
             Join Our Team at
@@ -160,12 +160,12 @@
 <!-- Current Opportunities Section -->
 <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white" aria-labelledby="opportunities-heading">
     <div class="max-w-4xl mx-auto text-center">
-        <div class="inline-flex items-center px-4 py-2 rounded-full bg-[#198fd9]/10 border border-[#198fd9]/20 text-sm font-medium text-[#198fd9] mb-6">
-            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <x-badge.breadcrumb class="mb-6">
+            <x-slot:icon>
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-            </svg>
+            </x-slot:icon>
             Open Positions
-        </div>
+        </x-badge.breadcrumb>
         <h2 id="opportunities-heading" class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Current Opportunities
         </h2>
@@ -193,12 +193,12 @@
 
     <div class="relative max-w-4xl mx-auto text-center">
         <!-- Eyebrow -->
-        <div class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-medium mb-6">
-            <svg class="w-4 h-4 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+        <x-badge.breadcrumb class="mb-6">
+            <x-slot:icon>
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
-            </svg>
+            </x-slot:icon>
             Join Our Team
-        </div>
+        </x-badge.breadcrumb>
 
         <h2 id="cta-heading" class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
             Ready to Make a Difference?
@@ -221,11 +221,8 @@
         </div>
 
         <!-- Trust indicator -->
-        <div class="mt-12 flex items-center justify-center text-sm text-gray-200">
-            <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
-            </svg>
-            <span>We'd love to hear from you • Flexible working • Career growth opportunities</span>
+        <div class="mt-12 flex items-center justify-center">
+            <x-trust-indicator>We'd love to hear from you • Flexible working • Career growth opportunities</x-trust-indicator>
         </div>
     </div>
 </section>

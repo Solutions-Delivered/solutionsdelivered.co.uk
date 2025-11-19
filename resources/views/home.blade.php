@@ -51,25 +51,10 @@
                 </div>
 
                 <!-- Trust indicators -->
-                <div class="flex flex-wrap items-center gap-6 text-sm text-gray-200">
-                    <div class="flex items-center">
-                        <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
-                        </svg>
-                        <span>WCAG 2.2 Compliant</span>
-                    </div>
-                    <div class="flex items-center">
-                        <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
-                        </svg>
-                        <span>Direct Team Collaboration</span>
-                    </div>
-                    <div class="flex items-center">
-                        <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
-                        </svg>
-                        <span>No-Bloat Philosophy</span>
-                    </div>
+                <div class="flex flex-wrap items-center gap-6 text-gray-200">
+                    <x-trust-indicator>WCAG 2.2 Compliant</x-trust-indicator>
+                    <x-trust-indicator>Direct Team Collaboration</x-trust-indicator>
+                    <x-trust-indicator>No-Bloat Philosophy</x-trust-indicator>
                 </div>
             </div>
         </div>
@@ -86,13 +71,10 @@
 <!-- Services Overview Section -->
 <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white" aria-labelledby="services-heading">
     <div class="max-w-7xl mx-auto">
-        <!-- Eyebrow label + heading -->
-        <div class="text-center mb-16">
-            <p class="text-sm font-semibold text-[#198fd9] tracking-wider uppercase mb-3">What We Offer</p>
-            <h2 id="services-heading" class="text-4xl md:text-5xl font-bold text-gray-900">
-                Our Core Services
-            </h2>
-        </div>
+        <!-- Section heading -->
+        <x-section-heading eyebrow="What We Offer" id="services-heading">
+            Our Core Services
+        </x-section-heading>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Web Development -->
@@ -230,15 +212,12 @@
 <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-white to-gray-50" aria-labelledby="values-heading">
     <div class="max-w-7xl mx-auto">
         <!-- Section heading with eyebrow -->
-        <div class="text-center mb-16">
-            <p class="text-sm font-semibold text-[#198fd9] tracking-wider uppercase mb-3">How We Work</p>
-            <h2 id="values-heading" class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Our Approach
-            </h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                We combine technical expertise with practical delivery to create lasting value
-            </p>
-        </div>
+        <x-section-heading eyebrow="How We Work" id="values-heading">
+            Our Approach
+        </x-section-heading>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto text-center -mt-12 mb-16">
+            We combine technical expertise with practical delivery to create lasting value
+        </p>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Process Design -->

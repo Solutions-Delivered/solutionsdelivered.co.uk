@@ -15,12 +15,12 @@
 
     <div class="relative max-w-7xl mx-auto">
         <!-- Breadcrumb/tag -->
-        <div class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-medium mb-6">
-            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <x-badge.breadcrumb class="mb-6">
+            <x-slot:icon>
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
+            </x-slot:icon>
             About Us
-        </div>
+        </x-badge.breadcrumb>
 
         <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
             About
@@ -144,12 +144,12 @@
 
     <div class="relative max-w-4xl mx-auto text-center">
         <!-- Eyebrow -->
-        <div class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-medium mb-6">
+        <x-badge.breadcrumb class="mb-6 text-green-400">
             <svg class="w-4 h-4 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
             </svg>
             Ready to Get Started?
-        </div>
+        </x-badge.breadcrumb>
 
         <h2 id="cta-heading" class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
             Want to Learn More?
@@ -181,11 +181,8 @@
         </div>
 
         <!-- Trust indicator -->
-        <div class="mt-12 flex items-center justify-center text-sm text-gray-200">
-            <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
-            </svg>
-            <span>No commitment required • Free initial consultation</span>
+        <div class="mt-12 flex items-center justify-center text-gray-200">
+            <x-trust-indicator>No commitment required • Free initial consultation</x-trust-indicator>
         </div>
     </div>
 </section>
