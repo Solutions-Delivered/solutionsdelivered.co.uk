@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'About Us - Solutions Delivered')
-@section('meta_description', 'Learn about Solutions Delivered, a UK-based consultancy specializing in tailored business solutions for process design, project management, and organizational change.')
+@section('meta_description', 'Learn about Solutions Delivered, a UK-based consultancy specialising in tailored business solutions for process design, project management, and organisational change.')
 
 @section('content')
 <!-- Page Header -->
@@ -19,10 +19,10 @@
     <div class="max-w-4xl mx-auto">
         <h2 id="mission-heading" class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
         <p class="text-lg text-gray-700 mb-4">
-            At Solutions Delivered, we believe that every organization is unique, and so are its challenges. Our mission is to provide tailored business solutions that align with your specific needs, helping you achieve sustainable growth and operational excellence.
+            At Solutions Delivered, we believe that every organisation is unique, and so are its challenges. Our mission is to provide tailored business solutions that align with your specific needs, helping you achieve sustainable growth and operational excellence.
         </p>
         <p class="text-lg text-gray-700 mb-4">
-            We focus on three core areas: Service Management, Project Management, and Business Change. Through these disciplines, we help organizations optimize their processes, deliver complex projects successfully, and navigate transformational change with confidence.
+            We focus on three core areas: Service Management, Project Management, and Business Change. Through these disciplines, we help organisations optimise their processes, deliver complex projects successfully, and navigate transformational change with confidence.
         </p>
     </div>
 </section>
@@ -38,7 +38,7 @@
             <div class="bg-white rounded-lg p-8 shadow-md">
                 <h3 class="text-2xl font-bold text-gray-900 mb-4">Tailored Solutions</h3>
                 <p class="text-gray-700">
-                    We don't believe in one-size-fits-all approaches. Every solution we deliver is customized to address your specific business context, challenges, and objectives.
+                    We don't believe in one-size-fits-all approaches. Every solution we deliver is customised to address your specific business context, challenges, and objectives.
                 </p>
             </div>
 
@@ -120,7 +120,7 @@
             Want to Learn More?
         </h2>
         <p class="text-xl mb-8">
-            Discover how our solutions can help transform your organization.
+            Discover how our solutions can help transform your organisation.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="{{ route('solutions') }}" class="inline-block bg-white text-[#198bd9] hover:bg-gray-100 px-8 py-4 rounded-md text-lg font-semibold transition-colors duration-200 shadow-lg">

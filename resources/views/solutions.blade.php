@@ -239,7 +239,7 @@
                     Complex projects require experienced oversight to ensure successful delivery. Our project management services provide the expertise and structure needed to keep your initiatives on track.
                 </p>
                 <p class="text-lg text-gray-700 mb-6">
-                    We specialize in risk mitigation, ensuring potential issues are identified early and addressed proactively, helping you deliver on time and within budget.
+                    We specialise in risk mitigation, ensuring potential issues are identified early and addressed proactively, helping you deliver on time and within budget.
                 </p>
             </div>
         </div>
@@ -306,7 +306,7 @@
             Ready to Get Started?
         </h2>
         <p class="text-xl mb-8">
-            Let's discuss which solution is right for your organization.
+            Let's discuss which solution is right for your organisation.
         </p>
         <a href="{{ route('get-started') }}" class="inline-block bg-white text-[#198bd9] hover:bg-gray-100 px-8 py-4 rounded-md text-lg font-semibold transition-colors duration-200 shadow-lg">
             Contact Us Today

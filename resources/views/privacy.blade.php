@@ -111,7 +111,7 @@
 
         <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Data Security</h2>
         <p class="text-gray-700 mb-4">
-            We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no internet transmission is completely secure, and we cannot guarantee absolute security.
+            We implement appropriate technical and organisational measures to protect your personal information against unauthorised access, alteration, disclosure, or destruction. However, no internet transmission is completely secure, and we cannot guarantee absolute security.
         </p>
 
         <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Third-Party Links</h2>

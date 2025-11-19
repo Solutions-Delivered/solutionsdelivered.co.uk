@@ -42,10 +42,10 @@
 
         <h3 class="text-xl font-bold text-gray-900 mt-6 mb-3">Acceptable Use</h3>
         <p class="text-gray-700 mb-4">
-            You agree to use our website only for lawful purposes and in a way that does not infringe the rights of, restrict, or inhibit anyone else's use of the website. Prohibited behavior includes:
+            You agree to use our website only for lawful purposes and in a way that does not infringe the rights of, restrict, or inhibit anyone else's use of the website. Prohibited behaviour includes:
         </p>
         <ul class="list-disc pl-6 mb-4 text-gray-700 space-y-2">
-            <li>Attempting to gain unauthorized access to our systems</li>
+            <li>Attempting to gain unauthorised access to our systems</li>
             <li>Transmitting malicious code or viruses</li>
             <li>Collecting or harvesting personal data</li>
             <li>Using the website to send spam or unsolicited communications</li>
