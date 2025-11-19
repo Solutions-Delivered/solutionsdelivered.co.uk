@@ -98,9 +98,8 @@
                         <img src="{{ asset('logo.png') }}"
                              srcset="{{ asset('logo.png') }} 1x, {{ asset('logo@2x.png') }} 2x"
                              alt="Solutions Delivered Logo"
-                             width="185"
-                             height="60"
-                             class="h-12 w-auto">
+                             class="h-10 w-auto"
+                             style="max-height: 2.5rem;">
                     </a>
                 </div>
 
