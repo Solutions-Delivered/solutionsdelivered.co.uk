@@ -5,7 +5,7 @@
 
 @section('content')
 <!-- Page Header -->
-<section class="bg-gradient-to-r from-[#198fd9] to-[#65bd7d] text-white py-16 px-4 sm:px-6 lg:px-8">
+<section class="bg-gradient-to-r from-[#198fd9] to-[#D65FCB] text-white py-16 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto">
         <h1 class="text-4xl md:text-5xl font-bold mb-4">About Solutions Delivered</h1>
         <p class="text-xl md:text-2xl max-w-3xl">
@@ -87,7 +87,7 @@
             </div>
 
             <div class="text-center">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-[#65bd7d] text-white rounded-full mb-4" aria-hidden="true">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-[#D65FCB] text-white rounded-full mb-4" aria-hidden="true">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                     </svg>
@@ -126,7 +126,7 @@
             <a href="{{ route('solutions') }}" class="inline-block bg-white text-[#198fd9] hover:bg-gray-100 px-8 py-4 rounded-md text-lg font-semibold transition-colors duration-200 shadow-lg">
                 Explore Solutions
             </a>
-            <a href="{{ route('get-started') }}" class="inline-block bg-[#65bd7d] text-white hover:bg-[#4da768] px-8 py-4 rounded-md text-lg font-semibold transition-colors duration-200 shadow-lg">
+            <a href="{{ route('get-started') }}" class="inline-block bg-[#D65FCB] text-white hover:bg-[#4da768] px-8 py-4 rounded-md text-lg font-semibold transition-colors duration-200 shadow-lg">
                 Get Started
             </a>
         </div>

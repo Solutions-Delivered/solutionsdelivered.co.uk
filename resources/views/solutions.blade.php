@@ -69,7 +69,7 @@
 
 @section('content')
 <!-- Page Header -->
-<section class="bg-gradient-to-r from-[#198fd9] to-[#65bd7d] text-white py-16 px-4 sm:px-6 lg:px-8">
+<section class="bg-gradient-to-r from-[#198fd9] to-[#D65FCB] text-white py-16 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto">
         <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Solutions</h1>
         <p class="text-xl md:text-2xl max-w-3xl">
@@ -105,31 +105,31 @@
                 <h3 class="text-xl font-bold text-gray-900 mb-4">What You Get</h3>
                 <ul class="space-y-3">
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#65bd7d] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700"><strong>Laravel-based systems</strong> – Modern, secure, and maintainable</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#65bd7d] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700"><strong>WCAG 2.2 compliance</strong> – Accessible to all users by default</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#65bd7d] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700"><strong>No-bloat philosophy</strong> – Only the features you actually need</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#65bd7d] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700"><strong>Cost-effective solutions</strong> – Professional quality without excessive costs</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#65bd7d] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700"><strong>Direct collaboration</strong> – Work directly with the developer</span>
@@ -164,25 +164,25 @@
                 <h3 class="text-xl font-bold text-gray-900 mb-4">Key Benefits</h3>
                 <ul class="space-y-3">
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#65bd7d] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700">Process optimization and standardization</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#65bd7d] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700">Improved operational efficiency</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#65bd7d] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700">Enhanced service quality and consistency</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#65bd7d] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700">Cost reduction through waste elimination</span>
@@ -201,25 +201,25 @@
                 <h3 class="text-xl font-bold text-gray-900 mb-4">What We Deliver</h3>
                 <ul class="space-y-3">
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#65bd7d] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700">Comprehensive risk assessment and mitigation</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#65bd7d] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700">Detailed project planning and scheduling</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#65bd7d] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700">Stakeholder management and communication</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#65bd7d] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700">Budget control and resource optimization</span>
@@ -227,7 +227,7 @@
                 </ul>
             </div>
             <div class="order-1 md:order-2">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-[#65bd7d] text-white rounded-full mb-6" aria-hidden="true">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-[#D65FCB] text-white rounded-full mb-6" aria-hidden="true">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                     </svg>
@@ -270,25 +270,25 @@
                 <h3 class="text-xl font-bold text-gray-900 mb-4">Our Approach Includes</h3>
                 <ul class="space-y-3">
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#65bd7d] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700">Change impact assessment and planning</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#65bd7d] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700">Stakeholder engagement strategies</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#65bd7d] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700">Communication and training programs</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-[#65bd7d] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-6 h-6 text-[#D65FCB] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700">Leadership coaching and support</span>

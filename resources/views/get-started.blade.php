@@ -22,7 +22,7 @@
 
 @section('content')
 <!-- Page Header -->
-<section class="bg-gradient-to-r from-[#198fd9] to-[#65bd7d] text-white py-16 px-4 sm:px-6 lg:px-8">
+<section class="bg-gradient-to-r from-[#198fd9] to-[#D65FCB] text-white py-16 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto">
         <h1 class="text-4xl md:text-5xl font-bold mb-4">Get Started</h1>
         <p class="text-xl md:text-2xl max-w-3xl">
@@ -42,7 +42,7 @@
         </p>
 
         @if(session('success'))
-            <div class="bg-[#65bd7d] text-white px-6 py-4 rounded-lg mb-8 shadow-md" role="alert" aria-live="polite">
+            <div class="bg-[#D65FCB] text-white px-6 py-4 rounded-lg mb-8 shadow-md" role="alert" aria-live="polite">
                 <div class="flex items-center">
                     <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -162,7 +162,7 @@
             <div>
                 <button
                     type="submit"
-                    class="w-full bg-[#198fd9] text-white hover:bg-[#65bd7d] px-8 py-4 rounded-md text-lg font-semibold transition-colors duration-200 shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#198fd9]"
+                    class="w-full bg-[#198fd9] text-white hover:bg-[#D65FCB] px-8 py-4 rounded-md text-lg font-semibold transition-colors duration-200 shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#198fd9]"
                 >
                     Send Message
                 </button>
@@ -194,7 +194,7 @@
             </div>
 
             <div class="text-center">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-[#65bd7d] text-white rounded-full mb-4 text-2xl font-bold" aria-hidden="true">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-[#D65FCB] text-white rounded-full mb-4 text-2xl font-bold" aria-hidden="true">
                     2
                 </div>
                 <h3 class="text-xl font-bold text-gray-900 mb-2">Initial Consultation</h3>

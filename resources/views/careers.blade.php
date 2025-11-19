@@ -5,7 +5,7 @@
 
 @section('content')
 <!-- Page Header -->
-<section class="bg-gradient-to-r from-[#198fd9] to-[#65bd7d] text-white py-16 px-4 sm:px-6 lg:px-8">
+<section class="bg-gradient-to-r from-[#198fd9] to-[#D65FCB] text-white py-16 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto">
         <h1 class="text-4xl md:text-5xl font-bold mb-4">Careers at Solutions Delivered</h1>
         <p class="text-xl md:text-2xl max-w-3xl">
@@ -35,7 +35,7 @@
             </div>
 
             <div class="bg-gray-50 rounded-lg p-8 shadow-md">
-                <div class="text-[#65bd7d] mb-4" aria-hidden="true">
+                <div class="text-[#D65FCB] mb-4" aria-hidden="true">
                     <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                     </svg>
@@ -59,7 +59,7 @@
             </div>
 
             <div class="bg-gray-50 rounded-lg p-8 shadow-md">
-                <div class="text-[#65bd7d] mb-4" aria-hidden="true">
+                <div class="text-[#D65FCB] mb-4" aria-hidden="true">
                     <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
                     </svg>
@@ -83,7 +83,7 @@
             </div>
 
             <div class="bg-gray-50 rounded-lg p-8 shadow-md">
-                <div class="text-[#65bd7d] mb-4" aria-hidden="true">
+                <div class="text-[#D65FCB] mb-4" aria-hidden="true">
                     <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                     </svg>
@@ -145,7 +145,7 @@
         <p class="text-lg text-gray-700 mb-8">
             We're always looking for talented individuals to join our team. Even if we don't have an open position that matches your skills right now, we'd love to hear from you.
         </p>
-        <a href="{{ route('get-started') }}" class="inline-block bg-[#198fd9] text-white hover:bg-[#65bd7d] px-8 py-4 rounded-md text-lg font-semibold transition-colors duration-200 shadow-lg">
+        <a href="{{ route('get-started') }}" class="inline-block bg-[#198fd9] text-white hover:bg-[#D65FCB] px-8 py-4 rounded-md text-lg font-semibold transition-colors duration-200 shadow-lg">
             Get in Touch
         </a>
     </div>
