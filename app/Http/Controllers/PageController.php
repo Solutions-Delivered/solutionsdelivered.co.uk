@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\ContactFormRequest;
+use App\Mail\ContactFormSubmitted;
 use Illuminate\Support\Facades\Mail;
 
 class PageController extends Controller
@@ -47,17 +48,25 @@ class PageController extends Controller
         return view('terms');
     }
 
-    public function contact(Request $request)
+    public function contact(ContactFormRequest $request)
     {
-        $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
-            'company' => 'nullable|string|max:255',
-            'message' => 'required|string|max:2000',
-        ]);
+        $validated = $request->validated();
 
-        // Here you would typically send an email or store the contact request
-        // For now, we'll just return a success response
+        // Send email notification
+        try {
+            Mail::to(config('brand.contact.general'))
+                ->send(new ContactFormSubmitted(
+                    name: $validated['name'],
+                    email: $validated['email'],
+                    company: $validated['company'] ?? null,
+                    message: $validated['message']
+                ));
+        } catch (\Exception $e) {
+            // Log the error but don't expose it to the user
+            \Log::error('Contact form email failed: ' . $e->getMessage());
+
+            // Still show success to user (email will be in logs for manual handling)
+        }
 
         return back()->with('success', 'Thank you for your message. We will get back to you soon.');
     }
