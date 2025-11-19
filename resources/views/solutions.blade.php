@@ -1,7 +1,71 @@
 @extends('layouts.app')
 
 @section('title', 'Our Solutions - Solutions Delivered')
-@section('meta_description', 'Explore our comprehensive business solutions including Service Management, Project Management, and Business Change consulting services.')
+@section('meta_description', 'Explore our comprehensive business solutions including Web Development, Service Management, Project Management, and Business Change consulting services.')
+
+@push('schema')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Our Solutions",
+    "description": "Comprehensive business solutions including web development, service management, project management, and business change consulting.",
+    "url": "{{ url()->current() }}"
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+        {
+            "@type": "Service",
+            "name": "Web Development",
+            "description": "Bespoke Laravel-based web systems built for accessibility, efficiency, and value. WCAG 2.2 compliant with no-bloat philosophy.",
+            "provider": {
+                "@type": "Organization",
+                "name": "Solutions Delivered"
+            },
+            "areaServed": "GB",
+            "serviceType": "Web Development"
+        },
+        {
+            "@type": "Service",
+            "name": "Service Management",
+            "description": "Expert guidance in implementing and optimizing ITIL-aligned service management frameworks.",
+            "provider": {
+                "@type": "Organization",
+                "name": "Solutions Delivered"
+            },
+            "areaServed": "GB",
+            "serviceType": "IT Service Management"
+        },
+        {
+            "@type": "Service",
+            "name": "Project Management",
+            "description": "Professional project management services to ensure successful delivery of your initiatives.",
+            "provider": {
+                "@type": "Organization",
+                "name": "Solutions Delivered"
+            },
+            "areaServed": "GB",
+            "serviceType": "Project Management"
+        },
+        {
+            "@type": "Service",
+            "name": "Business Change",
+            "description": "Strategic guidance through organizational transformation and business process improvement.",
+            "provider": {
+                "@type": "Organization",
+                "name": "Solutions Delivered"
+            },
+            "areaServed": "GB",
+            "serviceType": "Business Consulting"
+        }
+    ]
+}
+</script>
+@endpush
 
 @section('content')
 <!-- Page Header -->

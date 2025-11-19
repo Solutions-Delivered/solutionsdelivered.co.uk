@@ -3,6 +3,23 @@
 @section('title', 'Get Started - Solutions Delivered')
 @section('meta_description', 'Contact Solutions Delivered to discuss how we can help transform your business with our tailored consulting services.')
 
+@push('schema')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Get Started",
+    "description": "Contact Solutions Delivered to discuss how we can help transform your business with our tailored consulting services.",
+    "url": "{{ url()->current() }}",
+    "mainEntity": {
+        "@type": "Organization",
+        "name": "Solutions Delivered",
+        "url": "{{ url('/') }}"
+    }
+}
+</script>
+@endpush
+
 @section('content')
 <!-- Page Header -->
 <section class="bg-gradient-to-r from-[#198bd9] to-[#65bd7d] text-white py-16 px-4 sm:px-6 lg:px-8">

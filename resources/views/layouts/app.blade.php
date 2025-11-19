@@ -8,6 +8,61 @@
 
     <title>@yield('title', 'Solutions Delivered - Delivering Solutions is in Our DNA')</title>
 
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="@yield('og_title', '@yield('title', 'Solutions Delivered - Delivering Solutions is in Our DNA')')">
+    <meta property="og:description" content="@yield('og_description', '@yield('meta_description', 'Solutions Delivered - Tailored business solutions for process design, project management, and organizational change.')')">
+    <meta property="og:type" content="@yield('og_type', 'website')">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:site_name" content="Solutions Delivered">
+    <meta property="og:locale" content="en_GB">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="@yield('twitter_title', '@yield('title', 'Solutions Delivered - Delivering Solutions is in Our DNA')')">
+    <meta name="twitter:description" content="@yield('twitter_description', '@yield('meta_description', 'Solutions Delivered - Tailored business solutions for process design, project management, and organizational change.')')">
+
+    <!-- Schema.org JSON-LD Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Solutions Delivered",
+        "url": "{{ url('/') }}",
+        "logo": "{{ url('/') }}/logo.png",
+        "description": "Solutions Delivered provides tailored business solutions for process design, project management, and organizational change.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "GB"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "url": "{{ route('get-started') }}"
+        },
+        "sameAs": []
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Solutions Delivered",
+        "url": "{{ url('/') }}",
+        "description": "Professional IT consultancy specializing in web development, service management, project management, and business change.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "GB"
+        },
+        "priceRange": "££"
+    }
+    </script>
+
+    @stack('schema')
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
 </head>
