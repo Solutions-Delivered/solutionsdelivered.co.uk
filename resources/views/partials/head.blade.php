@@ -42,39 +42,39 @@
 
     <!-- Schema.org JSON-LD Markup -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Solutions Delivered",
-        "url": "{{ url('/') }}",
-        "logo": "{{ url('/') }}/logo.png",
-        "description": "Solutions Delivered provides tailored business solutions for process design, project management, and organizational change.",
-        "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "GB"
-        },
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "Customer Service",
-            "url": "{{ route('get-started') }}"
-        },
-        "sameAs": []
-    }
+    {!! json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'Organization',
+        'name' => 'Solutions Delivered',
+        'url' => url('/'),
+        'logo' => url('/') . '/logo.png',
+        'description' => 'Solutions Delivered provides tailored business solutions for process design, project management, and organizational change.',
+        'address' => [
+            '@type' => 'PostalAddress',
+            'addressCountry' => 'GB'
+        ],
+        'contactPoint' => [
+            '@type' => 'ContactPoint',
+            'contactType' => 'Customer Service',
+            'url' => route('get-started')
+        ],
+        'sameAs' => []
+    ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
     </script>
 
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Solutions Delivered",
-        "url": "{{ url('/') }}",
-        "description": "Professional IT consultancy specialising in web development, service management, project management, and business change.",
-        "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "GB"
-        },
-        "priceRange": "££"
-    }
+    {!! json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'LocalBusiness',
+        'name' => 'Solutions Delivered',
+        'url' => url('/'),
+        'description' => 'Professional IT consultancy specialising in web development, service management, project management, and business change.',
+        'address' => [
+            '@type' => 'PostalAddress',
+            'addressCountry' => 'GB'
+        ],
+        'priceRange' => '££'
+    ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
     </script>
 
     @stack('schema')
