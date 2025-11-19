@@ -8,6 +8,11 @@
 
     <title>@yield('title', 'Solutions Delivered - Delivering Solutions is in Our DNA')</title>
 
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
+
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ url()->current() }}">
 
@@ -16,13 +21,19 @@
     <meta property="og:description" content="@yield('og_description', '@yield('meta_description', 'Solutions Delivered - Tailored business solutions for process design, project management, and organizational change.')')">
     <meta property="og:type" content="@yield('og_type', 'website')">
     <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:image" content="{{ asset('og-image.png') }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Solutions Delivered - Delivering Solutions is in Our DNA">
     <meta property="og:site_name" content="Solutions Delivered">
     <meta property="og:locale" content="en_GB">
 
     <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="@yield('twitter_title', '@yield('title', 'Solutions Delivered - Delivering Solutions is in Our DNA')')">
     <meta name="twitter:description" content="@yield('twitter_description', '@yield('meta_description', 'Solutions Delivered - Tailored business solutions for process design, project management, and organizational change.')')">
+    <meta name="twitter:image" content="{{ asset('og-image.png') }}">
+    <meta name="twitter:image:alt" content="Solutions Delivered - Delivering Solutions is in Our DNA">
 
     <!-- Schema.org JSON-LD Markup -->
     <script type="application/ld+json">
