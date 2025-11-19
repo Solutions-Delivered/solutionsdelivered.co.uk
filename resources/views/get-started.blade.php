@@ -6,7 +6,7 @@
 @push('schema')
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
+    "@@context": "https://schema.org",
     "@type": "ContactPage",
     "name": "Get Started",
     "description": "Contact Solutions Delivered to discuss how we can help transform your business with our tailored consulting services.",

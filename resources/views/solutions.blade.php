@@ -6,7 +6,7 @@
 @push('schema')
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
+    "@@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Our Solutions",
     "description": "Comprehensive business solutions including web development, service management, project management, and business change consulting.",
@@ -15,7 +15,7 @@
 </script>
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
+    "@@context": "https://schema.org",
     "@type": "ItemList",
     "itemListElement": [
         {

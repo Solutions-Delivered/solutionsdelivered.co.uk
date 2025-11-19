@@ -23,8 +23,8 @@ class TrailingSlashMiddleware
 
         $path = $request->path();
 
-        // Skip for root path
-        if ($path === '/') {
+        // Skip for root path (Laravel's path() returns empty string for '/')
+        if ($path === '/' || $path === '') {
             return $next($request);
         }
 
