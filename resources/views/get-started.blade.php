@@ -22,7 +22,7 @@
 
 @section('content')
 <!-- Page Header -->
-<section class="bg-gradient-to-r from-[#198bd9] to-[#65bd7d] text-white py-16 px-4 sm:px-6 lg:px-8">
+<section class="bg-gradient-to-r from-[#198fd9] to-[#65bd7d] text-white py-16 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto">
         <h1 class="text-4xl md:text-5xl font-bold mb-4">Get Started</h1>
         <p class="text-xl md:text-2xl max-w-3xl">
@@ -86,7 +86,7 @@
                     required
                     aria-required="true"
                     aria-describedby="name-error"
-                    class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#198bd9] focus:border-[#198bd9] text-gray-900 @error('name') border-red-500 @enderror"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#198fd9] focus:border-[#198fd9] text-gray-900 @error('name') border-red-500 @enderror"
                     placeholder="John Smith"
                 >
                 @error('name')
@@ -107,7 +107,7 @@
                     required
                     aria-required="true"
                     aria-describedby="email-error email-help"
-                    class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#198bd9] focus:border-[#198bd9] text-gray-900 @error('email') border-red-500 @enderror"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#198fd9] focus:border-[#198fd9] text-gray-900 @error('email') border-red-500 @enderror"
                     placeholder="john.smith@example.com"
                     autocomplete="email"
                 >
@@ -128,7 +128,7 @@
                     name="company"
                     value="{{ old('company') }}"
                     aria-describedby="company-error"
-                    class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#198bd9] focus:border-[#198bd9] text-gray-900 @error('company') border-red-500 @enderror"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#198fd9] focus:border-[#198fd9] text-gray-900 @error('company') border-red-500 @enderror"
                     placeholder="Your Company Ltd"
                     autocomplete="organization"
                 >
@@ -149,7 +149,7 @@
                     required
                     aria-required="true"
                     aria-describedby="message-error message-help"
-                    class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#198bd9] focus:border-[#198bd9] text-gray-900 @error('message') border-red-500 @enderror"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#198fd9] focus:border-[#198fd9] text-gray-900 @error('message') border-red-500 @enderror"
                     placeholder="Tell us about your needs and how we can help..."
                 >{{ old('message') }}</textarea>
                 <p class="mt-1 text-sm text-gray-600" id="message-help">Maximum 2000 characters</p>
@@ -162,7 +162,7 @@
             <div>
                 <button
                     type="submit"
-                    class="w-full bg-[#198bd9] text-white hover:bg-[#65bd7d] px-8 py-4 rounded-md text-lg font-semibold transition-colors duration-200 shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#198bd9]"
+                    class="w-full bg-[#198fd9] text-white hover:bg-[#65bd7d] px-8 py-4 rounded-md text-lg font-semibold transition-colors duration-200 shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#198fd9]"
                 >
                     Send Message
                 </button>
@@ -184,7 +184,7 @@
 
         <div class="grid md:grid-cols-3 gap-8">
             <div class="text-center">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-[#198bd9] text-white rounded-full mb-4 text-2xl font-bold" aria-hidden="true">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-[#198fd9] text-white rounded-full mb-4 text-2xl font-bold" aria-hidden="true">
                     1
                 </div>
                 <h3 class="text-xl font-bold text-gray-900 mb-2">We Review Your Request</h3>
@@ -204,7 +204,7 @@
             </div>
 
             <div class="text-center">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-[#198bd9] text-white rounded-full mb-4 text-2xl font-bold" aria-hidden="true">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-[#198fd9] text-white rounded-full mb-4 text-2xl font-bold" aria-hidden="true">
                     3
                 </div>
                 <h3 class="text-xl font-bold text-gray-900 mb-2">Tailored Proposal</h3>

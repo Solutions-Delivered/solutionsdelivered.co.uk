@@ -5,7 +5,7 @@
 
 @section('content')
 <!-- Page Header -->
-<section class="bg-gradient-to-r from-[#198bd9] to-[#65bd7d] text-white py-16 px-4 sm:px-6 lg:px-8">
+<section class="bg-gradient-to-r from-[#198fd9] to-[#65bd7d] text-white py-16 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto">
         <h1 class="text-4xl md:text-5xl font-bold mb-4">Careers at Solutions Delivered</h1>
         <p class="text-xl md:text-2xl max-w-3xl">
@@ -23,7 +23,7 @@
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="bg-gray-50 rounded-lg p-8 shadow-md">
-                <div class="text-[#198bd9] mb-4" aria-hidden="true">
+                <div class="text-[#198fd9] mb-4" aria-hidden="true">
                     <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
                     </svg>
@@ -47,7 +47,7 @@
             </div>
 
             <div class="bg-gray-50 rounded-lg p-8 shadow-md">
-                <div class="text-[#198bd9] mb-4" aria-hidden="true">
+                <div class="text-[#198fd9] mb-4" aria-hidden="true">
                     <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                     </svg>
@@ -71,7 +71,7 @@
             </div>
 
             <div class="bg-gray-50 rounded-lg p-8 shadow-md">
-                <div class="text-[#198bd9] mb-4" aria-hidden="true">
+                <div class="text-[#198fd9] mb-4" aria-hidden="true">
                     <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
                     </svg>
@@ -145,14 +145,14 @@
         <p class="text-lg text-gray-700 mb-8">
             We're always looking for talented individuals to join our team. Even if we don't have an open position that matches your skills right now, we'd love to hear from you.
         </p>
-        <a href="{{ route('get-started') }}" class="inline-block bg-[#198bd9] text-white hover:bg-[#65bd7d] px-8 py-4 rounded-md text-lg font-semibold transition-colors duration-200 shadow-lg">
+        <a href="{{ route('get-started') }}" class="inline-block bg-[#198fd9] text-white hover:bg-[#65bd7d] px-8 py-4 rounded-md text-lg font-semibold transition-colors duration-200 shadow-lg">
             Get in Touch
         </a>
     </div>
 </section>
 
 <!-- Call to Action -->
-<section class="py-16 px-4 sm:px-6 lg:px-8 bg-[#198bd9] text-white" aria-labelledby="cta-heading">
+<section class="py-16 px-4 sm:px-6 lg:px-8 bg-[#198fd9] text-white" aria-labelledby="cta-heading">
     <div class="max-w-4xl mx-auto text-center">
         <h2 id="cta-heading" class="text-3xl md:text-4xl font-bold mb-6">
             Ready to Make a Difference?
@@ -160,7 +160,7 @@
         <p class="text-xl mb-8">
             Start your journey with Solutions Delivered today.
         </p>
-        <a href="{{ route('get-started') }}" class="inline-block bg-white text-[#198bd9] hover:bg-gray-100 px-8 py-4 rounded-md text-lg font-semibold transition-colors duration-200 shadow-lg">
+        <a href="{{ route('get-started') }}" class="inline-block bg-white text-[#198fd9] hover:bg-gray-100 px-8 py-4 rounded-md text-lg font-semibold transition-colors duration-200 shadow-lg">
             Contact Us
         </a>
     </div>

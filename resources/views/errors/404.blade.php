@@ -5,7 +5,7 @@
 
 @section('content')
 <!-- 404 Header -->
-<section class="bg-gradient-to-r from-[#198bd9] to-[#65bd7d] text-white py-16 px-4 sm:px-6 lg:px-8">
+<section class="bg-gradient-to-r from-[#198fd9] to-[#65bd7d] text-white py-16 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto text-center">
         <h1 class="text-6xl md:text-8xl font-bold mb-4">404</h1>
         <p class="text-2xl md:text-3xl">
@@ -30,22 +30,22 @@
             <nav aria-label="Error page navigation">
                 <ul class="space-y-3">
                     <li>
-                        <a href="{{ route('home') }}" class="text-[#198bd9] hover:text-[#65bd7d] font-medium transition-colors duration-200 underline">
+                        <a href="{{ route('home') }}" class="text-[#198fd9] hover:text-[#65bd7d] font-medium transition-colors duration-200 underline">
                             Return to Home Page
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('solutions') }}" class="text-[#198bd9] hover:text-[#65bd7d] font-medium transition-colors duration-200 underline">
+                        <a href="{{ route('solutions') }}" class="text-[#198fd9] hover:text-[#65bd7d] font-medium transition-colors duration-200 underline">
                             View Our Solutions
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('about') }}" class="text-[#198bd9] hover:text-[#65bd7d] font-medium transition-colors duration-200 underline">
+                        <a href="{{ route('about') }}" class="text-[#198fd9] hover:text-[#65bd7d] font-medium transition-colors duration-200 underline">
                             Learn About Us
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('get-started') }}" class="text-[#198bd9] hover:text-[#65bd7d] font-medium transition-colors duration-200 underline">
+                        <a href="{{ route('get-started') }}" class="text-[#198fd9] hover:text-[#65bd7d] font-medium transition-colors duration-200 underline">
                             Get in Touch
                         </a>
                     </li>
@@ -54,7 +54,7 @@
         </div>
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="{{ route('home') }}" class="inline-block bg-[#198bd9] text-white hover:bg-[#65bd7d] px-8 py-3 rounded-md text-lg font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#198bd9]">
+            <a href="{{ route('home') }}" class="inline-block bg-[#198fd9] text-white hover:bg-[#65bd7d] px-8 py-3 rounded-md text-lg font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#198fd9]">
                 Go to Home Page
             </a>
             <button onclick="window.history.back()" class="inline-block bg-gray-200 text-gray-800 hover:bg-gray-300 px-8 py-3 rounded-md text-lg font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400">
@@ -71,7 +71,7 @@
         <p class="text-lg text-gray-700 mb-6">
             If you believe this is an error or you can't find what you're looking for, please contact us and we'll be happy to help.
         </p>
-        <a href="{{ route('get-started') }}" class="inline-block bg-[#198bd9] text-white hover:bg-[#65bd7d] px-6 py-2 rounded-md font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#198bd9]">
+        <a href="{{ route('get-started') }}" class="inline-block bg-[#198fd9] text-white hover:bg-[#65bd7d] px-6 py-2 rounded-md font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#198fd9]">
             Contact Us
         </a>
     </div>

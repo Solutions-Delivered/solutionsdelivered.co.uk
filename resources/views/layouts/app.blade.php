@@ -7,8 +7,8 @@
     <meta name="description" content="@yield('meta_description', 'Solutions Delivered - Tailored business solutions for process design, project management, and organisational change.')">
 
     <!-- Theme Color for Browser UI -->
-    <meta name="theme-color" content="#198bd9">
-    <meta name="msapplication-TileColor" content="#198bd9">
+    <meta name="theme-color" content="#198fd9">
+    <meta name="msapplication-TileColor" content="#198fd9">
 
     <title>@yield('title', 'Solutions Delivered - Delivering Solutions is in Our DNA')</title>
 
@@ -94,36 +94,36 @@
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
-                    <a href="{{ route('home') }}" class="text-2xl font-bold text-[#198bd9] hover:text-[#65bd7d] transition-colors duration-200" aria-label="Solutions Delivered Home">
+                    <a href="{{ route('home') }}" class="text-2xl font-bold text-[#198fd9] hover:text-[#65bd7d] transition-colors duration-200" aria-label="Solutions Delivered Home">
                         Solutions Delivered
                     </a>
                 </div>
 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex md:items-center md:space-x-6">
-                    <a href="{{ route('home') }}" class="text-gray-700 hover:text-[#198bd9] px-3 py-2 text-sm font-medium transition-colors duration-200 {{ request()->routeIs('home') ? 'border-b-2 border-[#198bd9]' : '' }}">
+                    <a href="{{ route('home') }}" class="text-gray-700 hover:text-[#198fd9] px-3 py-2 text-sm font-medium transition-colors duration-200 {{ request()->routeIs('home') ? 'border-b-2 border-[#198fd9]' : '' }}">
                         Home
                     </a>
-                    <a href="{{ route('about') }}" class="text-gray-700 hover:text-[#198bd9] px-3 py-2 text-sm font-medium transition-colors duration-200 {{ request()->routeIs('about') ? 'border-b-2 border-[#198bd9]' : '' }}">
+                    <a href="{{ route('about') }}" class="text-gray-700 hover:text-[#198fd9] px-3 py-2 text-sm font-medium transition-colors duration-200 {{ request()->routeIs('about') ? 'border-b-2 border-[#198fd9]' : '' }}">
                         About
                     </a>
-                    <a href="{{ route('solutions') }}" class="text-gray-700 hover:text-[#198bd9] px-3 py-2 text-sm font-medium transition-colors duration-200 {{ request()->routeIs('solutions') ? 'border-b-2 border-[#198bd9]' : '' }}">
+                    <a href="{{ route('solutions') }}" class="text-gray-700 hover:text-[#198fd9] px-3 py-2 text-sm font-medium transition-colors duration-200 {{ request()->routeIs('solutions') ? 'border-b-2 border-[#198fd9]' : '' }}">
                         Solutions
                     </a>
-                    <a href="{{ route('how-we-work') }}" class="text-gray-700 hover:text-[#198bd9] px-3 py-2 text-sm font-medium transition-colors duration-200 {{ request()->routeIs('how-we-work') ? 'border-b-2 border-[#198bd9]' : '' }}">
+                    <a href="{{ route('how-we-work') }}" class="text-gray-700 hover:text-[#198fd9] px-3 py-2 text-sm font-medium transition-colors duration-200 {{ request()->routeIs('how-we-work') ? 'border-b-2 border-[#198fd9]' : '' }}">
                         How We Work
                     </a>
-                    <a href="{{ route('careers') }}" class="text-gray-700 hover:text-[#198bd9] px-3 py-2 text-sm font-medium transition-colors duration-200 {{ request()->routeIs('careers') ? 'border-b-2 border-[#198bd9]' : '' }}">
+                    <a href="{{ route('careers') }}" class="text-gray-700 hover:text-[#198fd9] px-3 py-2 text-sm font-medium transition-colors duration-200 {{ request()->routeIs('careers') ? 'border-b-2 border-[#198fd9]' : '' }}">
                         Careers
                     </a>
-                    <a href="{{ route('get-started') }}" class="bg-[#198bd9] text-white hover:bg-[#65bd7d] px-6 py-2 rounded-md text-sm font-medium transition-colors duration-200">
+                    <a href="{{ route('get-started') }}" class="bg-[#198fd9] text-white hover:bg-[#65bd7d] px-6 py-2 rounded-md text-sm font-medium transition-colors duration-200">
                         Get Started
                     </a>
                 </div>
 
                 <!-- Mobile menu button -->
                 <div class="md:hidden" x-data="{ open: false }">
-                    <button @click="open = !open" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-[#198bd9] hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#198bd9]" aria-expanded="false" :aria-expanded="open.toString()" aria-label="Toggle navigation menu">
+                    <button @click="open = !open" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-[#198fd9] hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#198fd9]" aria-expanded="false" :aria-expanded="open.toString()" aria-label="Toggle navigation menu">
                         <span class="sr-only">Open main menu</span>
                         <!-- Menu icon -->
                         <svg class="h-6 w-6" :class="{ 'hidden': open, 'block': !open }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -141,12 +141,12 @@
                             <div class="pt-5 pb-6 px-5">
                                 <div class="mt-6">
                                     <nav class="grid gap-y-8">
-                                        <a href="{{ route('home') }}" class="text-base font-medium text-gray-700 hover:text-[#198bd9]">Home</a>
-                                        <a href="{{ route('about') }}" class="text-base font-medium text-gray-700 hover:text-[#198bd9]">About</a>
-                                        <a href="{{ route('solutions') }}" class="text-base font-medium text-gray-700 hover:text-[#198bd9]">Solutions</a>
-                                        <a href="{{ route('how-we-work') }}" class="text-base font-medium text-gray-700 hover:text-[#198bd9]">How We Work</a>
-                                        <a href="{{ route('careers') }}" class="text-base font-medium text-gray-700 hover:text-[#198bd9]">Careers</a>
-                                        <a href="{{ route('get-started') }}" class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#198bd9] hover:bg-[#65bd7d]">Get Started</a>
+                                        <a href="{{ route('home') }}" class="text-base font-medium text-gray-700 hover:text-[#198fd9]">Home</a>
+                                        <a href="{{ route('about') }}" class="text-base font-medium text-gray-700 hover:text-[#198fd9]">About</a>
+                                        <a href="{{ route('solutions') }}" class="text-base font-medium text-gray-700 hover:text-[#198fd9]">Solutions</a>
+                                        <a href="{{ route('how-we-work') }}" class="text-base font-medium text-gray-700 hover:text-[#198fd9]">How We Work</a>
+                                        <a href="{{ route('careers') }}" class="text-base font-medium text-gray-700 hover:text-[#198fd9]">Careers</a>
+                                        <a href="{{ route('get-started') }}" class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#198fd9] hover:bg-[#65bd7d]">Get Started</a>
                                     </nav>
                                 </div>
                             </div>
@@ -195,7 +195,7 @@
                     <p class="text-gray-300 text-sm mb-2">
                         Ready to transform your business?
                     </p>
-                    <a href="{{ route('get-started') }}" class="inline-block bg-[#198bd9] text-white hover:bg-[#65bd7d] px-6 py-2 rounded-md text-sm font-medium transition-colors duration-200">
+                    <a href="{{ route('get-started') }}" class="inline-block bg-[#198fd9] text-white hover:bg-[#65bd7d] px-6 py-2 rounded-md text-sm font-medium transition-colors duration-200">
                         Contact Us
                     </a>
                 </div>

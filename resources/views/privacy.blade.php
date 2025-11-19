@@ -5,7 +5,7 @@
 
 @section('content')
 <!-- Page Header -->
-<section class="bg-gradient-to-r from-[#198bd9] to-[#65bd7d] text-white py-16 px-4 sm:px-6 lg:px-8">
+<section class="bg-gradient-to-r from-[#198fd9] to-[#65bd7d] text-white py-16 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto">
         <h1 class="text-4xl md:text-5xl font-bold mb-4">Privacy Policy</h1>
         <p class="text-xl md:text-2xl max-w-3xl">
@@ -136,10 +136,10 @@
         <div class="bg-gray-50 rounded-lg p-6">
             <p class="text-gray-900 font-medium mb-2">Solutions Delivered</p>
             <p class="text-gray-700">
-                Email: <a href="mailto:privacy@solutionsdelivered.co.uk" class="text-[#198bd9] hover:text-[#65bd7d]">privacy@solutionsdelivered.co.uk</a>
+                Email: <a href="mailto:privacy@solutionsdelivered.co.uk" class="text-[#198fd9] hover:text-[#65bd7d]">privacy@solutionsdelivered.co.uk</a>
             </p>
             <p class="text-gray-700 mt-2">
-                Alternatively, use our <a href="{{ route('get-started') }}" class="text-[#198bd9] hover:text-[#65bd7d]">contact form</a>.
+                Alternatively, use our <a href="{{ route('get-started') }}" class="text-[#198fd9] hover:text-[#65bd7d]">contact form</a>.
             </p>
         </div>
 
@@ -149,7 +149,7 @@
         </p>
         <div class="bg-gray-50 rounded-lg p-6">
             <p class="text-gray-900 font-medium mb-2">Information Commissioner's Office</p>
-            <p class="text-gray-700">Website: <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" class="text-[#198bd9] hover:text-[#65bd7d]">ico.org.uk</a></p>
+            <p class="text-gray-700">Website: <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" class="text-[#198fd9] hover:text-[#65bd7d]">ico.org.uk</a></p>
             <p class="text-gray-700">Helpline: 0303 123 1113</p>
         </div>
     </div>

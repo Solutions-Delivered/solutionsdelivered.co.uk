@@ -5,7 +5,7 @@
 
 @section('content')
 <!-- Hero Section -->
-<section class="relative bg-gradient-to-r from-[#198bd9] to-[#65bd7d] text-white py-24 px-4 sm:px-6 lg:px-8" aria-labelledby="hero-heading">
+<section class="relative bg-gradient-to-r from-[#198fd9] to-[#65bd7d] text-white py-24 px-4 sm:px-6 lg:px-8" aria-labelledby="hero-heading">
     <div class="max-w-7xl mx-auto text-center">
         <h1 id="hero-heading" class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Delivering Solutions is in Our DNA
@@ -13,7 +13,7 @@
         <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
             We focus on delivering tailored solutions to our customers' needs
         </p>
-        <a href="{{ route('get-started') }}" class="inline-block bg-white text-[#198bd9] hover:bg-gray-100 px-8 py-4 rounded-md text-lg font-semibold transition-colors duration-200 shadow-lg">
+        <a href="{{ route('get-started') }}" class="inline-block bg-white text-[#198fd9] hover:bg-gray-100 px-8 py-4 rounded-md text-lg font-semibold transition-colors duration-200 shadow-lg">
             Get Started
         </a>
     </div>
@@ -29,7 +29,7 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Web Development -->
             <article class="bg-gray-50 rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow duration-200">
-                <div class="text-[#198bd9] mb-4" aria-hidden="true">
+                <div class="text-[#198fd9] mb-4" aria-hidden="true">
                     <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                     </svg>
@@ -38,7 +38,7 @@
                 <p class="text-gray-700 mb-4">
                     Bespoke Laravel-based web systems built for accessibility, efficiency, and value. No bloat, just solutions.
                 </p>
-                <a href="{{ route('solutions') }}#web-development" class="text-[#198bd9] hover:text-[#65bd7d] font-medium transition-colors duration-200">
+                <a href="{{ route('solutions') }}#web-development" class="text-[#198fd9] hover:text-[#65bd7d] font-medium transition-colors duration-200">
                     Learn more <span aria-hidden="true">→</span>
                 </a>
             </article>
@@ -54,14 +54,14 @@
                 <p class="text-gray-700 mb-4">
                     Customized internal process optimization working directly with client teams to enhance efficiency and effectiveness.
                 </p>
-                <a href="{{ route('solutions') }}#service-management" class="text-[#198bd9] hover:text-[#65bd7d] font-medium transition-colors duration-200">
+                <a href="{{ route('solutions') }}#service-management" class="text-[#198fd9] hover:text-[#65bd7d] font-medium transition-colors duration-200">
                     Learn more <span aria-hidden="true">→</span>
                 </a>
             </article>
 
             <!-- Project Management -->
             <article class="bg-gray-50 rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow duration-200">
-                <div class="text-[#198bd9] mb-4" aria-hidden="true">
+                <div class="text-[#198fd9] mb-4" aria-hidden="true">
                     <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                     </svg>
@@ -70,7 +70,7 @@
                 <p class="text-gray-700 mb-4">
                     Risk mitigation and delivery oversight for complex projects, ensuring successful outcomes on time and within budget.
                 </p>
-                <a href="{{ route('solutions') }}#project-management" class="text-[#198bd9] hover:text-[#65bd7d] font-medium transition-colors duration-200">
+                <a href="{{ route('solutions') }}#project-management" class="text-[#198fd9] hover:text-[#65bd7d] font-medium transition-colors duration-200">
                     Learn more <span aria-hidden="true">→</span>
                 </a>
             </article>
@@ -86,7 +86,7 @@
                 <p class="text-gray-700 mb-4">
                     Leadership support for organizational transformation initiatives, guiding teams through successful change management.
                 </p>
-                <a href="{{ route('solutions') }}#business-change" class="text-[#198bd9] hover:text-[#65bd7d] font-medium transition-colors duration-200">
+                <a href="{{ route('solutions') }}#business-change" class="text-[#198fd9] hover:text-[#65bd7d] font-medium transition-colors duration-200">
                     Learn more <span aria-hidden="true">→</span>
                 </a>
             </article>
@@ -136,7 +136,7 @@
 </section>
 
 <!-- Call to Action Section -->
-<section class="py-16 px-4 sm:px-6 lg:px-8 bg-[#198bd9] text-white" aria-labelledby="cta-heading">
+<section class="py-16 px-4 sm:px-6 lg:px-8 bg-[#198fd9] text-white" aria-labelledby="cta-heading">
     <div class="max-w-4xl mx-auto text-center">
         <h2 id="cta-heading" class="text-3xl md:text-4xl font-bold mb-6">
             Ready to Transform Your Business?
@@ -144,7 +144,7 @@
         <p class="text-xl mb-8">
             Let's discuss how we can help deliver tailored solutions for your unique challenges.
         </p>
-        <a href="{{ route('get-started') }}" class="inline-block bg-white text-[#198bd9] hover:bg-gray-100 px-8 py-4 rounded-md text-lg font-semibold transition-colors duration-200 shadow-lg">
+        <a href="{{ route('get-started') }}" class="inline-block bg-white text-[#198fd9] hover:bg-gray-100 px-8 py-4 rounded-md text-lg font-semibold transition-colors duration-200 shadow-lg">
             Get Started Today
         </a>
     </div>

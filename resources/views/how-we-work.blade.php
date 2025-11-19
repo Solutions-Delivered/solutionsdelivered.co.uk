@@ -5,7 +5,7 @@
 
 @section('content')
 <!-- Page Header -->
-<section class="bg-gradient-to-r from-[#198bd9] to-[#65bd7d] text-white py-16 px-4 sm:px-6 lg:px-8">
+<section class="bg-gradient-to-r from-[#198fd9] to-[#65bd7d] text-white py-16 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto">
         <h1 class="text-4xl md:text-5xl font-bold mb-4">How We Work</h1>
         <p class="text-xl md:text-2xl max-w-3xl">
@@ -38,7 +38,7 @@
 
         <div class="grid md:grid-cols-4 gap-8">
             <div class="text-center">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-[#198bd9] text-white rounded-full mb-4 text-2xl font-bold" aria-hidden="true">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-[#198fd9] text-white rounded-full mb-4 text-2xl font-bold" aria-hidden="true">
                     1
                 </div>
                 <h3 class="text-xl font-bold text-gray-900 mb-2">Initial Discussion</h3>
@@ -58,7 +58,7 @@
             </div>
 
             <div class="text-center">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-[#198bd9] text-white rounded-full mb-4 text-2xl font-bold" aria-hidden="true">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-[#198fd9] text-white rounded-full mb-4 text-2xl font-bold" aria-hidden="true">
                     3
                 </div>
                 <h3 class="text-xl font-bold text-gray-900 mb-2">Collaborative Delivery</h3>
@@ -222,31 +222,31 @@
         </p>
         <ul class="space-y-3 text-lg text-gray-700">
             <li class="flex items-start">
-                <svg class="w-6 h-6 text-[#198bd9] mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <svg class="w-6 h-6 text-[#198fd9] mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
                 <span>Value quality, accessibility, and long-term maintainability over quick fixes</span>
             </li>
             <li class="flex items-start">
-                <svg class="w-6 h-6 text-[#198bd9] mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <svg class="w-6 h-6 text-[#198fd9] mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
                 <span>Prefer collaborative partnerships over transactional vendor relationships</span>
             </li>
             <li class="flex items-start">
-                <svg class="w-6 h-6 text-[#198bd9] mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <svg class="w-6 h-6 text-[#198fd9] mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
                 <span>Need bespoke solutions, not off-the-shelf products</span>
             </li>
             <li class="flex items-start">
-                <svg class="w-6 h-6 text-[#198bd9] mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <svg class="w-6 h-6 text-[#198fd9] mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
                 <span>Appreciate transparent communication and realistic expectations</span>
             </li>
             <li class="flex items-start">
-                <svg class="w-6 h-6 text-[#198bd9] mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <svg class="w-6 h-6 text-[#198fd9] mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
                 <span>Care about accessibility and inclusive digital experiences</span>
@@ -256,7 +256,7 @@
 </section>
 
 <!-- Call to Action -->
-<section class="py-16 px-4 sm:px-6 lg:px-8 bg-[#198bd9] text-white" aria-labelledby="cta-heading">
+<section class="py-16 px-4 sm:px-6 lg:px-8 bg-[#198fd9] text-white" aria-labelledby="cta-heading">
     <div class="max-w-4xl mx-auto text-center">
         <h2 id="cta-heading" class="text-3xl md:text-4xl font-bold mb-6">
             Ready to Get Started?
@@ -264,7 +264,7 @@
         <p class="text-xl mb-8">
             Let's have an initial conversation about your needs—no obligation, no pressure.
         </p>
-        <a href="{{ route('get-started') }}" class="inline-block bg-white text-[#198bd9] hover:bg-gray-100 px-8 py-4 rounded-md text-lg font-semibold transition-colors duration-200 shadow-lg">
+        <a href="{{ route('get-started') }}" class="inline-block bg-white text-[#198fd9] hover:bg-gray-100 px-8 py-4 rounded-md text-lg font-semibold transition-colors duration-200 shadow-lg">
             Get in Touch
         </a>
     </div>
