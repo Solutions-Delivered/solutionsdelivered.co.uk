@@ -8,8 +8,7 @@
             <!-- Logo -->
             <div class="flex-shrink-0">
                 <a href="{{ route('home') }}" class="block transition-opacity duration-200 hover:opacity-80" aria-label="Solutions Delivered Home">
-                    <img src="{{ asset('logo.png') }}"
-                         srcset="{{ asset('logo.png') }} 1x, {{ asset('logo@2x.png') }} 2x"
+                    <img src="{{ asset('logo.svg') }}"
                          alt="Solutions Delivered Logo"
                          class="h-10 w-auto"
                          style="max-height: 2.5rem;">

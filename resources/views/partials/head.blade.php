@@ -11,6 +11,7 @@
     <title>@yield('title', 'Solutions Delivered - Delivering Solutions is in Our DNA')</title>
 
     <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
@@ -19,7 +20,7 @@
     <link rel="canonical" href="{{ url()->current() }}">
 
     <!-- Performance Hints -->
-    <link rel="preload" href="{{ asset('logo.png') }}" as="image" type="image/png">
+    <link rel="preload" href="{{ asset('logo.svg') }}" as="image" type="image/svg+xml">
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="@yield('og_title', 'Solutions Delivered - Delivering Solutions is in Our DNA')">

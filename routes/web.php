@@ -19,3 +19,18 @@ Route::get('/terms/', [PageController::class, 'terms'])->name('terms');
 Route::get('/sitemap.xml', function() {
     return response()->view('sitemap')->header('Content-Type', 'application/xml');
 });
+
+// Logo URL preservation - serve new SVG logo for old PNG requests
+Route::get('/logo.png', function() {
+    return response()->file(public_path('logo.svg'), [
+        'Content-Type' => 'image/svg+xml',
+        'Cache-Control' => 'public, max-age=31536000',
+    ]);
+});
+
+Route::get('/logo@2x.png', function() {
+    return response()->file(public_path('logo.svg'), [
+        'Content-Type' => 'image/svg+xml',
+        'Cache-Control' => 'public, max-age=31536000',
+    ]);
+});
