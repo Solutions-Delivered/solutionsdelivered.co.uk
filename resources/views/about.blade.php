@@ -1,7 +1,14 @@
 @extends('layouts.app')
 
 @section('title', 'About Us - Solutions Delivered')
-@section('meta_description', 'Learn about Solutions Delivered, a UK-based consultancy specialising in tailored business solutions for process design, project management, and organisational change.')
+@section('meta_description', 'Founded 2019 in Bolton, UK. Direct collaboration with experienced consultants. Transparent process, proven results. Specialising in Laravel development, ITIL, and business change.')
+
+@push('schema')
+<x-schema.breadcrumb :items="[
+    ['name' => 'Home', 'url' => route('home')],
+    ['name' => 'About']
+]" />
+@endpush
 
 @section('content')
 <!-- Page Header -->

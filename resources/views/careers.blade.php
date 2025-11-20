@@ -3,6 +3,13 @@
 @section('title', 'Careers - Solutions Delivered')
 @section('meta_description', 'Join our team of experienced consultants and help deliver tailored business solutions to organizations across the UK.')
 
+@push('schema')
+<x-schema.breadcrumb :items="[
+    ['name' => 'Home', 'url' => route('home')],
+    ['name' => 'Careers']
+]" />
+@endpush
+
 @section('content')
 <!-- Page Header -->
 <section class="relative overflow-hidden bg-gradient-to-br from-[#198fd9] via-[#1a7fc7] to-[#0f6ba8] text-white py-20 px-4 sm:px-6 lg:px-8">

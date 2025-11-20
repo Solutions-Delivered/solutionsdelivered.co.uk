@@ -57,12 +57,18 @@
     {!! json_encode([
         '@context' => 'https://schema.org',
         '@type' => 'Organization',
-        'name' => 'Solutions Delivered',
+        'name' => 'Solutions Delivered Limited',
+        'legalName' => 'Solutions Delivered Limited',
         'url' => url('/'),
         'logo' => url('/') . '/logo.svg',
         'description' => 'Solutions Delivered provides tailored business solutions for process design, project management, and organizational change.',
+        'foundingDate' => '2019-06-21',
         'address' => [
             '@type' => 'PostalAddress',
+            'streetAddress' => 'Belmont Suite, Paragon Business Park, Chorley New Road',
+            'addressLocality' => 'Horwich',
+            'addressRegion' => 'Bolton',
+            'postalCode' => 'BL6 6HG',
             'addressCountry' => 'GB'
         ],
         'contactPoint' => [
@@ -70,6 +76,11 @@
             'contactType' => 'Customer Service',
             'url' => route('get-started')
         ],
+        'areaServed' => [
+            '@type' => 'Country',
+            'name' => 'United Kingdom'
+        ],
+        'taxID' => '12063264',
         'sameAs' => []
     ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
     </script>
@@ -78,20 +89,24 @@
     {!! json_encode([
         '@context' => 'https://schema.org',
         '@type' => 'ProfessionalService',
-        'name' => 'Solutions Delivered',
+        'name' => 'Solutions Delivered Limited',
         'url' => url('/'),
         'logo' => url('/') . '/logo.svg',
         'description' => 'Professional IT consultancy specialising in web development, service management, project management, and business change.',
         'address' => [
             '@type' => 'PostalAddress',
-            'addressCountry' => 'GB',
-            'addressLocality' => 'United Kingdom'
+            'streetAddress' => 'Belmont Suite, Paragon Business Park, Chorley New Road',
+            'addressLocality' => 'Horwich',
+            'addressRegion' => 'Bolton',
+            'postalCode' => 'BL6 6HG',
+            'addressCountry' => 'GB'
         ],
         'areaServed' => [
             '@type' => 'Country',
             'name' => 'United Kingdom'
         ],
         'priceRange' => '££',
+        'foundingDate' => '2019-06-21',
         'knowsAbout' => [
             'Web Development',
             'Service Management',

@@ -1,7 +1,71 @@
 @extends('layouts.app')
 
 @section('title', 'How We Work - Solutions Delivered')
-@section('meta_description', 'Learn about our collaborative approach, engagement process, and what to expect when working with Solutions Delivered.')
+@section('meta_description', 'Direct collaboration with experienced consultants. Transparent process, no hidden costs. Free initial consultation and 24-hour response time. Discover our proven engagement approach.')
+
+@push('schema')
+<x-schema.breadcrumb :items="[
+    ['name' => 'Home', 'url' => route('home')],
+    ['name' => 'How We Work']
+]" />
+
+<script type="application/ld+json">
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'FAQPage',
+    'mainEntity' => [
+        [
+            '@type' => 'Question',
+            'name' => 'What is your engagement process?',
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => 'We follow a simple four-step process: 1) Initial Discussion - We start with a conversation to understand your needs and objectives. 2) Proposal & Planning - We provide a clear proposal outlining scope, approach, timeline, and costs. 3) Collaborative Delivery - Regular check-ins and continuous feedback ensure we stay aligned with your vision. 4) Handover & Support - Comprehensive handover with documentation and ongoing support options.'
+            ]
+        ],
+        [
+            '@type' => 'Question',
+            'name' => 'How quickly will you respond to my inquiry?',
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => 'We guarantee a response within 24 hours during working days. You\'ll have direct access to our team with no account managers or layers of bureaucracy.'
+            ]
+        ],
+        [
+            '@type' => 'Question',
+            'name' => 'What are your pricing options?',
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => 'We offer flexible pricing options including fixed-price for defined scope projects or day-rate for flexible work. All pricing is transparent with no hidden costs, and we offer flexible payment terms for ongoing engagements. Our rates are competitive and value-focused without compromising quality.'
+            ]
+        ],
+        [
+            '@type' => 'Question',
+            'name' => 'Do you work remotely or on-site?',
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => 'We are remote-first and UK-based, offering flexible scheduling to accommodate your availability. On-site visits are available for local clients when needed, and we work with the tools and platforms of your choice.'
+            ]
+        ],
+        [
+            '@type' => 'Question',
+            'name' => 'What makes you different from other consultancies?',
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => 'We provide direct access to experienced consultants without account managers or bureaucracy. We focus on quality over speed with realistic timelines, offer transparent pricing with no hidden costs, and emphasize collaborative partnerships rather than transactional vendor relationships. We\'re committed to accessibility (WCAG 2.2 compliance) and building maintainable, no-bloat solutions.'
+            ]
+        ],
+        [
+            '@type' => 'Question',
+            'name' => 'Who are you a good fit for?',
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => 'We work best with organizations that value quality, accessibility, and long-term maintainability over quick fixes. Ideal clients prefer collaborative partnerships, need bespoke solutions rather than off-the-shelf products, appreciate transparent communication and realistic expectations, and care about accessibility and inclusive digital experiences.'
+            ]
+        ]
+    ]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
+</script>
+@endpush
 
 @section('content')
 <!-- Page Header -->

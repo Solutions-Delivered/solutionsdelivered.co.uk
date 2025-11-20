@@ -1,9 +1,15 @@
 @extends('layouts.app')
 
 @section('title', 'Get Started - Solutions Delivered')
-@section('meta_description', 'Contact Solutions Delivered to discuss how we can help transform your business with our tailored consulting services.')
+@section('meta_description', 'Start your transformation today. Free initial consultation, 24-hour response time, no-obligation proposal. Contact our Bolton-based team to discuss your Laravel, ITIL, or project management needs.')
 
 @push('schema')
+<x-schema.breadcrumb :items="[
+    ['name' => 'Home', 'url' => route('home')],
+    ['name' => 'Get Started']
+]" />
+
+
 <script type="application/ld+json">
 {!! json_encode([
     '@context' => 'https://schema.org',

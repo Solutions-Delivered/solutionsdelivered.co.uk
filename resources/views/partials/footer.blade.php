@@ -99,9 +99,14 @@
         <!-- Bottom section -->
         <div class="relative border-t border-gray-700/50 pt-8">
             <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                <p class="text-gray-500 text-sm">
-                    &copy; {{ date('Y') }} Solutions Delivered. All rights reserved.
-                </p>
+                <div class="text-center md:text-left">
+                    <p class="text-gray-500 text-sm">
+                        &copy; {{ date('Y') }} Solutions Delivered Limited. All rights reserved.
+                    </p>
+                    <p class="text-gray-600 text-xs mt-1">
+                        Registered in England and Wales • Company No. 12063264
+                    </p>
+                </div>
                 <div class="flex items-center space-x-6">
                     <a href="{{ route('privacy') }}" class="text-gray-500 hover:text-white text-sm transition-colors duration-200 relative group">
                         Privacy Policy

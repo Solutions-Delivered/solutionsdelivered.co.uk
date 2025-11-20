@@ -1,9 +1,14 @@
 @extends('layouts.app')
 
 @section('title', 'Our Solutions - Solutions Delivered')
-@section('meta_description', 'Explore our comprehensive business solutions including Web Development, Service Management, Project Management, and Business Change consulting services.')
+@section('meta_description', 'Bespoke Laravel web development, ITIL service management, project management, and business change consulting. WCAG 2.2 compliant, no-bloat solutions tailored to your needs.')
 
 @push('schema')
+<x-schema.breadcrumb :items="[
+    ['name' => 'Home', 'url' => route('home')],
+    ['name' => 'Solutions']
+]" />
+
 <script type="application/ld+json">
 {!! json_encode([
     '@context' => 'https://schema.org',

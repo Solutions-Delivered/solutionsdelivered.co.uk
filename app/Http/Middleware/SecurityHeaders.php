@@ -40,11 +40,12 @@ class SecurityHeaders
         // Note: This is a strict policy. Adjust based on your needs.
         $csp = [
             "default-src 'self'",
-            "script-src 'self' 'unsafe-inline' 'unsafe-eval'", // unsafe-inline/eval needed for Vite dev & Alpine.js
+            "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com", // unsafe-inline/eval needed for Vite dev & Alpine.js; GTM for analytics
             "style-src 'self' 'unsafe-inline'",                 // unsafe-inline needed for Tailwind
-            "img-src 'self' data: https:",
+            "img-src 'self' data: https: https://www.googletagmanager.com",
             "font-src 'self' data:",
-            "connect-src 'self'",
+            "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com",
+            'frame-src https://www.googletagmanager.com',
             "frame-ancestors 'self'",
             "base-uri 'self'",
             "form-action 'self'",

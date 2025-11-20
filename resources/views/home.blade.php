@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Solutions Delivered - Delivering Solutions is in Our DNA')
-@section('meta_description', 'UK-based consultancy offering tailored business solutions for process design, project management, and organizational change.')
+@section('meta_description', 'Bolton-based IT consultancy founded 2019. Laravel web development, ITIL service management, project management. WCAG 2.2 compliant, no-bloat solutions. Free consultation, 24-hour response.')
 
 @section('content')
 <!-- Hero Section -->
