@@ -5,18 +5,18 @@
 
 @push('schema')
 <script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "name": "Get Started",
-    "description": "Contact Solutions Delivered to discuss how we can help transform your business with our tailored consulting services.",
-    "url": "{{ url()->current() }}",
-    "mainEntity": {
-        "@type": "Organization",
-        "name": "Solutions Delivered",
-        "url": "{{ url('/') }}"
-    }
-}
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'ContactPage',
+    'name' => 'Get Started',
+    'description' => 'Contact Solutions Delivered to discuss how we can help transform your business with our tailored consulting services.',
+    'url' => url()->current(),
+    'mainEntity' => [
+        '@type' => 'Organization',
+        'name' => 'Solutions Delivered',
+        'url' => url('/'),
+    ],
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
 </script>
 @endpush
 
