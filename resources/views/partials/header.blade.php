@@ -10,8 +10,10 @@
                 <a href="{{ route('home') }}" class="flex items-center gap-3 transition-opacity duration-200 hover:opacity-80" aria-label="Solutions Delivered Home">
                     <img src="{{ asset('logo.svg') }}"
                          alt="Solutions Delivered Logo"
-                         class="h-10 w-10"
-                         style="max-height: 2.5rem;">
+                         width="40"
+                         height="40"
+                         fetchpriority="high"
+                         class="h-10 w-10">
                     <span class="text-xl font-bold text-[#198fd9]">Solutions Delivered</span>
                 </a>
             </div>
@@ -33,7 +35,7 @@
                 <a href="{{ route('careers') }}" class="text-gray-700 hover:text-[#198fd9] px-3 py-2 text-sm font-medium transition-colors duration-200 {{ request()->routeIs('careers') ? 'border-b-2 border-[#198fd9]' : '' }}" {!! request()->routeIs('careers') ? 'aria-current="page"' : '' !!}>
                     Careers
                 </a>
-                <a href="{{ route('get-started') }}" class="bg-[#198fd9] text-white hover:bg-[#0f6ba8] px-6 py-2 rounded-md text-sm font-medium transition-colors duration-200">
+                <a href="{{ route('get-started') }}" class="bg-[#198fd9] text-white hover:bg-[#0f6ba8] px-6 py-2 rounded-md text-sm font-medium transition-all duration-200 active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#198fd9]">
                     Get Started
                 </a>
             </div>
@@ -63,7 +65,7 @@
                                     <a href="{{ route('solutions') }}" class="text-base font-medium text-gray-700 hover:text-[#198fd9]" {!! request()->routeIs('solutions') ? 'aria-current="page"' : '' !!}>Solutions</a>
                                     <a href="{{ route('how-we-work') }}" class="text-base font-medium text-gray-700 hover:text-[#198fd9]" {!! request()->routeIs('how-we-work') ? 'aria-current="page"' : '' !!}>How We Work</a>
                                     <a href="{{ route('careers') }}" class="text-base font-medium text-gray-700 hover:text-[#198fd9]" {!! request()->routeIs('careers') ? 'aria-current="page"' : '' !!}>Careers</a>
-                                    <a href="{{ route('get-started') }}" class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#198fd9] hover:bg-[#0f6ba8]">Get Started</a>
+                                    <a href="{{ route('get-started') }}" class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#198fd9] hover:bg-[#0f6ba8] active:scale-95 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#198fd9]">Get Started</a>
                                 </nav>
                             </div>
                         </div>

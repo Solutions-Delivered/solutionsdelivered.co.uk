@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Get Started - Solutions Delivered')
-@section('meta_description', 'Start your transformation today. Free initial consultation, 24-hour response time, no-obligation proposal. Contact our Bolton-based team to discuss your Laravel, ITIL, or project management needs.')
+@section('meta_description', 'Start your transformation today. Free initial consultation, 24-hour response time, no-obligation proposal. Contact our UK-wide remote team to discuss your Laravel, ITIL, or project management needs.')
 
 @push('schema')
 <x-schema.breadcrumb :items="[
@@ -29,11 +29,9 @@
 @section('content')
 <!-- Page Header -->
 <section class="relative overflow-hidden bg-gradient-to-br from-[#198fd9] via-[#1a7fc7] to-[#0f6ba8] text-white py-20 px-4 sm:px-6 lg:px-8">
-    <!-- Decorative background elements -->
+    <!-- Subtle decorative background element -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div class="absolute top-10 right-10 w-96 h-96 bg-white opacity-10 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-10 left-10 w-72 h-72 bg-white opacity-5 rounded-full blur-3xl"></div>
-        <div class="absolute inset-0 bg-white opacity-5 transform skew-y-3 origin-bottom-left"></div>
+        <div class="absolute top-10 right-10 w-64 h-64 bg-white opacity-5 rounded-full blur-xl"></div>
     </div>
 
     <div class="relative max-w-7xl mx-auto">
@@ -249,10 +247,9 @@
 
 <!-- Additional Info Section -->
 <section class="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white" aria-labelledby="info-heading">
-    <!-- Decorative background -->
+    <!-- Subtle decorative background -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div class="absolute top-1/2 left-1/4 w-96 h-96 bg-[#198fd9] opacity-5 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-[#0f6ba8] opacity-5 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/2 left-1/4 w-64 h-64 bg-[#198fd9] opacity-5 rounded-full blur-lg"></div>
     </div>
 
     <div class="relative max-w-7xl mx-auto">

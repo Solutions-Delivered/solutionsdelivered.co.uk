@@ -1,19 +1,15 @@
 @extends('layouts.app')
 
 @section('title', 'Solutions Delivered - Delivering Solutions is in Our DNA')
-@section('meta_description', 'Bolton-based IT consultancy founded 2019. Laravel web development, ITIL service management, project management. WCAG 2.2 compliant, no-bloat solutions. Free consultation, 24-hour response.')
+@section('meta_description', 'UK remote IT consultancy founded 2019. Laravel web development, ITIL service management, project management. WCAG 2.2 compliant, no-bloat solutions. Free consultation, 24-hour response.')
 
 @section('content')
 <!-- Hero Section -->
 <section class="relative overflow-hidden min-h-[600px]" aria-labelledby="hero-heading">
-    <!-- Background with gradient and decorative elements -->
+    <!-- Background with gradient and subtle decorative elements -->
     <div class="absolute inset-0 bg-gradient-to-br from-[#198fd9] via-[#1a7fc7] to-[#0f6ba8]">
-        <!-- Diagonal overlay for visual interest -->
-        <div class="absolute inset-0 bg-white opacity-5 transform -skew-y-6 origin-top-left"></div>
-
-        <!-- Decorative circles/blurs for depth -->
-        <div class="absolute top-20 right-20 w-64 h-64 bg-white opacity-10 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-10 left-10 w-96 h-96 bg-white opacity-10 rounded-full blur-3xl"></div>
+        <!-- Subtle decorative element for depth -->
+        <div class="absolute top-20 right-20 w-64 h-64 bg-white opacity-5 rounded-full blur-xl"></div>
     </div>
 
     <!-- Content -->
@@ -321,9 +317,8 @@
 
 <!-- Call to Action Section -->
 <section class="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#198fd9] via-[#1a7fc7] to-[#0f6ba8] text-white overflow-hidden" aria-labelledby="cta-heading">
-    <!-- Decorative elements -->
-    <div class="absolute top-0 right-0 w-96 h-96 bg-white opacity-5 rounded-full blur-3xl" aria-hidden="true"></div>
-    <div class="absolute bottom-0 left-0 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl" aria-hidden="true"></div>
+    <!-- Subtle decorative element -->
+    <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full blur-lg" aria-hidden="true"></div>
 
     <div class="relative max-w-4xl mx-auto text-center">
         <h2 id="cta-heading" class="text-4xl md:text-5xl font-bold mb-6">

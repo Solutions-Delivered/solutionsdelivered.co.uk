@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'About Us - Solutions Delivered')
-@section('meta_description', 'Founded 2019 in Bolton, UK. Direct collaboration with experienced consultants. Transparent process, proven results. Specialising in Laravel development, ITIL, and business change.')
+@section('meta_description', 'Founded 2019, UK-wide. 100% remote or client-site consultancy. Direct collaboration with experienced consultants. Transparent process, proven results. Specialising in Laravel development, ITIL, and business change.')
 
 @push('schema')
 <x-schema.breadcrumb :items="[
@@ -13,11 +13,9 @@
 @section('content')
 <!-- Page Header -->
 <section class="relative overflow-hidden bg-gradient-to-br from-[#198fd9] via-[#1a7fc7] to-[#0f6ba8] text-white py-20 px-4 sm:px-6 lg:px-8">
-    <!-- Decorative background elements -->
+    <!-- Subtle decorative background element -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div class="absolute top-10 right-20 w-72 h-72 bg-white opacity-10 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-10 left-10 w-96 h-96 bg-white opacity-5 rounded-full blur-3xl"></div>
-        <div class="absolute inset-0 bg-white opacity-5 transform -skew-y-3 origin-top-right"></div>
+        <div class="absolute top-10 right-20 w-64 h-64 bg-white opacity-5 rounded-full blur-xl"></div>
     </div>
 
     <div class="relative max-w-7xl mx-auto">
@@ -143,10 +141,9 @@
 
 <!-- Call to Action -->
 <section class="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#198fd9] via-[#1a7fc7] to-[#0f6ba8] text-white" aria-labelledby="cta-heading">
-    <!-- Decorative background elements -->
+    <!-- Subtle decorative background element -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div class="absolute -top-24 -right-24 w-96 h-96 bg-white opacity-10 rounded-full blur-3xl"></div>
-        <div class="absolute -bottom-24 -left-24 w-[500px] h-[500px] bg-white opacity-5 rounded-full blur-3xl"></div>
+        <div class="absolute -top-24 -right-24 w-64 h-64 bg-white opacity-5 rounded-full blur-lg"></div>
     </div>
 
     <div class="relative max-w-4xl mx-auto text-center">
