@@ -69,7 +69,7 @@
 
 @section('content')
 <!-- Page Header -->
-<section class="relative overflow-hidden bg-gradient-to-br from-[#198fd9] via-[#1a7fc7] to-[#0f6ba8] text-white py-20 px-4 sm:px-6 lg:px-8">
+<section class="relative overflow-hidden bg-gradient-to-br from-[#198fd9] via-[#1a7fc7] to-[#0f6ba8] text-white py-10 sm:py-14 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
     <!-- Decorative background elements -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
         <div class="absolute top-10 right-20 w-72 h-72 bg-white opacity-10 rounded-full blur-3xl"></div>
@@ -86,23 +86,23 @@
             How We Work
         </x-badge.breadcrumb>
 
-        <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             Our Collaborative
             <span class="block text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-100 to-gray-200 mt-1">
                 Approach to Success
             </span>
         </h1>
 
-        <p class="text-xl md:text-2xl max-w-3xl text-gray-100 leading-relaxed">
+        <p class="text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl text-gray-100 leading-relaxed">
             A transparent, collaborative approach to delivering your solutions with clear communication every step of the way
         </p>
     </div>
 </section>
 
 <!-- Our Approach Section -->
-<section class="py-16 px-4 sm:px-6 lg:px-8 bg-white" aria-labelledby="approach-heading">
+<section class="py-8 sm:py-12 md:py-14 lg:py-16 px-4 sm:px-6 lg:px-8 bg-white" aria-labelledby="approach-heading">
     <div class="max-w-4xl mx-auto">
-        <h2 id="approach-heading" class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        <h2 id="approach-heading" class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             Our Approach
         </h2>
         <p class="text-lg text-gray-700 mb-4">
@@ -115,7 +115,7 @@
 </section>
 
 <!-- Engagement Process Section -->
-<section class="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white" aria-labelledby="process-heading">
+<section class="relative overflow-hidden py-10 sm:py-14 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white" aria-labelledby="process-heading">
     <!-- Decorative background -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
         <div class="absolute top-1/2 left-1/4 w-96 h-96 bg-[#198fd9] opacity-5 rounded-full blur-3xl"></div>
@@ -130,16 +130,16 @@
                 </x-slot:icon>
                 Our Process
             </x-badge.breadcrumb>
-            <h2 id="process-heading" class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 id="process-heading" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
                 How We Engage
             </h2>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p class="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
                 A simple, transparent four-step process to turn your vision into reality
             </p>
         </div>
 
         <div class="grid md:grid-cols-4 gap-6">
-            <div class="relative bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-200">
+            <div class="relative bg-white rounded-2xl p-6 sm:p-7 md:p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-200">
                 <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
                     <div class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-[#198fd9] to-[#1a7fc7] text-white rounded-xl shadow-lg text-xl font-bold" aria-hidden="true">
                         1
@@ -153,7 +153,7 @@
                 </div>
             </div>
 
-            <div class="relative bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-200">
+            <div class="relative bg-white rounded-2xl p-6 sm:p-7 md:p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-200">
                 <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
                     <div class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-[#1a7fc7] to-[#0f6ba8] text-white rounded-xl shadow-lg text-xl font-bold" aria-hidden="true">
                         2
@@ -167,7 +167,7 @@
                 </div>
             </div>
 
-            <div class="relative bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-200">
+            <div class="relative bg-white rounded-2xl p-6 sm:p-7 md:p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-200">
                 <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
                     <div class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-[#0f6ba8] to-[#198fd9] text-white rounded-xl shadow-lg text-xl font-bold" aria-hidden="true">
                         3
@@ -181,7 +181,7 @@
                 </div>
             </div>
 
-            <div class="relative bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-200">
+            <div class="relative bg-white rounded-2xl p-6 sm:p-7 md:p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-200">
                 <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
                     <div class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-[#198fd9] to-[#0f6ba8] text-white rounded-xl shadow-lg text-xl font-bold" aria-hidden="true">
                         4
@@ -199,14 +199,14 @@
 </section>
 
 <!-- What to Expect Section -->
-<section class="py-16 px-4 sm:px-6 lg:px-8 bg-white" aria-labelledby="expect-heading">
+<section class="py-8 sm:py-12 md:py-14 lg:py-16 px-4 sm:px-6 lg:px-8 bg-white" aria-labelledby="expect-heading">
     <div class="max-w-7xl mx-auto">
-        <h2 id="expect-heading" class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+        <h2 id="expect-heading" class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
             What to Expect
         </h2>
 
         <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+            <div class="bg-white rounded-2xl p-6 sm:p-7 md:p-8 shadow-lg border border-gray-100">
                 <div class="flex items-center mb-6">
                     <div class="w-12 h-12 bg-gradient-to-br from-[#198fd9] to-[#1a7fc7] rounded-xl flex items-center justify-center mr-4 shadow-md" aria-hidden="true">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -358,9 +358,9 @@
 </section>
 
 <!-- When We're a Good Fit Section -->
-<section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50" aria-labelledby="fit-heading">
+<section class="py-8 sm:py-12 md:py-14 lg:py-16 px-4 sm:px-6 lg:px-8 bg-gray-50" aria-labelledby="fit-heading">
     <div class="max-w-4xl mx-auto">
-        <h2 id="fit-heading" class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        <h2 id="fit-heading" class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             When We're a Good Fit
         </h2>
         <p class="text-lg text-gray-700 mb-6">
@@ -402,7 +402,7 @@
 </section>
 
 <!-- Call to Action -->
-<section class="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#198fd9] via-[#1a7fc7] to-[#0f6ba8] text-white" aria-labelledby="cta-heading">
+<section class="relative overflow-hidden py-10 sm:py-14 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#198fd9] via-[#1a7fc7] to-[#0f6ba8] text-white" aria-labelledby="cta-heading">
     <!-- Decorative background elements -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
         <div class="absolute -top-24 -right-24 w-96 h-96 bg-white opacity-10 rounded-full blur-3xl"></div>
@@ -418,10 +418,10 @@
             Ready to Get Started?
         </div>
 
-        <h2 id="cta-heading" class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+        <h2 id="cta-heading" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
             Let's Start a Conversation
         </h2>
-        <p class="text-xl md:text-2xl mb-12 text-gray-100 max-w-2xl mx-auto leading-relaxed">
+        <p class="text-base sm:text-lg md:text-xl lg:text-2xl mb-12 text-gray-100 max-w-2xl mx-auto leading-relaxed">
             No obligation, no pressure—just an honest discussion about your needs and how we can help
         </p>
 

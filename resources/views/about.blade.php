@@ -12,7 +12,7 @@
 
 @section('content')
 <!-- Page Header -->
-<section class="relative overflow-hidden bg-gradient-to-br from-[#198fd9] via-[#1a7fc7] to-[#0f6ba8] text-white py-20 px-4 sm:px-6 lg:px-8">
+<section class="relative overflow-hidden bg-gradient-to-br from-[#198fd9] via-[#1a7fc7] to-[#0f6ba8] text-white py-10 sm:py-14 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
     <!-- Subtle decorative background element -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
         <div class="absolute top-10 right-20 w-64 h-64 bg-white opacity-5 rounded-full blur-xl"></div>
@@ -27,23 +27,23 @@
             About Us
         </x-badge.breadcrumb>
 
-        <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             About
             <span class="block text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-100 to-gray-200 mt-1">
                 Solutions Delivered
             </span>
         </h1>
 
-        <p class="text-xl md:text-2xl max-w-3xl text-gray-100 leading-relaxed">
+        <p class="text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl text-gray-100 leading-relaxed">
             Your trusted partner in delivering tailored business solutions that drive real results.
         </p>
     </div>
 </section>
 
 <!-- Mission Section -->
-<section class="py-16 px-4 sm:px-6 lg:px-8 bg-white" aria-labelledby="mission-heading">
+<section class="py-8 sm:py-12 md:py-14 lg:py-16 px-4 sm:px-6 lg:px-8 bg-white" aria-labelledby="mission-heading">
     <div class="max-w-4xl mx-auto">
-        <h2 id="mission-heading" class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
+        <h2 id="mission-heading" class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
         <p class="text-lg text-gray-700 mb-4">
             At Solutions Delivered, we believe that every organisation is unique, and so are its challenges. Our mission is to provide tailored business solutions that align with your specific needs, helping you achieve sustainable growth and operational excellence.
         </p>
@@ -54,36 +54,36 @@
 </section>
 
 <!-- What Sets Us Apart -->
-<section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50" aria-labelledby="approach-heading">
+<section class="py-8 sm:py-12 md:py-14 lg:py-16 px-4 sm:px-6 lg:px-8 bg-gray-50" aria-labelledby="approach-heading">
     <div class="max-w-7xl mx-auto">
-        <h2 id="approach-heading" class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+        <h2 id="approach-heading" class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 mb-8 sm:mb-10 md:mb-12">
             What Sets Us Apart
         </h2>
 
         <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white rounded-lg p-8 shadow-md">
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">Tailored Solutions</h3>
+            <div class="bg-white rounded-lg p-6 sm:p-7 md:p-8 shadow-md">
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Tailored Solutions</h3>
                 <p class="text-gray-700">
                     We don't believe in one-size-fits-all approaches. Every solution we deliver is customised to address your specific business context, challenges, and objectives.
                 </p>
             </div>
 
-            <div class="bg-white rounded-lg p-8 shadow-md">
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">Experienced Team</h3>
+            <div class="bg-white rounded-lg p-6 sm:p-7 md:p-8 shadow-md">
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Experienced Team</h3>
                 <p class="text-gray-700">
                     Our consultants bring years of real-world experience across various industries, ensuring practical, implementable solutions that drive results.
                 </p>
             </div>
 
-            <div class="bg-white rounded-lg p-8 shadow-md">
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">Collaborative Approach</h3>
+            <div class="bg-white rounded-lg p-6 sm:p-7 md:p-8 shadow-md">
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Collaborative Approach</h3>
                 <p class="text-gray-700">
                     We work directly with your teams, fostering knowledge transfer and building internal capabilities that last beyond our engagement.
                 </p>
             </div>
 
-            <div class="bg-white rounded-lg p-8 shadow-md">
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">Results-Driven</h3>
+            <div class="bg-white rounded-lg p-6 sm:p-7 md:p-8 shadow-md">
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Results-Driven</h3>
                 <p class="text-gray-700">
                     Our focus is on delivering measurable outcomes that contribute to your bottom line and long-term success.
                 </p>
@@ -93,9 +93,9 @@
 </section>
 
 <!-- Our Values -->
-<section class="py-16 px-4 sm:px-6 lg:px-8 bg-white" aria-labelledby="values-heading">
+<section class="py-8 sm:py-12 md:py-14 lg:py-16 px-4 sm:px-6 lg:px-8 bg-white" aria-labelledby="values-heading">
     <div class="max-w-7xl mx-auto">
-        <h2 id="values-heading" class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+        <h2 id="values-heading" class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 mb-8 sm:mb-10 md:mb-12">
             Our Core Values
         </h2>
 
@@ -140,7 +140,7 @@
 </section>
 
 <!-- Call to Action -->
-<section class="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#198fd9] via-[#1a7fc7] to-[#0f6ba8] text-white" aria-labelledby="cta-heading">
+<section class="relative overflow-hidden py-10 sm:py-14 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#198fd9] via-[#1a7fc7] to-[#0f6ba8] text-white" aria-labelledby="cta-heading">
     <!-- Subtle decorative background element -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
         <div class="absolute -top-24 -right-24 w-64 h-64 bg-white opacity-5 rounded-full blur-lg"></div>
@@ -155,10 +155,10 @@
             Ready to Get Started?
         </x-badge.breadcrumb>
 
-        <h2 id="cta-heading" class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+        <h2 id="cta-heading" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
             Want to Learn More?
         </h2>
-        <p class="text-xl md:text-2xl mb-12 text-gray-100 max-w-2xl mx-auto leading-relaxed">
+        <p class="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 sm:mb-10 md:mb-12 text-gray-100 max-w-2xl mx-auto leading-relaxed">
             Discover how our solutions can help transform your organisation and drive sustainable growth.
         </p>
 

@@ -5,7 +5,7 @@
 
 @section('content')
 <!-- Hero Section -->
-<section class="relative overflow-hidden min-h-[600px]" aria-labelledby="hero-heading">
+<section class="relative overflow-hidden min-h-auto sm:min-h-[500px] md:min-h-[600px]" aria-labelledby="hero-heading">
     <!-- Background with gradient and subtle decorative elements -->
     <div class="absolute inset-0 bg-gradient-to-br from-[#198fd9] via-[#1a7fc7] to-[#0f6ba8]">
         <!-- Subtle decorative element for depth -->
@@ -13,7 +13,7 @@
     </div>
 
     <!-- Content -->
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
         <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
             <div class="text-white">
                 <!-- Badge/tag element -->
@@ -22,14 +22,14 @@
                     UK-Based IT Consultancy
                 </div>
 
-                <h1 id="hero-heading" class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                <h1 id="hero-heading" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight">
                     Delivering Solutions
                     <span class="block text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-200 mt-2">
                         is in Our DNA
                     </span>
                 </h1>
 
-                <p class="text-xl md:text-2xl mb-8 text-gray-100 max-w-2xl">
+                <p class="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 text-gray-100 max-w-2xl">
                     Tailored IT solutions for service management, web development, and business transformation
                 </p>
 
@@ -65,7 +65,7 @@
 </section>
 
 <!-- Services Overview Section -->
-<section class="py-20 px-4 sm:px-6 lg:px-8 bg-white" aria-labelledby="services-heading">
+<section class="py-10 sm:py-14 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white" aria-labelledby="services-heading">
     <div class="max-w-7xl mx-auto">
         <!-- Section heading -->
         <x-section-heading eyebrow="What We Offer" id="services-heading">
@@ -74,7 +74,7 @@
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Web Development -->
-            <article class="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-[#198fd9] hover:border-[#0f6ba8] hover:-translate-y-2">
+            <article class="group relative bg-white rounded-2xl p-6 sm:p-7 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-[#198fd9] hover:border-[#0f6ba8] hover:-translate-y-2">
                 <!-- Gradient icon background -->
                 <div class="relative inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-[#198fd9] to-[#1a7fc7] text-white mb-6 shadow-lg group-hover:scale-110 transition-transform" aria-hidden="true">
                     <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -84,7 +84,7 @@
                     <div class="absolute -inset-1 bg-gradient-to-br from-[#198fd9] to-[#1a7fc7] rounded-xl opacity-20 blur-sm group-hover:opacity-40 transition-opacity"></div>
                 </div>
 
-                <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#198fd9] transition-colors">
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#198fd9] transition-colors">
                     Web Development
                 </h3>
 
@@ -117,7 +117,7 @@
                     <div class="absolute -inset-1 bg-gradient-to-br from-[#0f6ba8] to-[#198fd9] rounded-xl opacity-20 blur-sm group-hover:opacity-40 transition-opacity"></div>
                 </div>
 
-                <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#198fd9] transition-colors">
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#198fd9] transition-colors">
                     Service Management
                 </h3>
 
@@ -140,7 +140,7 @@
             </article>
 
             <!-- Project Management -->
-            <article class="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-[#198fd9] hover:border-[#0f6ba8] hover:-translate-y-2">
+            <article class="group relative bg-white rounded-2xl p-6 sm:p-7 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-[#198fd9] hover:border-[#0f6ba8] hover:-translate-y-2">
                 <div class="relative inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-[#198fd9] to-[#1a7fc7] text-white mb-6 shadow-lg group-hover:scale-110 transition-transform" aria-hidden="true">
                     <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
@@ -148,7 +148,7 @@
                     <div class="absolute -inset-1 bg-gradient-to-br from-[#198fd9] to-[#1a7fc7] rounded-xl opacity-20 blur-sm group-hover:opacity-40 transition-opacity"></div>
                 </div>
 
-                <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#198fd9] transition-colors">
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#198fd9] transition-colors">
                     Project Management
                 </h3>
 
@@ -179,7 +179,7 @@
                     <div class="absolute -inset-1 bg-gradient-to-br from-[#0f6ba8] to-[#198fd9] rounded-xl opacity-20 blur-sm group-hover:opacity-40 transition-opacity"></div>
                 </div>
 
-                <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#198fd9] transition-colors">
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#198fd9] transition-colors">
                     Business Change
                 </h3>
 
@@ -205,13 +205,13 @@
 </section>
 
 <!-- Value Propositions Section -->
-<section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-white to-gray-50" aria-labelledby="values-heading">
+<section class="py-10 sm:py-14 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-white to-gray-50" aria-labelledby="values-heading">
     <div class="max-w-7xl mx-auto">
         <!-- Section heading with eyebrow -->
         <x-section-heading eyebrow="How We Work" id="values-heading">
             Our Approach
         </x-section-heading>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto text-center -mt-12 mb-16">
+        <p class="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto text-center -mt-12 mb-12 sm:mb-14 md:mb-16">
             We combine technical expertise with practical delivery to create lasting value
         </p>
 
@@ -226,7 +226,7 @@
                     </div>
                     <div class="absolute -inset-2 border-2 border-[#198fd9] opacity-0 group-hover:opacity-20 rounded-2xl transition-opacity" aria-hidden="true"></div>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-3">Process Design</h3>
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Process Design</h3>
                 <p class="text-gray-600 leading-relaxed">
                     Streamlined workflows tailored to your business needs, eliminating bottlenecks and improving efficiency
                 </p>
@@ -242,7 +242,7 @@
                     </div>
                     <div class="absolute -inset-2 border-2 border-[#0f6ba8] opacity-0 group-hover:opacity-20 rounded-2xl transition-opacity" aria-hidden="true"></div>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-3">Team Development</h3>
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Team Development</h3>
                 <p class="text-gray-600 leading-relaxed">
                     Empowering teams to achieve their full potential through direct collaboration and knowledge transfer
                 </p>
@@ -258,7 +258,7 @@
                     </div>
                     <div class="absolute -inset-2 border-2 border-[#198fd9] opacity-0 group-hover:opacity-20 rounded-2xl transition-opacity" aria-hidden="true"></div>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-3">Trusted Delivery</h3>
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Trusted Delivery</h3>
                 <p class="text-gray-600 leading-relaxed">
                     Reliable execution you can count on, with transparent communication and realistic expectations
                 </p>
@@ -274,7 +274,7 @@
                     </div>
                     <div class="absolute -inset-2 border-2 border-[#0f6ba8] opacity-0 group-hover:opacity-20 rounded-2xl transition-opacity" aria-hidden="true"></div>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-3">Digital Presence</h3>
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Digital Presence</h3>
                 <p class="text-gray-600 leading-relaxed">
                     Building strong, accessible online identities that work for everyone
                 </p>
@@ -290,7 +290,7 @@
                     </div>
                     <div class="absolute -inset-2 border-2 border-[#198fd9] opacity-0 group-hover:opacity-20 rounded-2xl transition-opacity" aria-hidden="true"></div>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-3">Delivery Management</h3>
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Delivery Management</h3>
                 <p class="text-gray-600 leading-relaxed">
                     Expert oversight from start to finish, keeping projects on track and within budget
                 </p>
@@ -306,7 +306,7 @@
                     </div>
                     <div class="absolute -inset-2 border-2 border-[#0f6ba8] opacity-0 group-hover:opacity-20 rounded-2xl transition-opacity" aria-hidden="true"></div>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-3">Quality Assurance</h3>
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Quality Assurance</h3>
                 <p class="text-gray-600 leading-relaxed">
                     Excellence in every deliverable, with rigorous testing and attention to detail
                 </p>
@@ -316,15 +316,15 @@
 </section>
 
 <!-- Call to Action Section -->
-<section class="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#198fd9] via-[#1a7fc7] to-[#0f6ba8] text-white overflow-hidden" aria-labelledby="cta-heading">
+<section class="relative py-10 sm:py-14 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#198fd9] via-[#1a7fc7] to-[#0f6ba8] text-white overflow-hidden" aria-labelledby="cta-heading">
     <!-- Subtle decorative element -->
     <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full blur-lg" aria-hidden="true"></div>
 
     <div class="relative max-w-4xl mx-auto text-center">
-        <h2 id="cta-heading" class="text-4xl md:text-5xl font-bold mb-6">
+        <h2 id="cta-heading" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             Ready to Transform Your Business?
         </h2>
-        <p class="text-xl md:text-2xl mb-12 text-gray-100">
+        <p class="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 sm:mb-10 md:mb-12 text-gray-100">
             Let's discuss how we can help deliver tailored solutions for your unique challenges
         </p>
 
