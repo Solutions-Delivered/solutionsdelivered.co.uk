@@ -5,65 +5,65 @@
 
 @push('schema')
 <script type="application/ld+json">
-{
-    "@@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Our Solutions",
-    "description": "Comprehensive business solutions including web development, service management, project management, and business change consulting.",
-    "url": "{{ url()->current() }}"
-}
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'WebPage',
+    'name' => 'Our Solutions',
+    'description' => 'Comprehensive business solutions including web development, service management, project management, and business change consulting.',
+    'url' => url()->current()
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
 </script>
 <script type="application/ld+json">
-{
-    "@@context": "https://schema.org",
-    "@type": "ItemList",
-    "itemListElement": [
-        {
-            "@type": "Service",
-            "name": "Web Development",
-            "description": "Bespoke Laravel-based web systems built for accessibility, efficiency, and value. WCAG 2.2 compliant with no-bloat philosophy.",
-            "provider": {
-                "@type": "Organization",
-                "name": "Solutions Delivered"
-            },
-            "areaServed": "GB",
-            "serviceType": "Web Development"
-        },
-        {
-            "@type": "Service",
-            "name": "Service Management",
-            "description": "Expert guidance in implementing and optimizing ITIL-aligned service management frameworks.",
-            "provider": {
-                "@type": "Organization",
-                "name": "Solutions Delivered"
-            },
-            "areaServed": "GB",
-            "serviceType": "IT Service Management"
-        },
-        {
-            "@type": "Service",
-            "name": "Project Management",
-            "description": "Professional project management services to ensure successful delivery of your initiatives.",
-            "provider": {
-                "@type": "Organization",
-                "name": "Solutions Delivered"
-            },
-            "areaServed": "GB",
-            "serviceType": "Project Management"
-        },
-        {
-            "@type": "Service",
-            "name": "Business Change",
-            "description": "Strategic guidance through organizational transformation and business process improvement.",
-            "provider": {
-                "@type": "Organization",
-                "name": "Solutions Delivered"
-            },
-            "areaServed": "GB",
-            "serviceType": "Business Consulting"
-        }
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'ItemList',
+    'itemListElement' => [
+        [
+            '@type' => 'Service',
+            'name' => 'Web Development',
+            'description' => 'Bespoke Laravel-based web systems built for accessibility, efficiency, and value. WCAG 2.2 compliant with no-bloat philosophy.',
+            'provider' => [
+                '@type' => 'Organization',
+                'name' => 'Solutions Delivered'
+            ],
+            'areaServed' => 'GB',
+            'serviceType' => 'Web Development'
+        ],
+        [
+            '@type' => 'Service',
+            'name' => 'Service Management',
+            'description' => 'Expert guidance in implementing and optimizing ITIL-aligned service management frameworks.',
+            'provider' => [
+                '@type' => 'Organization',
+                'name' => 'Solutions Delivered'
+            ],
+            'areaServed' => 'GB',
+            'serviceType' => 'IT Service Management'
+        ],
+        [
+            '@type' => 'Service',
+            'name' => 'Project Management',
+            'description' => 'Professional project management services to ensure successful delivery of your initiatives.',
+            'provider' => [
+                '@type' => 'Organization',
+                'name' => 'Solutions Delivered'
+            ],
+            'areaServed' => 'GB',
+            'serviceType' => 'Project Management'
+        ],
+        [
+            '@type' => 'Service',
+            'name' => 'Business Change',
+            'description' => 'Strategic guidance through organizational transformation and business process improvement.',
+            'provider' => [
+                '@type' => 'Organization',
+                'name' => 'Solutions Delivered'
+            ],
+            'areaServed' => 'GB',
+            'serviceType' => 'Business Consulting'
+        ]
     ]
-}
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
 </script>
 @endpush
 

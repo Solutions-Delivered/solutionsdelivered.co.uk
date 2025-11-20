@@ -35,4 +35,9 @@ return [
         ],
     ],
 
+    'analytics' => [
+        'enabled' => env('ANALYTICS_ENABLED', false),
+        'gtm_id' => env('GOOGLE_TAG_MANAGER_ID'),
+    ],
+
 ];

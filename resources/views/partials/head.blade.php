@@ -1,8 +1,19 @@
 <head>
+    @if(config('services.analytics.enabled') && config('services.analytics.gtm_id'))
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','{{ config('services.analytics.gtm_id') }}');</script>
+    <!-- End Google Tag Manager -->
+    @endif
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="description" content="@yield('meta_description', 'Solutions Delivered - Tailored business solutions for process design, project management, and organisational change.')">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
     <!-- Theme Color for Browser UI -->
     <meta name="theme-color" content="#198fd9">
@@ -48,7 +59,7 @@
         '@type' => 'Organization',
         'name' => 'Solutions Delivered',
         'url' => url('/'),
-        'logo' => url('/') . '/logo.png',
+        'logo' => url('/') . '/logo.svg',
         'description' => 'Solutions Delivered provides tailored business solutions for process design, project management, and organizational change.',
         'address' => [
             '@type' => 'PostalAddress',
@@ -66,15 +77,31 @@
     <script type="application/ld+json">
     {!! json_encode([
         '@context' => 'https://schema.org',
-        '@type' => 'LocalBusiness',
+        '@type' => 'ProfessionalService',
         'name' => 'Solutions Delivered',
         'url' => url('/'),
+        'logo' => url('/') . '/logo.svg',
         'description' => 'Professional IT consultancy specialising in web development, service management, project management, and business change.',
         'address' => [
             '@type' => 'PostalAddress',
-            'addressCountry' => 'GB'
+            'addressCountry' => 'GB',
+            'addressLocality' => 'United Kingdom'
         ],
-        'priceRange' => '££'
+        'areaServed' => [
+            '@type' => 'Country',
+            'name' => 'United Kingdom'
+        ],
+        'priceRange' => '££',
+        'knowsAbout' => [
+            'Web Development',
+            'Service Management',
+            'Project Management',
+            'Business Change Management',
+            'ITIL',
+            'Laravel Development',
+            'WCAG Accessibility'
+        ],
+        'serviceType' => 'IT Consultancy'
     ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
     </script>
 

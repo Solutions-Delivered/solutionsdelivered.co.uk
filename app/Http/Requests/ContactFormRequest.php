@@ -23,7 +23,7 @@ class ContactFormRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string', 'max:255', 'min:2'],
-            'email' => ['required', 'email:rfc,dns', 'max:255'],
+            'email' => ['required', 'email:rfc', 'max:255'],
             'company' => ['nullable', 'string', 'max:255'],
             'message' => ['required', 'string', 'max:2000', 'min:10'],
         ];

@@ -40,14 +40,16 @@
 
         <h3 class="text-xl font-bold text-gray-900 mt-6 mb-3">Automatically Collected Information</h3>
         <p class="text-gray-700 mb-4">
-            When you visit our website, we may automatically collect certain information about your device, including:
+            When you visit our website, we may automatically collect certain information about your device and usage, including:
         </p>
         <ul class="list-disc pl-6 mb-4 text-gray-700 space-y-2">
-            <li>IP address</li>
+            <li>IP address (anonymized in analytics)</li>
             <li>Browser type and version</li>
             <li>Pages visited and time spent on pages</li>
             <li>Referring website</li>
             <li>Device type and operating system</li>
+            <li>Interaction with page elements (clicks, scrolls, form interactions)</li>
+            <li>Geographic location (country/region level only)</li>
         </ul>
 
         <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">How We Use Your Information</h2>
@@ -57,7 +59,9 @@
         <ul class="list-disc pl-6 mb-4 text-gray-700 space-y-2">
             <li>Respond to your inquiries and provide customer support</li>
             <li>Communicate with you about our services</li>
-            <li>Improve our website and services</li>
+            <li>Improve our website and services through analytics</li>
+            <li>Understand how visitors use our website to enhance user experience</li>
+            <li>Measure the effectiveness of our content and marketing</li>
             <li>Comply with legal obligations</li>
             <li>Protect against fraudulent or illegal activity</li>
         </ul>
@@ -104,9 +108,16 @@
             To exercise any of these rights, please contact us using the details at the end of this policy.
         </p>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Cookies</h2>
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Cookies and Analytics</h2>
         <p class="text-gray-700 mb-4">
-            Our website uses minimal cookies necessary for basic functionality. We do not use tracking cookies or third-party analytics cookies. Any cookies we do use are essential for the website to function properly.
+            Our website uses cookies for both essential functionality and analytics purposes:
+        </p>
+        <ul class="list-disc pl-6 mb-4 text-gray-700 space-y-2">
+            <li><strong>Essential Cookies:</strong> Required for the website to function properly, including session management and security features</li>
+            <li><strong>Analytics Cookies:</strong> We use Google Tag Manager and Google Analytics (or similar analytics services) to understand how visitors interact with our website. These cookies collect anonymized data about page views, user journeys, and website performance. This helps us improve our services and user experience.</li>
+        </ul>
+        <p class="text-gray-700 mb-4">
+            Analytics data is anonymized and aggregated. We do not use this data to personally identify individual visitors. You can opt out of analytics tracking through your browser settings or by using browser extensions that block analytics scripts.
         </p>
 
         <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Data Security</h2>

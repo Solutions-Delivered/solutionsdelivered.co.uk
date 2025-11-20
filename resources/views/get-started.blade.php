@@ -102,7 +102,16 @@
             </div>
         @endif
 
-        <form method="POST" action="{{ route('contact') }}" class="relative bg-white rounded-2xl p-8 shadow-xl border border-gray-100" novalidate>
+        <form method="POST" action="{{ route('contact') }}" class="relative bg-white rounded-2xl p-8 shadow-xl border border-gray-100" novalidate
+              x-data="{
+                  submitting: false,
+                  messageLength: {{ strlen(old('message', '')) }},
+                  maxLength: 2000,
+                  submitForm(event) {
+                      this.submitting = true;
+                      event.target.submit();
+                  }
+              }">
             <!-- Decorative corner accents -->
             <div class="absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-[#198fd9] to-transparent opacity-10 rounded-tl-2xl" aria-hidden="true"></div>
             <div class="absolute bottom-0 right-0 w-20 h-20 bg-gradient-to-tl from-[#0f6ba8] to-transparent opacity-10 rounded-br-2xl" aria-hidden="true"></div>
@@ -185,11 +194,18 @@
                     rows="6"
                     required
                     aria-required="true"
-                    aria-describedby="message-error message-help"
+                    aria-describedby="message-error message-help message-count"
                     class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#198fd9] focus:border-[#198fd9] text-gray-900 @error('message') border-red-500 @enderror"
                     placeholder="Tell us about your needs and how we can help..."
+                    maxlength="2000"
+                    x-on:input="messageLength = $event.target.value.length"
                 >{{ old('message') }}</textarea>
-                <p class="mt-1 text-sm text-gray-600" id="message-help">Maximum 2000 characters</p>
+                <div class="flex justify-between items-center mt-1">
+                    <p class="text-sm text-gray-600" id="message-help">Maximum 2000 characters</p>
+                    <p class="text-sm" id="message-count" :class="messageLength > maxLength * 0.9 ? 'text-orange-600 font-medium' : 'text-gray-600'">
+                        <span x-text="messageLength"></span> / <span x-text="maxLength"></span>
+                    </p>
+                </div>
                 @error('message')
                     <p class="mt-2 text-sm text-red-600" id="message-error" role="alert">{{ $message }}</p>
                 @enderror
@@ -199,11 +215,18 @@
             <div>
                 <button
                     type="submit"
-                    class="group relative w-full bg-gradient-to-r from-[#198fd9] to-[#1a7fc7] text-white hover:from-[#1a7fc7] hover:to-[#0f6ba8] px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-200 shadow-xl hover:shadow-2xl hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#198fd9]"
+                    @click="submitForm($event)"
+                    :disabled="submitting"
+                    class="group relative w-full bg-gradient-to-r from-[#198fd9] to-[#1a7fc7] text-white hover:from-[#1a7fc7] hover:to-[#0f6ba8] px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-200 shadow-xl hover:shadow-2xl hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#198fd9] disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:shadow-xl disabled:hover:translate-y-0 active:scale-95"
+                    :class="{ 'cursor-wait': submitting }"
                 >
                     <span class="flex items-center justify-center">
-                        Send Message
-                        <svg class="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <svg x-show="submitting" class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true" x-cloak>
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        <span x-text="submitting ? 'Sending...' : 'Send Message'"></span>
+                        <svg x-show="!submitting" class="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" x-cloak>
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                         </svg>
                     </span>

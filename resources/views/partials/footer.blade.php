@@ -15,7 +15,7 @@
             <!-- Company Info -->
             <div>
                 <div class="flex items-center mb-4">
-                    <img src="{{ asset('favicon.svg') }}" alt="" class="h-8 w-8 mr-3 opacity-90" aria-hidden="true">
+                    <img src="{{ asset('favicon.svg') }}" class="h-8 w-8 mr-3 opacity-90" aria-hidden="true">
                     <h2 class="text-xl font-bold text-white">Solutions Delivered</h2>
                 </div>
                 <p class="text-gray-400 text-sm leading-relaxed mb-4">

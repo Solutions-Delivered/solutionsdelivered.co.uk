@@ -18,19 +18,19 @@
 
             <!-- Desktop Navigation -->
             <div class="hidden md:flex md:items-center md:space-x-6">
-                <a href="{{ route('home') }}" class="text-gray-700 hover:text-[#198fd9] px-3 py-2 text-sm font-medium transition-colors duration-200 {{ request()->routeIs('home') ? 'border-b-2 border-[#198fd9]' : '' }}">
+                <a href="{{ route('home') }}" class="text-gray-700 hover:text-[#198fd9] px-3 py-2 text-sm font-medium transition-colors duration-200 {{ request()->routeIs('home') ? 'border-b-2 border-[#198fd9]' : '' }}" {!! request()->routeIs('home') ? 'aria-current="page"' : '' !!}>
                     Home
                 </a>
-                <a href="{{ route('about') }}" class="text-gray-700 hover:text-[#198fd9] px-3 py-2 text-sm font-medium transition-colors duration-200 {{ request()->routeIs('about') ? 'border-b-2 border-[#198fd9]' : '' }}">
+                <a href="{{ route('about') }}" class="text-gray-700 hover:text-[#198fd9] px-3 py-2 text-sm font-medium transition-colors duration-200 {{ request()->routeIs('about') ? 'border-b-2 border-[#198fd9]' : '' }}" {!! request()->routeIs('about') ? 'aria-current="page"' : '' !!}>
                     About
                 </a>
-                <a href="{{ route('solutions') }}" class="text-gray-700 hover:text-[#198fd9] px-3 py-2 text-sm font-medium transition-colors duration-200 {{ request()->routeIs('solutions') ? 'border-b-2 border-[#198fd9]' : '' }}">
+                <a href="{{ route('solutions') }}" class="text-gray-700 hover:text-[#198fd9] px-3 py-2 text-sm font-medium transition-colors duration-200 {{ request()->routeIs('solutions') ? 'border-b-2 border-[#198fd9]' : '' }}" {!! request()->routeIs('solutions') ? 'aria-current="page"' : '' !!}>
                     Solutions
                 </a>
-                <a href="{{ route('how-we-work') }}" class="text-gray-700 hover:text-[#198fd9] px-3 py-2 text-sm font-medium transition-colors duration-200 {{ request()->routeIs('how-we-work') ? 'border-b-2 border-[#198fd9]' : '' }}">
+                <a href="{{ route('how-we-work') }}" class="text-gray-700 hover:text-[#198fd9] px-3 py-2 text-sm font-medium transition-colors duration-200 {{ request()->routeIs('how-we-work') ? 'border-b-2 border-[#198fd9]' : '' }}" {!! request()->routeIs('how-we-work') ? 'aria-current="page"' : '' !!}>
                     How We Work
                 </a>
-                <a href="{{ route('careers') }}" class="text-gray-700 hover:text-[#198fd9] px-3 py-2 text-sm font-medium transition-colors duration-200 {{ request()->routeIs('careers') ? 'border-b-2 border-[#198fd9]' : '' }}">
+                <a href="{{ route('careers') }}" class="text-gray-700 hover:text-[#198fd9] px-3 py-2 text-sm font-medium transition-colors duration-200 {{ request()->routeIs('careers') ? 'border-b-2 border-[#198fd9]' : '' }}" {!! request()->routeIs('careers') ? 'aria-current="page"' : '' !!}>
                     Careers
                 </a>
                 <a href="{{ route('get-started') }}" class="bg-[#198fd9] text-white hover:bg-[#0f6ba8] px-6 py-2 rounded-md text-sm font-medium transition-colors duration-200">
@@ -58,11 +58,11 @@
                         <div class="pt-5 pb-6 px-5">
                             <div class="mt-6">
                                 <nav class="grid gap-y-8">
-                                    <a href="{{ route('home') }}" class="text-base font-medium text-gray-700 hover:text-[#198fd9]">Home</a>
-                                    <a href="{{ route('about') }}" class="text-base font-medium text-gray-700 hover:text-[#198fd9]">About</a>
-                                    <a href="{{ route('solutions') }}" class="text-base font-medium text-gray-700 hover:text-[#198fd9]">Solutions</a>
-                                    <a href="{{ route('how-we-work') }}" class="text-base font-medium text-gray-700 hover:text-[#198fd9]">How We Work</a>
-                                    <a href="{{ route('careers') }}" class="text-base font-medium text-gray-700 hover:text-[#198fd9]">Careers</a>
+                                    <a href="{{ route('home') }}" class="text-base font-medium text-gray-700 hover:text-[#198fd9]" {!! request()->routeIs('home') ? 'aria-current="page"' : '' !!}>Home</a>
+                                    <a href="{{ route('about') }}" class="text-base font-medium text-gray-700 hover:text-[#198fd9]" {!! request()->routeIs('about') ? 'aria-current="page"' : '' !!}>About</a>
+                                    <a href="{{ route('solutions') }}" class="text-base font-medium text-gray-700 hover:text-[#198fd9]" {!! request()->routeIs('solutions') ? 'aria-current="page"' : '' !!}>Solutions</a>
+                                    <a href="{{ route('how-we-work') }}" class="text-base font-medium text-gray-700 hover:text-[#198fd9]" {!! request()->routeIs('how-we-work') ? 'aria-current="page"' : '' !!}>How We Work</a>
+                                    <a href="{{ route('careers') }}" class="text-base font-medium text-gray-700 hover:text-[#198fd9]" {!! request()->routeIs('careers') ? 'aria-current="page"' : '' !!}>Careers</a>
                                     <a href="{{ route('get-started') }}" class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#198fd9] hover:bg-[#0f6ba8]">Get Started</a>
                                 </nav>
                             </div>
