@@ -40,10 +40,15 @@
                 hideCookieDialog();
             }
 
-            const buttons = document.getElementsByClassName('js-cookie-consent-agree');
+            const agreeButtons = document.getElementsByClassName('js-cookie-consent-agree');
+            const declineButtons = document.getElementsByClassName('js-cookie-consent-decline');
 
-            for (let i = 0; i < buttons.length; ++i) {
-                buttons[i].addEventListener('click', consentWithCookies);
+            for (let i = 0; i < agreeButtons.length; ++i) {
+                agreeButtons[i].addEventListener('click', consentWithCookies);
+            }
+
+            for (let i = 0; i < declineButtons.length; ++i) {
+                declineButtons[i].addEventListener('click', hideCookieDialog);
             }
 
             return {

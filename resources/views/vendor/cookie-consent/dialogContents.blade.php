@@ -25,7 +25,16 @@
                 <!-- Buttons -->
                 <div class="flex items-center gap-3 w-full sm:w-auto sm:flex-shrink-0">
                     <button
-                        class="js-cookie-consent-agree cookie-consent__agree inline-flex items-center justify-center px-6 py-3 bg-white text-[#198fd9] rounded-lg font-semibold text-sm shadow-lg hover:shadow-xl hover:bg-gray-50 transition-all duration-200 transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#198fd9] active:scale-95 w-full sm:w-auto"
+                        type="button"
+                        class="js-cookie-consent-decline cookie-consent__decline inline-flex items-center justify-center px-6 py-3 bg-white/20 text-white border-2 border-white rounded-lg font-semibold text-sm hover:bg-white/30 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-white/50 active:scale-95 w-full sm:w-auto"
+                        aria-label="Decline cookies"
+                    >
+                        Decline
+                    </button>
+                    <button
+                        type="button"
+                        class="js-cookie-consent-agree cookie-consent__agree inline-flex items-center justify-center px-6 py-3 bg-white text-[#198fd9] rounded-lg font-semibold text-sm shadow-lg hover:shadow-xl hover:bg-gray-50 transition-all duration-200 transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-white/50 active:scale-95 w-full sm:w-auto"
+                        aria-label="Accept cookies"
                     >
                         {{ trans('cookie-consent::texts.agree') }}
                     </button>
