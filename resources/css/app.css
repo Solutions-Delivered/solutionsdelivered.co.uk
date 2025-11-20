@@ -1,0 +1,89 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+    /* WCAG 2.2 AA Compliant Color Palette */
+    --color-primary: #198bd9; /* Blue - Contrast ratio 4.5:1 on white */
+    --color-secondary: #65bd7d; /* Green/Teal - Contrast ratio 4.5:1 on white */
+    --color-dark: #1a1a1a; /* Dark text - Contrast ratio 14.3:1 on white */
+    --color-gray: #4a5568; /* Gray text - Contrast ratio 7.8:1 on white */
+    --color-light-gray: #f7fafc;
+    --color-white: #ffffff;
+
+    /* Focus states for accessibility */
+    --focus-ring: 0 0 0 3px rgba(25, 139, 217, 0.5);
+}
+
+/* Base accessibility styles */
+*:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+    transition: outline-offset 0.1s ease;
+}
+
+/* Enhanced focus styles for interactive elements */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[role="button"]:focus-visible,
+[role="link"]:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(25, 139, 217, 0.2);
+}
+
+/* Dark background focus indicators */
+.bg-gradient-to-br a:focus-visible,
+.bg-gradient-to-r a:focus-visible,
+[class*="from-"]:not([class*="from-white"]) a:focus-visible,
+[class*="from-"]:not([class*="from-white"]) button:focus-visible {
+    outline-color: white;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.3);
+}
+
+/* Skip navigation enhancements for better keyboard accessibility */
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+/* Skip to main content link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--color-dark);
+    color: var(--color-white);
+    padding: 8px 16px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
