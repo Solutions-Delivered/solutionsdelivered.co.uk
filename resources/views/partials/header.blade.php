@@ -7,11 +7,12 @@
         <div class="flex justify-between items-center h-16">
             <!-- Logo -->
             <div class="flex-shrink-0">
-                <a href="{{ route('home') }}" class="block transition-opacity duration-200 hover:opacity-80" aria-label="Solutions Delivered Home">
+                <a href="{{ route('home') }}" class="flex items-center gap-3 transition-opacity duration-200 hover:opacity-80" aria-label="Solutions Delivered Home">
                     <img src="{{ asset('logo.svg') }}"
                          alt="Solutions Delivered Logo"
-                         class="h-10 w-auto"
+                         class="h-10 w-10"
                          style="max-height: 2.5rem;">
+                    <span class="text-xl font-bold text-[#198fd9]">Solutions Delivered</span>
                 </a>
             </div>
 
