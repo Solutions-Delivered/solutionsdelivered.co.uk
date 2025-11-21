@@ -52,10 +52,10 @@ class PageController extends Controller
     {
         $validated = $request->validated();
 
-        // Queue email notification for better performance
+        // Send email notification
         try {
             Mail::to(config('brand.contact.general'))
-                ->queue(new ContactFormSubmitted(
+                ->send(new ContactFormSubmitted(
                     name: $validated['name'],
                     email: $validated['email'],
                     company: $validated['company'] ?? null,

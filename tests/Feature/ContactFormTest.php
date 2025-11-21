@@ -16,7 +16,7 @@ it('successfully submits contact form with valid data', function () {
     $response->assertRedirect();
     $response->assertSessionHas('success');
 
-    Mail::assertQueued(ContactFormSubmitted::class, function ($mail) {
+    Mail::assertSent(ContactFormSubmitted::class, function ($mail) {
         return $mail->hasTo(config('brand.contact.general'));
     });
 });
@@ -33,7 +33,7 @@ it('successfully submits contact form without optional company field', function 
     $response->assertRedirect();
     $response->assertSessionHas('success');
 
-    Mail::assertQueued(ContactFormSubmitted::class);
+    Mail::assertSent(ContactFormSubmitted::class);
 });
 
 it('strips html tags from input fields', function () {
@@ -163,4 +163,18 @@ it('continues gracefully when email sending fails', function () {
 
     $response->assertRedirect();
     $response->assertSessionHas('success');
+});
+
+it('rejects submission when honeypot field is filled (bot protection)', function () {
+    Mail::fake();
+
+    $response = $this->post(route('contact'), [
+        'name' => 'John Smith',
+        'email' => 'john@gmail.com',
+        'message' => 'This is a test message that is long enough to pass validation.',
+        'website' => 'https://spam-bot.com', // Honeypot field filled by bot
+    ]);
+
+    $response->assertForbidden();
+    Mail::assertNotSent(ContactFormSubmitted::class);
 });

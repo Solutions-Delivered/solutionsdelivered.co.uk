@@ -11,7 +11,8 @@ class ContactFormRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return true;
+        // Honeypot spam protection - if the 'website' field is filled, it's a bot
+        return empty($this->input('website'));
     }
 
     /**

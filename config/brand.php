@@ -52,7 +52,7 @@ return [
     */
 
     'contact' => [
-        'general' => 'info@solutionsdelivered.co.uk',
+        'general' => 'sam.jenkins@solutionsdelivered.co.uk',
         'privacy' => 'privacy@solutionsdelivered.co.uk',
         'support' => 'support@solutionsdelivered.co.uk',
     ],
