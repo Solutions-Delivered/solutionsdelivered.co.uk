@@ -1,10 +1,8 @@
 <!-- Footer -->
 <footer class="relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white mt-20" role="contentinfo">
-    <!-- Decorative background elements -->
+    <!-- Subtle decorative background element -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div class="absolute -top-24 -right-24 w-96 h-96 bg-[#198fd9] opacity-5 rounded-full blur-3xl"></div>
-        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-[#0f6ba8] opacity-5 rounded-full blur-3xl"></div>
-        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-[#198fd9] to-[#0f6ba8] opacity-[0.02] rounded-full blur-3xl"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-[#198fd9] to-[#0f6ba8] opacity-[0.02] rounded-full blur-xl"></div>
     </div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -15,7 +13,13 @@
             <!-- Company Info -->
             <div>
                 <div class="flex items-center mb-4">
-                    <img src="{{ asset('favicon.svg') }}" class="h-8 w-8 mr-3 opacity-90" aria-hidden="true">
+                    <img src="{{ asset('favicon.svg') }}"
+                         alt=""
+                         width="32"
+                         height="32"
+                         loading="lazy"
+                         class="h-8 w-8 mr-3 opacity-90"
+                         aria-hidden="true">
                     <h2 class="text-xl font-bold text-white">Solutions Delivered</h2>
                 </div>
                 <p class="text-gray-400 text-sm leading-relaxed mb-4">
@@ -86,7 +90,7 @@
                 <p class="text-gray-400 text-sm leading-relaxed mb-6">
                     Ready to transform your business? Let's discuss how we can help you achieve your goals.
                 </p>
-                <a href="{{ route('get-started') }}" class="group relative inline-flex items-center justify-center bg-gradient-to-r from-[#198fd9] to-[#1a7fc7] text-white hover:from-[#1a7fc7] hover:to-[#0f6ba8] px-6 py-3 rounded-lg text-sm font-medium transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                <a href="{{ route('get-started') }}" class="group relative inline-flex items-center justify-center bg-gradient-to-r from-[#198fd9] to-[#1a7fc7] text-white hover:from-[#1a7fc7] hover:to-[#0f6ba8] px-6 py-3 rounded-lg text-sm font-medium transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#198fd9]">
                     <span class="relative z-10">Contact Us</span>
                     <svg class="relative z-10 ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>

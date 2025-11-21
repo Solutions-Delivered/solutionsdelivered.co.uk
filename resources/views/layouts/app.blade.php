@@ -21,6 +21,8 @@
 
     @include('partials.footer')
 
+    @include('cookie-consent::index')
+
     @include('partials.scripts')
 </body>
 </html>

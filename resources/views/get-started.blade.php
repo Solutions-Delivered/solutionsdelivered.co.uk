@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Get Started - Solutions Delivered')
-@section('meta_description', 'Start your transformation today. Free initial consultation, 24-hour response time, no-obligation proposal. Contact our Bolton-based team to discuss your Laravel, ITIL, or project management needs.')
+@section('meta_description', 'Start your transformation today. Free initial consultation, 24-hour response time, no-obligation proposal. Contact our UK-wide remote team to discuss your Laravel, ITIL, or project management needs.')
 
 @push('schema')
 <x-schema.breadcrumb :items="[
@@ -28,12 +28,10 @@
 
 @section('content')
 <!-- Page Header -->
-<section class="relative overflow-hidden bg-gradient-to-br from-[#198fd9] via-[#1a7fc7] to-[#0f6ba8] text-white py-20 px-4 sm:px-6 lg:px-8">
-    <!-- Decorative background elements -->
+<section class="relative overflow-hidden bg-gradient-to-br from-[#198fd9] via-[#1a7fc7] to-[#0f6ba8] text-white py-10 sm:py-14 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+    <!-- Subtle decorative background element -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div class="absolute top-10 right-10 w-96 h-96 bg-white opacity-10 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-10 left-10 w-72 h-72 bg-white opacity-5 rounded-full blur-3xl"></div>
-        <div class="absolute inset-0 bg-white opacity-5 transform skew-y-3 origin-bottom-left"></div>
+        <div class="absolute top-10 right-10 w-64 h-64 bg-white opacity-5 rounded-full blur-xl"></div>
     </div>
 
     <div class="relative max-w-7xl mx-auto">
@@ -45,14 +43,14 @@
             Get Started
         </x-badge.breadcrumb>
 
-        <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             Let's Start Your
             <span class="block text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-100 to-gray-200 mt-1">
                 Transformation Journey
             </span>
         </h1>
 
-        <p class="text-xl md:text-2xl max-w-3xl text-gray-100 leading-relaxed">
+        <p class="text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl text-gray-100 leading-relaxed">
             Tell us about your challenges and we'll show you how we can help deliver solutions for your business
         </p>
 
@@ -66,9 +64,9 @@
 </section>
 
 <!-- Contact Form Section -->
-<section class="py-16 px-4 sm:px-6 lg:px-8 bg-white" aria-labelledby="contact-heading">
+<section class="py-8 sm:py-12 md:py-14 lg:py-16 px-4 sm:px-6 lg:px-8 bg-white" aria-labelledby="contact-heading">
     <div class="max-w-3xl mx-auto">
-        <h2 id="contact-heading" class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
+        <h2 id="contact-heading" class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
             Contact Us
         </h2>
         <p class="text-lg text-gray-700 text-center mb-12">
@@ -124,6 +122,7 @@
 
             <div class="relative">
             @csrf
+            @honeypot
 
             <!-- Name Field -->
             <div class="mb-6">
@@ -248,11 +247,10 @@
 </section>
 
 <!-- Additional Info Section -->
-<section class="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white" aria-labelledby="info-heading">
-    <!-- Decorative background -->
+<section class="relative overflow-hidden py-10 sm:py-14 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white" aria-labelledby="info-heading">
+    <!-- Subtle decorative background -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div class="absolute top-1/2 left-1/4 w-96 h-96 bg-[#198fd9] opacity-5 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-[#0f6ba8] opacity-5 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/2 left-1/4 w-64 h-64 bg-[#198fd9] opacity-5 rounded-full blur-lg"></div>
     </div>
 
     <div class="relative max-w-7xl mx-auto">
@@ -264,7 +262,7 @@
                 </svg>
                 Our Process
             </div>
-            <h2 id="info-heading" class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 id="info-heading" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
                 What Happens Next?
             </h2>
             <p class="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -281,7 +279,7 @@
                     </div>
                 </div>
                 <div class="mt-8">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3 flex items-center">
+                    <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3 flex items-center">
                         We Review Your Request
                         <svg class="w-6 h-6 text-[#198fd9] ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
@@ -301,7 +299,7 @@
                     </div>
                 </div>
                 <div class="mt-8">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3 flex items-center">
+                    <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3 flex items-center">
                         Initial Consultation
                         <svg class="w-6 h-6 text-[#198fd9] ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
@@ -321,7 +319,7 @@
                     </div>
                 </div>
                 <div class="mt-8">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3 flex items-center">
+                    <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3 flex items-center">
                         Tailored Proposal
                         <svg class="w-6 h-6 text-[#198fd9] ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>

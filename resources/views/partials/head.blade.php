@@ -33,6 +33,22 @@
     <!-- Performance Hints -->
     <link rel="preload" href="{{ asset('logo.svg') }}" as="image" type="image/svg+xml">
 
+    @if(config('services.analytics.enabled') && config('services.analytics.gtm_id'))
+    <!-- Preconnect to Google Tag Manager -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    @endif
+
+    <!-- DNS Prefetch for likely next navigations -->
+    @if(!request()->routeIs('get-started'))
+    <link rel="prefetch" href="{{ route('get-started') }}" as="document">
+    @endif
+
+    @if(request()->routeIs('home'))
+    <link rel="prefetch" href="{{ route('solutions') }}" as="document">
+    <link rel="prefetch" href="{{ route('about') }}" as="document">
+    @endif
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="@yield('og_title', 'Solutions Delivered - Delivering Solutions is in Our DNA')">
     <meta property="og:description" content="@yield('og_description', 'Solutions Delivered - Tailored business solutions for process design, project management, and organisational change.')">
@@ -61,7 +77,7 @@
         'legalName' => 'Solutions Delivered Limited',
         'url' => url('/'),
         'logo' => url('/') . '/logo.svg',
-        'description' => 'Solutions Delivered provides tailored business solutions for process design, project management, and organizational change.',
+        'description' => 'Solutions Delivered provides tailored business solutions for process design, project management, and organizational change. 100% remote or client-site based consultancy serving clients UK-wide.',
         'foundingDate' => '2019-06-21',
         'address' => [
             '@type' => 'PostalAddress',
@@ -81,7 +97,8 @@
             'name' => 'United Kingdom'
         ],
         'taxID' => '12063264',
-        'sameAs' => []
+        'sameAs' => [],
+        'additionalType' => 'RemoteFirstOrganization'
     ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
     </script>
 
@@ -92,7 +109,7 @@
         'name' => 'Solutions Delivered Limited',
         'url' => url('/'),
         'logo' => url('/') . '/logo.svg',
-        'description' => 'Professional IT consultancy specialising in web development, service management, project management, and business change.',
+        'description' => 'Professional IT consultancy specialising in web development, service management, project management, and business change. Services delivered remotely or on client-site across the UK.',
         'address' => [
             '@type' => 'PostalAddress',
             'streetAddress' => 'Belmont Suite, Paragon Business Park, Chorley New Road',
@@ -114,9 +131,11 @@
             'Business Change Management',
             'ITIL',
             'Laravel Development',
-            'WCAG Accessibility'
+            'WCAG Accessibility',
+            'Remote IT Consulting'
         ],
-        'serviceType' => 'IT Consultancy'
+        'serviceType' => 'IT Consultancy',
+        'slogan' => 'Delivering Solutions is in Our DNA'
     ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
     </script>
 

@@ -63,7 +63,7 @@ class PageController extends Controller
                 ));
         } catch (\Exception $e) {
             // Log the error but don't expose it to the user
-            \Log::error('Contact form email failed: ' . $e->getMessage());
+            \Log::error('Contact form email failed: '.$e->getMessage());
 
             // Still show success to user (email will be in logs for manual handling)
         }

@@ -2,7 +2,6 @@
 
 namespace App\Mail;
 
-use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
@@ -11,7 +10,7 @@ use Illuminate\Queue\SerializesModels;
 
 class ContactFormSubmitted extends Mailable
 {
-    use Queueable, SerializesModels;
+    use SerializesModels;
 
     /**
      * Create a new message instance.
@@ -33,7 +32,7 @@ class ContactFormSubmitted extends Mailable
             replyTo: [
                 new Address($this->email, $this->name),
             ],
-            subject: 'New Contact Form Submission - ' . ($this->company ?? $this->name),
+            subject: 'New Contact Form Submission - '.($this->company ?? $this->name),
         );
     }
 

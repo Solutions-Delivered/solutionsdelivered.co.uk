@@ -164,3 +164,43 @@ it('continues gracefully when email sending fails', function () {
     $response->assertRedirect();
     $response->assertSessionHas('success');
 });
+
+it('rejects submission when honeypot field is filled (bot protection)', function () {
+    Mail::fake();
+
+    // Get the honeypot field name from config (default is randomly generated)
+    config(['honeypot.randomize_name_field_name' => false]);
+    config(['honeypot.name_field_name' => 'my_name']);
+
+    $response = $this->post(route('contact'), [
+        'name' => 'John Smith',
+        'email' => 'john@gmail.com',
+        'message' => 'This is a test message that is long enough to pass validation.',
+        'my_name' => 'spam-bot', // Honeypot field filled by bot
+    ]);
+
+    // Spatie honeypot returns 200 with blank page (default BlankPageResponder)
+    $response->assertSuccessful();
+    $response->assertSee('', false); // Blank page
+    Mail::assertNotSent(ContactFormSubmitted::class);
+});
+
+it('rejects submission when form submitted too quickly (bot protection)', function () {
+    Mail::fake();
+
+    // Configure honeypot with 2 second minimum time
+    config(['honeypot.valid_from_timestamp' => true]);
+    config(['honeypot.amount_of_seconds' => 2]);
+
+    $response = $this->post(route('contact'), [
+        'name' => 'John Smith',
+        'email' => 'john@gmail.com',
+        'message' => 'This is a test message that is long enough to pass validation.',
+        config('honeypot.valid_from_field_name', 'valid_from') => now()->timestamp, // Submitted immediately
+    ]);
+
+    // Spatie honeypot returns 200 with blank page (default BlankPageResponder)
+    $response->assertSuccessful();
+    $response->assertSee('', false); // Blank page
+    Mail::assertNotSent(ContactFormSubmitted::class);
+});
