@@ -13,6 +13,11 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware): void {
         // Add security headers to all responses
         $middleware->append(\App\Http\Middleware\SecurityHeaders::class);
+
+        // Register honeypot middleware alias
+        $middleware->alias([
+            'honeypot' => \Spatie\Honeypot\ProtectAgainstSpam::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

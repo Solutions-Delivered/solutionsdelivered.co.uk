@@ -9,7 +9,7 @@ Route::get('/solutions/', [PageController::class, 'solutions'])->name('solutions
 Route::get('/how-we-work/', [PageController::class, 'howWeWork'])->name('how-we-work');
 Route::get('/careers/', [PageController::class, 'careers'])->name('careers');
 Route::get('/get-started/', [PageController::class, 'getStarted'])->name('get-started');
-Route::post('/contact', [PageController::class, 'contact'])->name('contact')->middleware('throttle:5,1');
+Route::post('/contact', [PageController::class, 'contact'])->name('contact')->middleware(['throttle:5,1', 'honeypot']);
 
 // Legal pages
 Route::get('/privacy/', [PageController::class, 'privacy'])->name('privacy');

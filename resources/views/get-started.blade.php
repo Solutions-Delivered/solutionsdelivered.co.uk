@@ -122,12 +122,7 @@
 
             <div class="relative">
             @csrf
-
-            <!-- Honeypot field to catch bots - leave empty -->
-            <div style="position: absolute; left: -9999px;" aria-hidden="true">
-                <label for="website">Website</label>
-                <input type="text" id="website" name="website" value="" tabindex="-1" autocomplete="off">
-            </div>
+            @honeypot
 
             <!-- Name Field -->
             <div class="mb-6">
