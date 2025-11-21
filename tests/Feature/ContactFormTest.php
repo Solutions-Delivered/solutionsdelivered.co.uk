@@ -16,7 +16,7 @@ it('successfully submits contact form with valid data', function () {
     $response->assertRedirect();
     $response->assertSessionHas('success');
 
-    Mail::assertSent(ContactFormSubmitted::class, function ($mail) {
+    Mail::assertQueued(ContactFormSubmitted::class, function ($mail) {
         return $mail->hasTo(config('brand.contact.general'));
     });
 });
@@ -33,7 +33,7 @@ it('successfully submits contact form without optional company field', function 
     $response->assertRedirect();
     $response->assertSessionHas('success');
 
-    Mail::assertSent(ContactFormSubmitted::class);
+    Mail::assertQueued(ContactFormSubmitted::class);
 });
 
 it('strips html tags from input fields', function () {

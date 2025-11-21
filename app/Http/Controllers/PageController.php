@@ -52,10 +52,10 @@ class PageController extends Controller
     {
         $validated = $request->validated();
 
-        // Send email notification
+        // Queue email notification for better performance
         try {
             Mail::to(config('brand.contact.general'))
-                ->send(new ContactFormSubmitted(
+                ->queue(new ContactFormSubmitted(
                     name: $validated['name'],
                     email: $validated['email'],
                     company: $validated['company'] ?? null,
@@ -63,7 +63,7 @@ class PageController extends Controller
                 ));
         } catch (\Exception $e) {
             // Log the error but don't expose it to the user
-            \Log::error('Contact form email failed: ' . $e->getMessage());
+            \Log::error('Contact form email failed: '.$e->getMessage());
 
             // Still show success to user (email will be in logs for manual handling)
         }
