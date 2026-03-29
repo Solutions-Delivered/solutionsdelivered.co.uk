@@ -34,3 +34,23 @@ Route::get('/logo@2x.png', function () {
         'Cache-Control' => 'public, max-age=31536000',
     ]);
 });
+
+Route::get('/health', function () {
+    $checks = ['app' => true];
+
+    try {
+        \Illuminate\Support\Facades\DB::connection()->getPdo();
+        $checks['database'] = true;
+    } catch (\Exception $e) {
+        $checks['database'] = false;
+    }
+
+    $healthy = !in_array(false, $checks, true);
+
+    return response()->json([
+        'status' => $healthy ? 'healthy' : 'degraded',
+        'app' => config('app.name'),
+        'checks' => $checks,
+        'timestamp' => now()->toISOString(),
+    ], $healthy ? 200 : 503);
+})->name('health');
