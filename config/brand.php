@@ -16,7 +16,7 @@ return [
         'primary' => '#198fd9',      // Main brand blue
         'primary-light' => '#1a7fc7', // Lighter shade
         'primary-dark' => '#0f6ba8',  // Darker shade (WCAG 2.2 AA compliant)
-        'accent' => '#10b981',        // Green for success/trust indicators
+        'accent' => '#4ade80',        // Tailwind green-400 - trust/success indicators (matches rendered views)
         'text' => [
             'dark' => '#111827',      // gray-900
             'medium' => '#374151',    // gray-700
