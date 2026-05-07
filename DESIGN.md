@@ -10,7 +10,7 @@ colors:
   primary-mid: "#1a7fc7"
   primary-dark: "#0f6ba8"
   primary-darker: "#0d5a8f"
-  accent-success: "#10b981"
+  accent-success: "#4ade80"
   surface: "#ffffff"
   surface-muted: "#f9fafb"
   surface-inverse: "#111827"
@@ -200,7 +200,7 @@ The palette is **monochromatic blue** plus neutrals plus a single semantic green
 | `{colors.primary-mid}` | `#1a7fc7` | Mid-stop in horizontal and hero gradients. Never used as a flat fill on its own. |
 | `{colors.primary-dark}` | `#0f6ba8` | End-stop in hero gradient. Hover state for solid-blue buttons (e.g. nav CTA). Used as alternating card-border accent. |
 | `{colors.primary-darker}` | `#0d5a8f` | Used only on dark-on-dark CTA hover (e.g. About-page CTA). Reserved — do not introduce new uses. |
-| `{colors.accent-success}` | `#10b981` | The **only** non-blue brand colour. Reserved for success/trust signals: trust-indicator checkmarks, the pulsing dot in the hero badge. Never decorative. |
+| `{colors.accent-success}` | `#4ade80` | The **only** non-blue brand colour (Tailwind `green-400`). Reserved for success/trust signals: trust-indicator checkmarks, the pulsing dot in the hero badge. Never decorative. |
 | `{colors.surface}` | `#ffffff` | Default page surface and card surface. |
 | `{colors.surface-muted}` | `#f9fafb` | Alternating section background and soft-gradient anchor. |
 | `{colors.surface-inverse}` | `#111827` | Footer base. |
@@ -409,11 +409,12 @@ White surface, sticky-top, `{elevation.sm}`. Logo lockup is icon + wordmark, bot
 - **Don't** introduce custom webfonts. The system stack is intentional for performance and platform-native trust.
 - **Don't** ship a colour change without re-checking contrast. AA is the floor.
 
-### Drift watch
+### Source of truth
 
-Two known inconsistencies between this spec and the codebase to be aware of when implementing:
+When in doubt, this DESIGN.md is the source of truth. The runtime values are kept in sync at:
 
-1. `resources/css/app.css` defines `--color-primary: #198bd9` while every Blade view uses `#198fd9`. The Blade hex is the source of truth (it's what users see); the CSS variable should be reconciled to `#198fd9`.
-2. `config/brand.php` lists the success accent as `#10b981`, while `resources/css/app.css` uses `#65bd7d`. Live views currently use Tailwind's `green-400` (`#4ade80`) for trust-indicator checkmarks. `{colors.accent-success}` in this document is `#10b981` — the config value — and should be the target during reconciliation.
+- `resources/css/app.css` — `--color-primary: #198fd9` (focus rings, skip-link, base accessibility styles).
+- `config/brand.php` — `colors.primary` and `colors.accent` mirror this document.
+- `resources/views/**/*.blade.php` — inline hex codes (`#198fd9`, `#1a7fc7`, `#0f6ba8`) and Tailwind utilities (`green-400` for the success accent).
 
-Both should be normalised; until then, prefer the values declared in this DESIGN.md.
+If a future change adds a new colour, update **all three** locations in the same commit so they don't drift.
