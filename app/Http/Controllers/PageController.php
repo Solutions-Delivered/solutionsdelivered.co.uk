@@ -59,6 +59,10 @@ class PageController extends Controller
     {
         $validated = $request->validated();
 
+        $packageName = isset($validated['package'])
+            ? config("packages.{$validated['package']}.name")
+            : null;
+
         // Send email notification
         try {
             Mail::to(config('brand.contact.general'))
@@ -66,7 +70,8 @@ class PageController extends Controller
                     name: $validated['name'],
                     email: $validated['email'],
                     company: $validated['company'] ?? null,
-                    message: $validated['message']
+                    message: $validated['message'],
+                    packageName: $packageName
                 ));
         } catch (\Exception $e) {
             // Log the error but don't expose it to the user

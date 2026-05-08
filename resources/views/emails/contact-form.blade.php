@@ -68,6 +68,15 @@
     <div class="content">
         <p style="margin-top: 0;">You have received a new message from your website contact form.</p>
 
+        @if($packageName)
+        <div class="field">
+            <div class="field-label">Package Enquiry:</div>
+            <div class="field-value" style="background: #ecfdf5; border-left-color: #16a34a;">
+                <strong>{{ $packageName }}</strong>
+            </div>
+        </div>
+        @endif
+
         <div class="field">
             <div class="field-label">Name:</div>
             <div class="field-value">{{ $name }}</div>

@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class ContactFormRequest extends FormRequest
 {
@@ -26,6 +27,7 @@ class ContactFormRequest extends FormRequest
             'email' => ['required', 'email:rfc', 'max:255'],
             'company' => ['nullable', 'string', 'max:255'],
             'message' => ['required', 'string', 'max:2000', 'min:10'],
+            'package' => ['nullable', 'string', Rule::in(array_keys(config('packages', [])))],
         ];
     }
 
@@ -72,6 +74,7 @@ class ContactFormRequest extends FormRequest
             'email' => strtolower(trim($this->email)),
             'company' => $this->company ? strip_tags($this->company) : null,
             'message' => strip_tags($this->message),
+            'package' => $this->package ? strip_tags($this->package) : null,
         ]);
     }
 }

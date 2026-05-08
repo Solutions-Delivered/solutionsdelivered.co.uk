@@ -4,6 +4,10 @@ Solutions Delivered
 
 You have received a new message from your website contact form.
 
+@if($packageName)
+Package Enquiry: {{ $packageName }}
+
+@endif
 Name: {{ $name }}
 Email: {{ $email }}
 @if($company)

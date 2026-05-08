@@ -19,7 +19,8 @@ class ContactFormSubmitted extends Mailable
         public string $name,
         public string $email,
         public ?string $company,
-        public string $message
+        public string $message,
+        public ?string $packageName = null
     ) {}
 
     /**
@@ -32,7 +33,9 @@ class ContactFormSubmitted extends Mailable
             replyTo: [
                 new Address($this->email, $this->name),
             ],
-            subject: 'New Contact Form Submission - '.($this->company ?? $this->name),
+            subject: $this->packageName
+                ? 'New Package Enquiry: '.$this->packageName.' - '.($this->company ?? $this->name)
+                : 'New Contact Form Submission - '.($this->company ?? $this->name),
         );
     }
 
