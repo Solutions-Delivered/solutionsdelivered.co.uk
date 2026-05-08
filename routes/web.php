@@ -9,6 +9,7 @@ Route::get('/solutions/', [PageController::class, 'solutions'])->name('solutions
 Route::get('/how-we-work/', [PageController::class, 'howWeWork'])->name('how-we-work');
 Route::get('/careers/', [PageController::class, 'careers'])->name('careers');
 Route::get('/get-started/', [PageController::class, 'getStarted'])->name('get-started');
+Route::get('/packages/', [PageController::class, 'packages'])->name('packages');
 Route::post('/contact', [PageController::class, 'contact'])->name('contact')->middleware(['throttle:5,1', 'honeypot']);
 
 // Legal pages
@@ -45,7 +46,7 @@ Route::get('/health', function () {
         $checks['database'] = false;
     }
 
-    $healthy = !in_array(false, $checks, true);
+    $healthy = ! in_array(false, $checks, true);
 
     return response()->json([
         'status' => $healthy ? 'healthy' : 'degraded',

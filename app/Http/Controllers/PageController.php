@@ -38,6 +38,13 @@ class PageController extends Controller
         return view('get-started');
     }
 
+    public function packages()
+    {
+        return view('packages', [
+            'packages' => config('packages'),
+        ]);
+    }
+
     public function privacy()
     {
         return view('privacy');
