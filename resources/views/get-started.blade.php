@@ -1,5 +1,14 @@
 @extends('layouts.app')
 
+@php
+    $packageSlug = request('package');
+    $selectedPackage = $packageSlug ? config("packages.{$packageSlug}") : null;
+    $prefillMessage = $selectedPackage
+        ? "I'm interested in your {$selectedPackage['name']} package. Please get in touch to discuss."
+        : '';
+    $packageSlugForForm = $selectedPackage ? $packageSlug : null;
+@endphp
+
 @section('title', 'Get Started - Solutions Delivered')
 @section('meta_description', 'Start your transformation today. Free initial consultation, 24-hour response time, no-obligation proposal. Contact our UK-wide remote team to discuss your Laravel, ITIL, or project management needs.')
 
@@ -109,7 +118,7 @@
         <form method="POST" action="{{ route('contact') }}" class="relative bg-white rounded-2xl p-8 shadow-xl border border-gray-100" novalidate
               x-data="{
                   submitting: false,
-                  messageLength: {{ strlen(old('message', '')) }},
+                  messageLength: {{ strlen(old('message', $prefillMessage)) }},
                   maxLength: 2000,
                   submitForm(event) {
                       this.submitting = true;
@@ -123,6 +132,17 @@
             <div class="relative">
             @csrf
             @honeypot
+
+            @if($selectedPackage)
+                <div class="mb-6 px-4 py-3 rounded-lg bg-[#198fd9]/10 border border-[#198fd9]/20" role="status">
+                    <p class="text-sm text-gray-800">
+                        <span class="font-semibold text-[#0f6ba8]">Enquiring about:</span>
+                        {{ $selectedPackage['name'] }}
+                        <span class="text-gray-600">— feel free to edit the message below before sending.</span>
+                    </p>
+                </div>
+                <input type="hidden" name="package" value="{{ old('package', $packageSlugForForm) }}">
+            @endif
 
             <!-- Name Field -->
             <div class="mb-6">
@@ -204,7 +224,7 @@
                     placeholder="Tell us about your needs and how we can help..."
                     maxlength="2000"
                     x-on:input="messageLength = $event.target.value.length"
-                >{{ old('message') }}</textarea>
+                >{{ old('message', $prefillMessage) }}</textarea>
                 <div class="flex justify-between items-center mt-1">
                     <p class="text-sm text-gray-600" id="message-help">Maximum 2000 characters</p>
                     <p class="text-sm" id="message-count" :class="messageLength > maxLength * 0.9 ? 'text-orange-600 font-medium' : 'text-gray-600'">
