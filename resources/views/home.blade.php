@@ -86,24 +86,19 @@
 {{-- How it works summary --}}
 <section class="border-y border-border bg-panel" aria-labelledby="how-heading">
     <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-        <x-section-heading id="how-heading" eyebrow="How we work">
+        <x-section-heading id="how-heading" eyebrow="How we work"
+            lead="The same four steps whether it's AI or IT work: a straight conversation, a clear proposal, delivery done with you, then support afterwards.">
             A clear path from first conversation to working AI
         </x-section-heading>
 
-        <div class="mt-8 max-w-3xl">
-            <x-process-step :number="1" title="Initial discussion">
-                We start with a straight conversation about your business and where AI could actually save you time. No pitch.
-            </x-process-step>
-            <x-process-step :number="2" title="Proposal and planning">
-                We set out what we would do, in plain English, with a clear scope and what it costs. You decide from there.
-            </x-process-step>
-            <x-process-step :number="3" title="Collaborative delivery">
-                We build it with you, not behind a curtain. You see the work as it happens and learn to run it yourself.
-            </x-process-step>
-            <x-process-step :number="4" title="Handover and support">
-                You leave with something that works on your own stack, and us on hand within {{ config('brand.contact.response_time') }} when you need us.
-            </x-process-step>
-        </div>
+        <ol class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            @foreach (['Initial discussion', 'Proposal and planning', 'Collaborative delivery', 'Handover and support'] as $i => $step)
+                <li class="flex items-baseline gap-3">
+                    <span class="font-mono text-sm text-faint" aria-hidden="true">{{ sprintf('%02d', $i + 1) }}</span>
+                    <span class="font-medium text-ink">{{ $step }}</span>
+                </li>
+            @endforeach
+        </ol>
 
         <div class="mt-8">
             <x-button variant="link" :href="route('how-it-works')">
