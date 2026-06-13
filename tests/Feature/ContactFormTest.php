@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Mail;
 it('successfully submits contact form with valid data', function () {
     Mail::fake();
 
-    $response = $this->post(route('contact'), [
+    $response = $this->post(route('contact.submit'), [
         'name' => 'John Smith',
         'email' => 'john@gmail.com',
         'company' => 'Example Ltd',
@@ -24,7 +24,7 @@ it('successfully submits contact form with valid data', function () {
 it('successfully submits contact form without optional company field', function () {
     Mail::fake();
 
-    $response = $this->post(route('contact'), [
+    $response = $this->post(route('contact.submit'), [
         'name' => 'John Smith',
         'email' => 'john@gmail.com',
         'message' => 'This is a test message that is long enough to pass validation.',
@@ -39,7 +39,7 @@ it('successfully submits contact form without optional company field', function 
 it('strips html tags from input fields', function () {
     Mail::fake();
 
-    $response = $this->post(route('contact'), [
+    $response = $this->post(route('contact.submit'), [
         'name' => '<script>alert("xss")</script>John Smith',
         'email' => 'john@gmail.com',
         'company' => '<b>Company</b>',
@@ -53,7 +53,7 @@ it('strips html tags from input fields', function () {
 it('normalizes email to lowercase', function () {
     Mail::fake();
 
-    $response = $this->post(route('contact'), [
+    $response = $this->post(route('contact.submit'), [
         'name' => 'John Smith',
         'email' => 'JOHN@GMAIL.COM',
         'message' => 'This is a test message that is long enough to pass validation.',
@@ -64,7 +64,7 @@ it('normalizes email to lowercase', function () {
 });
 
 it('fails validation when name is missing', function () {
-    $response = $this->post(route('contact'), [
+    $response = $this->post(route('contact.submit'), [
         'email' => 'john@example.com',
         'message' => 'This is a test message that is long enough to pass validation.',
     ]);
@@ -73,7 +73,7 @@ it('fails validation when name is missing', function () {
 });
 
 it('fails validation when name is too short', function () {
-    $response = $this->post(route('contact'), [
+    $response = $this->post(route('contact.submit'), [
         'name' => 'J',
         'email' => 'john@example.com',
         'message' => 'This is a test message that is long enough to pass validation.',
@@ -83,7 +83,7 @@ it('fails validation when name is too short', function () {
 });
 
 it('fails validation when name is too long', function () {
-    $response = $this->post(route('contact'), [
+    $response = $this->post(route('contact.submit'), [
         'name' => str_repeat('a', 256),
         'email' => 'john@example.com',
         'message' => 'This is a test message that is long enough to pass validation.',
@@ -93,7 +93,7 @@ it('fails validation when name is too long', function () {
 });
 
 it('fails validation when email is missing', function () {
-    $response = $this->post(route('contact'), [
+    $response = $this->post(route('contact.submit'), [
         'name' => 'John Smith',
         'message' => 'This is a test message that is long enough to pass validation.',
     ]);
@@ -102,7 +102,7 @@ it('fails validation when email is missing', function () {
 });
 
 it('fails validation when email is invalid', function () {
-    $response = $this->post(route('contact'), [
+    $response = $this->post(route('contact.submit'), [
         'name' => 'John Smith',
         'email' => 'not-an-email',
         'message' => 'This is a test message that is long enough to pass validation.',
@@ -112,7 +112,7 @@ it('fails validation when email is invalid', function () {
 });
 
 it('fails validation when message is missing', function () {
-    $response = $this->post(route('contact'), [
+    $response = $this->post(route('contact.submit'), [
         'name' => 'John Smith',
         'email' => 'john@example.com',
     ]);
@@ -121,7 +121,7 @@ it('fails validation when message is missing', function () {
 });
 
 it('fails validation when message is too short', function () {
-    $response = $this->post(route('contact'), [
+    $response = $this->post(route('contact.submit'), [
         'name' => 'John Smith',
         'email' => 'john@example.com',
         'message' => 'Too short',
@@ -131,7 +131,7 @@ it('fails validation when message is too short', function () {
 });
 
 it('fails validation when message is too long', function () {
-    $response = $this->post(route('contact'), [
+    $response = $this->post(route('contact.submit'), [
         'name' => 'John Smith',
         'email' => 'john@example.com',
         'message' => str_repeat('a', 2001),
@@ -141,7 +141,7 @@ it('fails validation when message is too long', function () {
 });
 
 it('fails validation when company is too long', function () {
-    $response = $this->post(route('contact'), [
+    $response = $this->post(route('contact.submit'), [
         'name' => 'John Smith',
         'email' => 'john@example.com',
         'company' => str_repeat('a', 256),
@@ -153,9 +153,9 @@ it('fails validation when company is too long', function () {
 
 it('continues gracefully when email sending fails', function () {
     Mail::fake();
-    Mail::shouldReceive('to')->andThrow(new \Exception('Mail server error'));
+    Mail::shouldReceive('to')->andThrow(new Exception('Mail server error'));
 
-    $response = $this->post(route('contact'), [
+    $response = $this->post(route('contact.submit'), [
         'name' => 'John Smith',
         'email' => 'john@gmail.com',
         'message' => 'This is a test message that is long enough to pass validation.',
@@ -172,7 +172,7 @@ it('rejects submission when honeypot field is filled (bot protection)', function
     config(['honeypot.randomize_name_field_name' => false]);
     config(['honeypot.name_field_name' => 'my_name']);
 
-    $response = $this->post(route('contact'), [
+    $response = $this->post(route('contact.submit'), [
         'name' => 'John Smith',
         'email' => 'john@gmail.com',
         'message' => 'This is a test message that is long enough to pass validation.',
@@ -192,7 +192,7 @@ it('rejects submission when form submitted too quickly (bot protection)', functi
     config(['honeypot.valid_from_timestamp' => true]);
     config(['honeypot.amount_of_seconds' => 2]);
 
-    $response = $this->post(route('contact'), [
+    $response = $this->post(route('contact.submit'), [
         'name' => 'John Smith',
         'email' => 'john@gmail.com',
         'message' => 'This is a test message that is long enough to pass validation.',

@@ -12,11 +12,11 @@ class BrandComposer
     public function compose(View $view): void
     {
         $view->with([
-            'brandColors' => config('brand.colors'),
             'companyInfo' => config('brand.company'),
             'contactInfo' => config('brand.contact'),
-            'navigation' => config('brand.navigation'),
-            'trustIndicators' => config('brand.trust_indicators'),
+            'navItems' => config('brand.nav'),
+            'navCta' => config('brand.cta'),
+            'socialLinks' => array_filter(config('brand.social')),
         ]);
     }
 }

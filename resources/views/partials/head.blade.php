@@ -1,4 +1,10 @@
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{-- Set the colour theme before paint to avoid a flash. --}}
+    @include('partials.theme-script')
+
     @if(config('services.analytics.enabled') && config('services.analytics.gtm_id'))
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -9,138 +15,81 @@
     <!-- End Google Tag Manager -->
     @endif
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="description" content="@yield('meta_description', 'Solutions Delivered - Tailored business solutions for process design, project management, and organisational change.')">
+    <meta name="description" content="@yield('meta_description', config('brand.company.description'))">
     <meta name="robots" content="@yield('robots', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1')">
 
-    <!-- Theme Color for Browser UI -->
-    <meta name="theme-color" content="#198fd9">
-    <meta name="msapplication-TileColor" content="#198fd9">
+    {{-- Browser UI colour, per theme. --}}
+    <meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#13161c" media="(prefers-color-scheme: dark)">
 
-    <title>@yield('title', 'Solutions Delivered - Delivering Solutions is in Our DNA')</title>
+    <title>@yield('title', config('brand.company.name').' | '.config('brand.company.tagline'))</title>
 
-    <!-- Favicons -->
-    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
+    {{-- Favicons: the SD monogram. --}}
+    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon-sd.svg') }}">
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
 
-    <!-- Canonical URL -->
     <link rel="canonical" href="{{ url()->current() }}">
 
-    <!-- Performance Hints -->
-    <link rel="preload" href="{{ asset('logo.svg') }}" as="image" type="image/svg+xml">
+    {{-- Preload the two most-used font cuts. --}}
+    <link rel="preload" href="{{ asset('fonts/hanken-grotesk-400.woff2') }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ asset('fonts/hanken-grotesk-600.woff2') }}" as="font" type="font/woff2" crossorigin>
 
     @if(config('services.analytics.enabled') && config('services.analytics.gtm_id'))
-    <!-- Preconnect to Google Tag Manager -->
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     @endif
 
-    <!-- DNS Prefetch for likely next navigations -->
-    @if(!request()->routeIs('get-started'))
-    <link rel="prefetch" href="{{ route('get-started') }}" as="document">
-    @endif
-
-    @if(request()->routeIs('home'))
-    <link rel="prefetch" href="{{ route('solutions') }}" as="document">
-    <link rel="prefetch" href="{{ route('about') }}" as="document">
-    @endif
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="@yield('og_title', 'Solutions Delivered - Delivering Solutions is in Our DNA')">
-    <meta property="og:description" content="@yield('og_description', 'Solutions Delivered - Tailored business solutions for process design, project management, and organisational change.')">
+    {{-- Open Graph --}}
+    <meta property="og:title" content="@yield('og_title', config('brand.company.name'))">
+    <meta property="og:description" content="@yield('og_description', config('brand.company.description'))">
     <meta property="og:type" content="@yield('og_type', 'website')">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:image" content="{{ asset('og-image.png') }}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Solutions Delivered - Delivering Solutions is in Our DNA">
-    <meta property="og:site_name" content="Solutions Delivered">
+    <meta property="og:site_name" content="{{ config('brand.company.name') }}">
     <meta property="og:locale" content="en_GB">
 
-    <!-- Twitter Card Meta Tags -->
+    {{-- Twitter --}}
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="@yield('twitter_title', 'Solutions Delivered - Delivering Solutions is in Our DNA')">
-    <meta name="twitter:description" content="@yield('twitter_description', 'Solutions Delivered - Tailored business solutions for process design, project management, and organisational change.')">
+    <meta name="twitter:title" content="@yield('twitter_title', config('brand.company.name'))">
+    <meta name="twitter:description" content="@yield('twitter_description', config('brand.company.description'))">
     <meta name="twitter:image" content="{{ asset('og-image.png') }}">
-    <meta name="twitter:image:alt" content="Solutions Delivered - Delivering Solutions is in Our DNA">
 
-    <!-- Schema.org JSON-LD Markup -->
+    {{-- Organisation schema --}}
     <script type="application/ld+json">
     {!! json_encode([
         '@context' => 'https://schema.org',
         '@type' => 'Organization',
-        'name' => 'Solutions Delivered Limited',
-        'legalName' => 'Solutions Delivered Limited',
+        'name' => config('brand.company.legal_name'),
+        'legalName' => config('brand.company.legal_name'),
         'url' => url('/'),
-        'logo' => url('/') . '/logo.svg',
-        'description' => 'Solutions Delivered provides tailored business solutions for process design, project management, and organizational change. 100% remote or client-site based consultancy serving clients UK-wide.',
-        'foundingDate' => '2019-06-21',
+        'logo' => url('/').'/logo.svg',
+        'description' => config('brand.company.description'),
+        'foundingDate' => config('brand.company.founded'),
         'address' => [
             '@type' => 'PostalAddress',
-            'streetAddress' => 'Belmont Suite, Paragon Business Park, Chorley New Road',
-            'addressLocality' => 'Horwich',
-            'addressRegion' => 'Bolton',
-            'postalCode' => 'BL6 6HG',
-            'addressCountry' => 'GB'
+            'streetAddress' => config('brand.company.address.street'),
+            'addressLocality' => config('brand.company.address.locality'),
+            'addressRegion' => config('brand.company.address.region'),
+            'postalCode' => config('brand.company.address.postcode'),
+            'addressCountry' => config('brand.company.address.country'),
         ],
         'contactPoint' => [
             '@type' => 'ContactPoint',
             'contactType' => 'Customer Service',
-            'url' => route('get-started')
+            'email' => config('brand.contact.general'),
+            'url' => route('contact'),
         ],
-        'areaServed' => [
-            '@type' => 'Country',
-            'name' => 'United Kingdom'
-        ],
-        'taxID' => '12063264',
-        'sameAs' => [],
-        'additionalType' => 'RemoteFirstOrganization'
-    ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
-    </script>
-
-    <script type="application/ld+json">
-    {!! json_encode([
-        '@context' => 'https://schema.org',
-        '@type' => 'ProfessionalService',
-        'name' => 'Solutions Delivered Limited',
-        'url' => url('/'),
-        'logo' => url('/') . '/logo.svg',
-        'description' => 'Professional IT consultancy specialising in web development, service management, project management, and business change. Services delivered remotely or on client-site across the UK.',
-        'address' => [
-            '@type' => 'PostalAddress',
-            'streetAddress' => 'Belmont Suite, Paragon Business Park, Chorley New Road',
-            'addressLocality' => 'Horwich',
-            'addressRegion' => 'Bolton',
-            'postalCode' => 'BL6 6HG',
-            'addressCountry' => 'GB'
-        ],
-        'areaServed' => [
-            '@type' => 'Country',
-            'name' => 'United Kingdom'
-        ],
-        'priceRange' => '££',
-        'foundingDate' => '2019-06-21',
-        'knowsAbout' => [
-            'Web Development',
-            'Service Management',
-            'Project Management',
-            'Business Change Management',
-            'ITIL',
-            'Laravel Development',
-            'WCAG Accessibility',
-            'Remote IT Consulting'
-        ],
-        'serviceType' => 'IT Consultancy',
-        'slogan' => 'Delivering Solutions is in Our DNA'
+        'areaServed' => ['@type' => 'Country', 'name' => 'United Kingdom'],
+        'taxID' => config('brand.company.company_number'),
+        'knowsAbout' => ['Practical AI for business', 'AI adoption', 'Web development', 'Project management', 'ITIL service management', 'Business change'],
     ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
     </script>
 
     @stack('schema')
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    @livewireStyles
 </head>

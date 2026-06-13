@@ -1,50 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    {{-- The AI Foundations and Foundations OS pages are noindex holding states and are intentionally omitted. --}}
     <url>
         <loc>{{ url('/') }}</loc>
-        <lastmod>2025-11-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>{{ route('about') }}</loc>
-        <lastmod>2025-11-20</lastmod>
+        <loc>{{ route('how-it-works') }}</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>{{ route('solutions') }}</loc>
-        <lastmod>2025-11-20</lastmod>
+        <loc>{{ route('consultancy') }}</loc>
         <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
+        <priority>0.8</priority>
     </url>
     <url>
-        <loc>{{ route('how-we-work') }}</loc>
-        <lastmod>2025-11-20</lastmod>
+        <loc>{{ route('about') }}</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>{{ route('careers') }}</loc>
-        <lastmod>2025-11-20</lastmod>
+        <loc>{{ route('contact') }}</loc>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>{{ route('get-started') }}</loc>
-        <lastmod>2025-11-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.7</priority>
     </url>
     <url>
         <loc>{{ route('privacy') }}</loc>
-        <lastmod>2025-11-20</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
         <loc>{{ route('terms') }}</loc>
-        <lastmod>2025-11-20</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>

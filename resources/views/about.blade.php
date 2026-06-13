@@ -1,193 +1,72 @@
 @extends('layouts.app')
 
-@section('title', 'About Us - Solutions Delivered')
-@section('meta_description', 'Founded 2019, UK-wide. 100% remote or client-site consultancy. Direct collaboration with experienced consultants. Transparent process, proven results. Specialising in Laravel development, ITIL, and business change.')
+@section('title', 'About | Solutions Delivered')
+@section('meta_description', 'Solutions Delivered is Sam Jenkins: fifteen years delivering software and IT that businesses depend on, now helping small businesses get real value from AI.')
 
 @push('schema')
 <x-schema.breadcrumb :items="[
     ['name' => 'Home', 'url' => route('home')],
-    ['name' => 'About']
+    ['name' => 'About'],
 ]" />
 @endpush
 
 @section('content')
-<!-- Page Header -->
-<section class="relative overflow-hidden bg-gradient-to-br from-[#198fd9] via-[#1a7fc7] to-[#0f6ba8] text-white py-10 sm:py-14 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
-    <!-- Subtle decorative background element -->
-    <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div class="absolute top-10 right-20 w-64 h-64 bg-white opacity-5 rounded-full blur-xl"></div>
-    </div>
+<x-page-header
+    eyebrow="About"
+    title="Practical AI from people who still do the work"
+    lead="Solutions Delivered helps small businesses get real, daily value from AI. We can say that with a straight face because we deliver software and IT for a living, and we run our own business on the same AI workspace we set up for clients." />
 
-    <div class="relative max-w-7xl mx-auto">
-        <!-- Breadcrumb/tag -->
-        <x-badge.breadcrumb class="mb-6">
-            <x-slot:icon>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </x-slot:icon>
-            About Us
-        </x-badge.breadcrumb>
-
-        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            About
-            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-100 to-gray-200 mt-1">
-                Solutions Delivered
-            </span>
-        </h1>
-
-        <p class="text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl text-gray-100 leading-relaxed">
-            Your trusted partner in delivering tailored business solutions that drive real results.
-        </p>
-    </div>
-</section>
-
-<!-- Mission Section -->
-<section class="py-8 sm:py-12 md:py-14 lg:py-16 px-4 sm:px-6 lg:px-8 bg-white" aria-labelledby="mission-heading">
-    <div class="max-w-4xl mx-auto">
-        <h2 id="mission-heading" class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
-        <p class="text-lg text-gray-700 mb-4">
-            At Solutions Delivered, we believe that every organisation is unique, and so are its challenges. Our mission is to provide tailored business solutions that align with your specific needs, helping you achieve sustainable growth and operational excellence.
-        </p>
-        <p class="text-lg text-gray-700 mb-4">
-            We focus on three core areas: Service Management, Project Management, and Business Change. Through these disciplines, we help organisations optimise their processes, deliver complex projects successfully, and navigate transformational change with confidence.
-        </p>
-    </div>
-</section>
-
-<!-- What Sets Us Apart -->
-<section class="py-8 sm:py-12 md:py-14 lg:py-16 px-4 sm:px-6 lg:px-8 bg-gray-50" aria-labelledby="approach-heading">
-    <div class="max-w-7xl mx-auto">
-        <h2 id="approach-heading" class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 mb-8 sm:mb-10 md:mb-12">
-            What Sets Us Apart
-        </h2>
-
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white rounded-lg p-6 sm:p-7 md:p-8 shadow-md">
-                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Tailored Solutions</h3>
-                <p class="text-gray-700">
-                    We don't believe in one-size-fits-all approaches. Every solution we deliver is customised to address your specific business context, challenges, and objectives.
+<section class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+    <div class="grid gap-12 lg:grid-cols-[1fr_360px] lg:items-start lg:gap-16">
+        <div class="max-w-2xl">
+            <h2 class="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">The person behind it</h2>
+            <div class="mt-5 flex flex-col gap-4 leading-relaxed text-text">
+                <p>
+                    The firm is Sam Jenkins. Fifteen years building and running systems that businesses depend
+                    on, with an MEng in Computer Science and PRINCE2 and ITIL behind the practice. The work has
+                    run from bespoke software to service management to delivering projects that had to land.
+                </p>
+                <p>
+                    These days a lot of that work uses AI, properly. We build and maintain a portfolio of small
+                    software products, and we use AI across our own business every day: drafting, qualifying
+                    enquiries, taking recurring jobs off the list. Not demos. The actual work.
+                </p>
+                <p>
+                    That is why we lead with AI now. Plenty of people will sell you a course about it. We would
+                    rather show you the same system we use ourselves, set it up so it knows your business, and
+                    leave you able to run it. We still take on the IT, web and project work too; it is the proof,
+                    not a competing message.
                 </p>
             </div>
 
-            <div class="bg-white rounded-lg p-6 sm:p-7 md:p-8 shadow-md">
-                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Experienced Team</h3>
-                <p class="text-gray-700">
-                    Our consultants bring years of real-world experience across various industries, ensuring practical, implementable solutions that drive results.
-                </p>
-            </div>
+            <h2 class="mt-12 text-2xl font-semibold tracking-tight text-ink sm:text-3xl">What you can count on</h2>
+            <ul class="mt-5 flex flex-col gap-3 text-text">
+                <li class="flex gap-3">
+                    <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-warm" aria-hidden="true"></span>
+                    You deal with the person doing the work, start to finish.
+                </li>
+                <li class="flex gap-3">
+                    <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-warm" aria-hidden="true"></span>
+                    Plain English, honest scoping, prices labelled ex-VAT.
+                </li>
+                <li class="flex gap-3">
+                    <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-warm" aria-hidden="true"></span>
+                    A reply within {{ config('brand.contact.response_time') }}, and accessibility built in to WCAG 2.2 AA.
+                </li>
+            </ul>
 
-            <div class="bg-white rounded-lg p-6 sm:p-7 md:p-8 shadow-md">
-                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Collaborative Approach</h3>
-                <p class="text-gray-700">
-                    We work directly with your teams, fostering knowledge transfer and building internal capabilities that last beyond our engagement.
-                </p>
-            </div>
-
-            <div class="bg-white rounded-lg p-6 sm:p-7 md:p-8 shadow-md">
-                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Results-Driven</h3>
-                <p class="text-gray-700">
-                    Our focus is on delivering measurable outcomes that contribute to your bottom line and long-term success.
-                </p>
+            <div class="mt-10">
+                <x-button :href="route('contact')">Work with us</x-button>
             </div>
         </div>
-    </div>
-</section>
 
-<!-- Our Values -->
-<section class="py-8 sm:py-12 md:py-14 lg:py-16 px-4 sm:px-6 lg:px-8 bg-white" aria-labelledby="values-heading">
-    <div class="max-w-7xl mx-auto">
-        <h2 id="values-heading" class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 mb-8 sm:mb-10 md:mb-12">
-            Our Core Values
-        </h2>
-
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="text-center">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-[#198fd9] text-white rounded-full mb-4" aria-hidden="true">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Integrity</h3>
-                <p class="text-gray-700">
-                    We operate with transparency and honesty in all our engagements.
-                </p>
-            </div>
-
-            <div class="text-center">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-[#0f6ba8] text-white rounded-full mb-4" aria-hidden="true">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Collaboration</h3>
-                <p class="text-gray-700">
-                    We work as partners with our clients, not just consultants.
-                </p>
-            </div>
-
-            <div class="text-center">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-[#198fd9] text-white rounded-full mb-4" aria-hidden="true">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Excellence</h3>
-                <p class="text-gray-700">
-                    We strive for the highest quality in everything we deliver.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Call to Action -->
-<section class="relative overflow-hidden py-10 sm:py-14 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#198fd9] via-[#1a7fc7] to-[#0f6ba8] text-white" aria-labelledby="cta-heading">
-    <!-- Subtle decorative background element -->
-    <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div class="absolute -top-24 -right-24 w-64 h-64 bg-white opacity-5 rounded-full blur-lg"></div>
-    </div>
-
-    <div class="relative max-w-4xl mx-auto text-center">
-        <!-- Eyebrow -->
-        <x-badge.breadcrumb class="mb-6 text-green-400">
-            <svg class="w-4 h-4 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
-            </svg>
-            Ready to Get Started?
-        </x-badge.breadcrumb>
-
-        <h2 id="cta-heading" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-            Want to Learn More?
-        </h2>
-        <p class="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 sm:mb-10 md:mb-12 text-gray-100 max-w-2xl mx-auto leading-relaxed">
-            Discover how our solutions can help transform your organisation and drive sustainable growth.
-        </p>
-
-        <div class="flex flex-col sm:flex-row gap-6 justify-center">
-            <a href="{{ route('solutions') }}" class="group relative inline-flex items-center justify-center bg-white text-[#198fd9] px-10 py-5 rounded-xl text-lg font-semibold shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-200 overflow-hidden">
-                <!-- Shimmer effect -->
-                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-gray-100 to-transparent opacity-0 group-hover:opacity-100 transform -skew-x-12 group-hover:translate-x-full transition-all duration-700" aria-hidden="true"></div>
-                <span class="relative z-10 flex items-center">
-                    Explore Solutions
-                    <svg class="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                    </svg>
-                </span>
-            </a>
-
-            <a href="{{ route('get-started') }}" class="group relative inline-flex items-center justify-center bg-[#0f6ba8] text-white border-2 border-white/30 hover:border-white/50 px-10 py-5 rounded-xl text-lg font-semibold shadow-xl hover:shadow-2xl hover:bg-[#0d5a8f] transform hover:-translate-y-1 transition-all duration-200">
-                <span class="flex items-center">
-                    Get Started Today
-                    <svg class="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                </span>
-            </a>
-        </div>
-
-        <!-- Trust indicator -->
-        <div class="mt-12 flex items-center justify-center text-gray-200">
-            <x-trust-indicator>No commitment required • Free initial consultation</x-trust-indicator>
-        </div>
+        <figure class="lg:sticky lg:top-24">
+            <img src="{{ asset('images/sam-headshot.png') }}"
+                 width="760" height="570"
+                 alt="Sam Jenkins, founder of Solutions Delivered."
+                 class="w-full rounded-lg border border-border bg-panel object-cover">
+            <figcaption class="mt-3 text-sm text-faint">Sam Jenkins, Solutions Delivered.</figcaption>
+        </figure>
     </div>
 </section>
 @endsection

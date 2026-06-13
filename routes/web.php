@@ -1,48 +1,57 @@
 <?php
 
 use App\Http\Controllers\PageController;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PageController::class, 'home'])->name('home');
-Route::get('/about/', [PageController::class, 'about'])->name('about');
-Route::get('/solutions/', [PageController::class, 'solutions'])->name('solutions');
-Route::get('/how-we-work/', [PageController::class, 'howWeWork'])->name('how-we-work');
-Route::get('/careers/', [PageController::class, 'careers'])->name('careers');
-Route::get('/get-started/', [PageController::class, 'getStarted'])->name('get-started');
-Route::get('/packages/', [PageController::class, 'packages'])->name('packages');
-Route::post('/contact', [PageController::class, 'contact'])->name('contact')->middleware(['throttle:5,1', 'honeypot']);
+
+// Productised AI offer. Holding state while the product spec is refined.
+Route::get('/ai-foundations', [PageController::class, 'aiFoundations'])->name('ai-foundations');
+Route::get('/foundations-os', [PageController::class, 'foundationsOs'])->name('foundations-os');
+
+Route::get('/how-it-works', [PageController::class, 'howItWorks'])->name('how-it-works');
+Route::get('/consultancy', [PageController::class, 'consultancy'])->name('consultancy');
+Route::get('/about', [PageController::class, 'about'])->name('about');
+
+Route::get('/contact', [PageController::class, 'contact'])->name('contact');
+Route::post('/contact', [PageController::class, 'submitContact'])
+    ->name('contact.submit')
+    ->middleware(['throttle:5,1', 'honeypot']);
 
 // Legal pages
-Route::get('/privacy/', [PageController::class, 'privacy'])->name('privacy');
-Route::get('/terms/', [PageController::class, 'terms'])->name('terms');
+Route::get('/privacy', [PageController::class, 'privacy'])->name('privacy');
+Route::get('/terms', [PageController::class, 'terms'])->name('terms');
+
+// Redirects from the previous IA (preserve SEO and inbound links).
+Route::redirect('/solutions', '/consultancy', 301);
+Route::redirect('/how-we-work', '/how-it-works', 301);
+Route::redirect('/get-started', '/contact', 301);
+Route::redirect('/packages', '/consultancy', 301);
+Route::redirect('/careers', '/', 301);
 
 // Sitemap
 Route::get('/sitemap.xml', function () {
     return response()->view('sitemap')->header('Content-Type', 'application/xml');
 });
 
-// Logo URL preservation - serve new SVG logo for old PNG requests
-Route::get('/logo.png', function () {
-    return response()->file(public_path('logo.svg'), [
-        'Content-Type' => 'image/svg+xml',
-        'Cache-Control' => 'public, max-age=31536000',
-    ]);
-});
-
-Route::get('/logo@2x.png', function () {
-    return response()->file(public_path('logo.svg'), [
-        'Content-Type' => 'image/svg+xml',
-        'Cache-Control' => 'public, max-age=31536000',
-    ]);
-});
+// Logo URL preservation - serve the SVG logo for old PNG requests.
+foreach (['/logo.png', '/logo@2x.png'] as $legacyLogo) {
+    Route::get($legacyLogo, function () {
+        return response()->file(public_path('logo.svg'), [
+            'Content-Type' => 'image/svg+xml',
+            'Cache-Control' => 'public, max-age=31536000',
+        ]);
+    });
+}
 
 Route::get('/health', function () {
     $checks = ['app' => true];
 
     try {
-        \Illuminate\Support\Facades\DB::connection()->getPdo();
+        DB::connection()->getPdo();
         $checks['database'] = true;
-    } catch (\Exception $e) {
+    } catch (Exception $e) {
         $checks['database'] = false;
     }
 

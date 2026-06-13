@@ -1,0 +1,8 @@
+{{-- SD monogram: --ink tile, off-white initials, warm corner dot. Matches favicon-sd.svg. --}}
+<svg {{ $attributes->merge(['class' => 'h-8 w-8']) }} viewBox="0 0 64 64" role="img" aria-label="Solutions Delivered" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="64" height="64" rx="15" fill="#16223A" />
+    <text x="32" y="33" text-anchor="middle" dominant-baseline="central"
+          font-family="'Hanken Grotesk','Helvetica Neue',Arial,sans-serif"
+          font-weight="700" font-size="28" letter-spacing="-1.5" fill="#FBFAF7">SD</text>
+    <circle cx="50" cy="50" r="5.5" fill="#DC7A3C" />
+</svg>

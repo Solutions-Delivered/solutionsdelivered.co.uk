@@ -1,36 +1,22 @@
 @extends('layouts.app')
 
-@section('title', 'Privacy Policy - Solutions Delivered')
-@section('meta_description', 'Privacy Policy for Solutions Delivered - How we collect, use, and protect your personal information.')
+@section('title', 'Privacy Policy | Solutions Delivered')
+@section('meta_description', 'How Solutions Delivered collects, uses, and protects your personal information.')
 
 @section('content')
-<!-- Page Header -->
-<section class="bg-gradient-to-r from-[#198fd9] to-[#0f6ba8] text-white py-16 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Privacy Policy</h1>
-        <p class="text-xl md:text-2xl max-w-3xl">
-            How we collect, use, and protect your information
-        </p>
-    </div>
-</section>
+<x-page-header eyebrow="Legal" title="Privacy Policy" lead="How we collect, use, and protect your information." />
 
-<!-- Privacy Policy Content -->
-<section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-    <div class="max-w-4xl mx-auto prose prose-lg">
-        <p class="text-gray-600 mb-8"><strong>Last Updated:</strong> {{ date('F d, Y') }}</p>
+<section class="mx-auto max-w-3xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
+    <div class="legal">
+        <p><strong>Last updated:</strong> {{ date('j F Y') }}</p>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Introduction</h2>
-        <p class="text-gray-700 mb-4">
-            Solutions Delivered ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
-        </p>
+        <h2>Introduction</h2>
+        <p>Solutions Delivered ("we", "our", or "us") is committed to protecting your privacy. This policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Information We Collect</h2>
-
-        <h3 class="text-xl font-bold text-gray-900 mt-6 mb-3">Information You Provide</h3>
-        <p class="text-gray-700 mb-4">
-            When you contact us through our website, we collect:
-        </p>
-        <ul class="list-disc pl-6 mb-4 text-gray-700 space-y-2">
+        <h2>Information we collect</h2>
+        <h3>Information you provide</h3>
+        <p>When you contact us through our website, we collect:</p>
+        <ul>
             <li>Name</li>
             <li>Email address</li>
             <li>Company name (optional)</li>
@@ -38,130 +24,77 @@
             <li>Any other information you choose to provide</li>
         </ul>
 
-        <h3 class="text-xl font-bold text-gray-900 mt-6 mb-3">Automatically Collected Information</h3>
-        <p class="text-gray-700 mb-4">
-            When you visit our website, we may automatically collect certain information about your device and usage, including:
-        </p>
-        <ul class="list-disc pl-6 mb-4 text-gray-700 space-y-2">
-            <li>IP address (anonymized in analytics)</li>
+        <h3>Automatically collected information</h3>
+        <p>When you visit our website, we may automatically collect certain information about your device and usage, including:</p>
+        <ul>
+            <li>IP address (anonymised in analytics)</li>
             <li>Browser type and version</li>
             <li>Pages visited and time spent on pages</li>
             <li>Referring website</li>
             <li>Device type and operating system</li>
             <li>Interaction with page elements (clicks, scrolls, form interactions)</li>
-            <li>Geographic location (country/region level only)</li>
+            <li>Geographic location (country or region level only)</li>
         </ul>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">How We Use Your Information</h2>
-        <p class="text-gray-700 mb-4">
-            We use the information we collect to:
-        </p>
-        <ul class="list-disc pl-6 mb-4 text-gray-700 space-y-2">
-            <li>Respond to your inquiries and provide customer support</li>
+        <h2>How we use your information</h2>
+        <p>We use the information we collect to:</p>
+        <ul>
+            <li>Respond to your enquiries and provide support</li>
             <li>Communicate with you about our services</li>
             <li>Improve our website and services through analytics</li>
-            <li>Understand how visitors use our website to enhance user experience</li>
-            <li>Measure the effectiveness of our content and marketing</li>
+            <li>Understand how visitors use our website to enhance the experience</li>
             <li>Comply with legal obligations</li>
             <li>Protect against fraudulent or illegal activity</li>
         </ul>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Legal Basis for Processing (UK GDPR)</h2>
-        <p class="text-gray-700 mb-4">
-            We process your personal data based on:
-        </p>
-        <ul class="list-disc pl-6 mb-4 text-gray-700 space-y-2">
-            <li><strong>Consent:</strong> When you submit information through our contact form</li>
-            <li><strong>Legitimate Interests:</strong> To operate and improve our website and services</li>
-            <li><strong>Legal Obligation:</strong> To comply with applicable laws and regulations</li>
+        <h2>Legal basis for processing (UK GDPR)</h2>
+        <p>We process your personal data based on:</p>
+        <ul>
+            <li><strong>Consent:</strong> when you submit information through our contact form</li>
+            <li><strong>Legitimate interests:</strong> to operate and improve our website and services</li>
+            <li><strong>Legal obligation:</strong> to comply with applicable laws and regulations</li>
         </ul>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Data Retention</h2>
-        <p class="text-gray-700 mb-4">
-            We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required by law. Contact form submissions are typically retained for up to 2 years unless you request earlier deletion.
-        </p>
+        <h2>Data retention</h2>
+        <p>We retain your personal information only for as long as necessary to fulfil the purposes set out in this policy, unless a longer retention period is required by law. Contact form submissions are typically retained for up to two years unless you request earlier deletion.</p>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Information Sharing and Disclosure</h2>
-        <p class="text-gray-700 mb-4">
-            We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:
-        </p>
-        <ul class="list-disc pl-6 mb-4 text-gray-700 space-y-2">
-            <li><strong>Service Providers:</strong> With trusted third-party service providers who assist in operating our website and delivering services (e.g., email hosting, web hosting)</li>
-            <li><strong>Legal Requirements:</strong> When required by law or to protect our rights</li>
-            <li><strong>Business Transfers:</strong> In connection with any merger, sale, or acquisition of our business</li>
+        <h2>Information sharing and disclosure</h2>
+        <p>We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:</p>
+        <ul>
+            <li><strong>Service providers:</strong> with trusted third parties who help us operate the website and deliver services (for example email and web hosting)</li>
+            <li><strong>Legal requirements:</strong> when required by law or to protect our rights</li>
+            <li><strong>Business transfers:</strong> in connection with any merger, sale, or acquisition of our business</li>
         </ul>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Your Rights (UK GDPR)</h2>
-        <p class="text-gray-700 mb-4">
-            Under UK data protection law, you have the following rights:
-        </p>
-        <ul class="list-disc pl-6 mb-4 text-gray-700 space-y-2">
-            <li><strong>Right to Access:</strong> Request a copy of your personal data</li>
-            <li><strong>Right to Rectification:</strong> Request correction of inaccurate data</li>
-            <li><strong>Right to Erasure:</strong> Request deletion of your personal data</li>
-            <li><strong>Right to Restrict Processing:</strong> Request limitation of how we use your data</li>
-            <li><strong>Right to Data Portability:</strong> Request transfer of your data to another service</li>
-            <li><strong>Right to Object:</strong> Object to processing of your personal data</li>
-            <li><strong>Right to Withdraw Consent:</strong> Withdraw consent at any time</li>
-        </ul>
-        <p class="text-gray-700 mb-4">
-            To exercise any of these rights, please contact us using the details at the end of this policy.
-        </p>
+        <h2>Your rights (UK GDPR)</h2>
+        <p>Under UK data protection law, you have the right to access, rectify, erase, restrict processing of, and port your personal data, as well as to object to processing and to withdraw consent at any time. To exercise any of these rights, please contact us using the details below.</p>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Cookies and Analytics</h2>
-        <p class="text-gray-700 mb-4">
-            Our website uses cookies for both essential functionality and analytics purposes:
-        </p>
-        <ul class="list-disc pl-6 mb-4 text-gray-700 space-y-2">
-            <li><strong>Essential Cookies:</strong> Required for the website to function properly, including session management and security features</li>
-            <li><strong>Analytics Cookies:</strong> We use Google Tag Manager and Google Analytics (or similar analytics services) to understand how visitors interact with our website. These cookies collect anonymized data about page views, user journeys, and website performance. This helps us improve our services and user experience.</li>
-        </ul>
-        <p class="text-gray-700 mb-4">
-            Analytics data is anonymized and aggregated. We do not use this data to personally identify individual visitors. You can opt out of analytics tracking through your browser settings or by using browser extensions that block analytics scripts.
-        </p>
+        <h2>Cookies and analytics</h2>
+        <p>Our website uses cookies for essential functionality and, with your consent, for analytics. Essential cookies are required for the website to work, including session management and security. Analytics cookies help us understand how visitors interact with the site so we can improve it; this data is anonymised and aggregated, and is not used to identify individual visitors. You can decline analytics cookies via our cookie banner, and the decline is as easy as the accept.</p>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Data Security</h2>
-        <p class="text-gray-700 mb-4">
-            We implement appropriate technical and organisational measures to protect your personal information against unauthorised access, alteration, disclosure, or destruction. However, no internet transmission is completely secure, and we cannot guarantee absolute security.
-        </p>
+        <h2>Data security</h2>
+        <p>We implement appropriate technical and organisational measures to protect your personal information. However, no internet transmission is completely secure, and we cannot guarantee absolute security.</p>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Third-Party Links</h2>
-        <p class="text-gray-700 mb-4">
-            Our website may contain links to third-party websites. We are not responsible for the privacy practices of these external sites. We encourage you to review their privacy policies.
-        </p>
+        <h2>Children's privacy</h2>
+        <p>Our services are not directed to individuals under the age of 18, and we do not knowingly collect personal information from children.</p>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Children's Privacy</h2>
-        <p class="text-gray-700 mb-4">
-            Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children.
-        </p>
+        <h2>Changes to this policy</h2>
+        <p>We may update this policy from time to time. We will post the new policy on this page and update the "last updated" date.</p>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Changes to This Policy</h2>
-        <p class="text-gray-700 mb-4">
-            We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last Updated" date.
-        </p>
-
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Contact Us</h2>
-        <p class="text-gray-700 mb-4">
-            If you have questions about this Privacy Policy or wish to exercise your data protection rights, please contact us:
-        </p>
-        <div class="bg-gray-50 rounded-lg p-6">
-            <p class="text-gray-900 font-medium mb-2">Solutions Delivered</p>
-            <p class="text-gray-700">
-                Email: <a href="mailto:privacy@solutionsdelivered.co.uk" class="text-[#198fd9] hover:text-[#0f6ba8]">privacy@solutionsdelivered.co.uk</a>
-            </p>
-            <p class="text-gray-700 mt-2">
-                Alternatively, use our <a href="{{ route('get-started') }}" class="text-[#198fd9] hover:text-[#0f6ba8]">contact form</a>.
-            </p>
+        <h2>Contact us</h2>
+        <p>If you have questions about this policy or wish to exercise your data protection rights, please contact us:</p>
+        <div class="note">
+            <p><strong>Solutions Delivered</strong></p>
+            <p>Email: <a href="mailto:{{ config('brand.contact.privacy') }}">{{ config('brand.contact.privacy') }}</a></p>
+            <p>Alternatively, use our <a href="{{ route('contact') }}">contact form</a>.</p>
         </div>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Supervisory Authority</h2>
-        <p class="text-gray-700 mb-4">
-            If you believe we have not addressed your concerns adequately, you have the right to lodge a complaint with the UK Information Commissioner's Office (ICO):
-        </p>
-        <div class="bg-gray-50 rounded-lg p-6">
-            <p class="text-gray-900 font-medium mb-2">Information Commissioner's Office</p>
-            <p class="text-gray-700">Website: <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" class="text-[#198fd9] hover:text-[#0f6ba8]">ico.org.uk</a></p>
-            <p class="text-gray-700">Helpline: 0303 123 1113</p>
+        <h2>Supervisory authority</h2>
+        <p>If you believe we have not addressed your concerns adequately, you have the right to lodge a complaint with the UK Information Commissioner's Office (ICO):</p>
+        <div class="note">
+            <p><strong>Information Commissioner's Office</strong></p>
+            <p>Website: <a href="https://ico.org.uk" rel="noopener">ico.org.uk</a></p>
+            <p>Helpline: 0303 123 1113</p>
         </div>
     </div>
 </section>

@@ -14,7 +14,7 @@
             padding: 20px;
         }
         .header {
-            background: linear-gradient(to right, #198fd9, #1a7fc7);
+            background: #2f6bed;
             color: white;
             padding: 30px 20px;
             text-align: center;
@@ -39,13 +39,13 @@
             padding: 10px;
             background: #f9fafb;
             border-radius: 6px;
-            border-left: 3px solid #198fd9;
+            border-left: 3px solid #2f6bed;
         }
         .message-box {
             background: #f9fafb;
             padding: 15px;
             border-radius: 6px;
-            border-left: 3px solid #198fd9;
+            border-left: 3px solid #2f6bed;
             white-space: pre-wrap;
             word-wrap: break-word;
         }
@@ -85,7 +85,7 @@
         <div class="field">
             <div class="field-label">Email:</div>
             <div class="field-value">
-                <a href="mailto:{{ $email }}" style="color: #198fd9; text-decoration: none;">{{ $email }}</a>
+                <a href="mailto:{{ $email }}" style="color: #2f6bed; text-decoration: none;">{{ $email }}</a>
             </div>
         </div>
 
@@ -109,7 +109,7 @@
     <div class="footer">
         <p style="margin: 0;">This email was sent from the Solutions Delivered contact form.</p>
         <p style="margin: 5px 0 0 0;">
-            <a href="{{ config('app.url') }}" style="color: #198fd9; text-decoration: none;">{{ config('app.url') }}</a>
+            <a href="{{ config('app.url') }}" style="color: #2f6bed; text-decoration: none;">{{ config('app.url') }}</a>
         </p>
     </div>
 </body>

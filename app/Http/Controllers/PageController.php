@@ -4,58 +4,61 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactFormRequest;
 use App\Mail\ContactFormSubmitted;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 
 class PageController extends Controller
 {
-    public function home()
+    public function home(): View
     {
         return view('home');
     }
 
-    public function about()
+    public function aiFoundations(): View
     {
-        return view('about');
+        return view('ai-foundations');
     }
 
-    public function solutions()
+    public function foundationsOs(): View
     {
-        return view('solutions');
+        return view('foundations-os');
     }
 
-    public function howWeWork()
+    public function howItWorks(): View
     {
-        return view('how-we-work');
+        return view('how-it-works');
     }
 
-    public function careers()
+    public function consultancy(): View
     {
-        return view('careers');
-    }
-
-    public function getStarted()
-    {
-        return view('get-started');
-    }
-
-    public function packages()
-    {
-        return view('packages', [
+        return view('consultancy', [
             'packages' => config('packages'),
         ]);
     }
 
-    public function privacy()
+    public function about(): View
+    {
+        return view('about');
+    }
+
+    public function contact(): View
+    {
+        return view('contact');
+    }
+
+    public function privacy(): View
     {
         return view('privacy');
     }
 
-    public function terms()
+    public function terms(): View
     {
         return view('terms');
     }
 
-    public function contact(ContactFormRequest $request)
+    public function submitContact(ContactFormRequest $request): RedirectResponse
     {
         $validated = $request->validated();
 
@@ -63,7 +66,6 @@ class PageController extends Controller
             ? config("packages.{$validated['package']}.name")
             : null;
 
-        // Send email notification
         try {
             Mail::to(config('brand.contact.general'))
                 ->send(new ContactFormSubmitted(
@@ -74,10 +76,7 @@ class PageController extends Controller
                     packageName: $packageName
                 ));
         } catch (\Exception $e) {
-            // Log the error but don't expose it to the user
-            \Log::error('Contact form email failed: '.$e->getMessage());
-
-            // Still show success to user (email will be in logs for manual handling)
+            Log::error('Contact form email failed: '.$e->getMessage());
         }
 
         return back()->with('success', 'Thank you for your message. We will get back to you soon.');
