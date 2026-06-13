@@ -1,187 +1,96 @@
 # Solutions Delivered - Official Website
 
-A modern, WCAG 2.2 AA/AAA compliant website built with Laravel 12 and the TALL stack (Tailwind CSS, Alpine.js, Laravel, Livewire).
+The Solutions Delivered website: practical AI for small businesses, with the IT and
+project delivery behind it. Built with Laravel 13, Tailwind CSS v4 and Alpine.js, to
+WCAG 2.2 AA in both light and dark themes.
 
 ## Overview
 
-Solutions Delivered is a UK-based consultancy offering tailored business solutions across three core areas:
-- **Service Management**: Customized internal process optimization
-- **Project Management**: Risk mitigation and delivery oversight
-- **Business Change**: Leadership support for organizational transformation
+Solutions Delivered leads with its productised AI offer and keeps its consultancy work
+as proof of competence:
 
-## Technology Stack
+- **AI Foundations**: a done-with-you build of an AI workspace that knows your business
+- **The Foundations OS**: the self-serve version of the same workspace
+- **Consultancy**: web and software development, service management, project management
+  and business change
 
-- **Backend**: Laravel 12
-- **Frontend**:
-  - Tailwind CSS v4 (via @tailwindcss/vite)
-  - Alpine.js v3
-  - Livewire v3
-- **Testing**: Pest v3 (PHPUnit 11)
-- **Build Tool**: Vite v7
-- **Database**: SQLite (development) / MySQL/PostgreSQL (production)
+The AI Foundations and Foundations OS pages currently ship as noindex holding states
+while the product spec is finalised.
 
-## Features
+## Technology stack
 
-### WCAG 2.2 Compliance
-This website meets WCAG 2.2 Level AA compliance with selected AAA criteria. Key accessibility features include:
+- **Backend**: Laravel 13 (PHP 8.3+)
+- **Frontend**: Tailwind CSS v4 (via `@tailwindcss/vite`) and Alpine.js v3
+- **Testing**: Pest v4 (PHPUnit 12)
+- **Build tool**: Vite
+- **Email/anti-spam**: Spatie Honeypot; Spatie Cookie Consent for the cookie banner
 
-- ✓ Keyboard navigation support with visible focus indicators
-- ✓ Skip to main content link
-- ✓ ARIA landmarks and labels
-- ✓ High contrast color scheme (minimum 4.5:1 ratio)
-- ✓ Screen reader friendly
-- ✓ Responsive design with touch-friendly targets
-- ✓ Reduced motion support
-- ✓ Accessible forms with validation
-- ✓ Semantic HTML5 structure
+## Design system
 
-See [WCAG_COMPLIANCE.md](WCAG_COMPLIANCE.md) for detailed compliance report.
+The visual system (tokens, type, components, dark mode, accessibility floor) is documented
+in [DESIGN.md](DESIGN.md), the single source of truth. In short:
 
-### Pages
-- **Home**: Hero section with service overview
-- **About**: Company mission and values
-- **Solutions**: Detailed service offerings
-- **Careers**: Join our team
-- **Get Started**: Contact form with validation
+- Warm light theme by default, with a warm dark theme; switched via a `.dark` class plus
+  `prefers-color-scheme`, with a toggle in the nav. No component library.
+- Self-hosted Hanken Grotesk (headings and body) and IBM Plex Mono (code), in `public/fonts/`.
+- Colour and type tokens are CSS variables in `resources/css/app.css`, mapped into Tailwind's
+  theme. Verify any new colour pair at WCAG 2.2 AA before use.
 
-### Design Philosophy
-- Clean, professional design
-- Minimal animations (respects prefers-reduced-motion)
-- Mobile-first responsive approach
-- Professional color palette:
-  - Primary Blue: #198bd9
-  - Secondary Green: #65bd7d
-  - Dark: #1a1a1a
-  - Gray: #4a5568
+## Pages
+
+Home, AI Foundations, The Foundations OS, How it works, Consultancy, About, Contact, plus
+Privacy and Terms. Retired URLs (`/solutions`, `/how-we-work`, `/get-started`, `/packages`,
+`/careers`) 301-redirect to their replacements.
 
 ## Installation
 
 ### Prerequisites
-- PHP 8.2 or higher
+- PHP 8.3 or higher
 - Composer
 - Node.js 18+ and npm
-- SQLite, MySQL, or PostgreSQL
 
-### Setup Steps
+### Setup
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd solutionsdelivered.co.uk
-   ```
-
-2. **Install PHP dependencies**
-   ```bash
-   composer install
-   ```
-
-3. **Install Node dependencies**
-   ```bash
-   npm install
-   ```
-
-4. **Environment configuration**
-   ```bash
-   cp .env.example .env
-   php artisan key:generate
-   ```
-
-5. **Configure your database**
-
-   For SQLite (default):
-   ```bash
-   touch database/database.sqlite
-   ```
-
-   Or update `.env` for MySQL/PostgreSQL:
-   ```env
-   DB_CONNECTION=mysql
-   DB_HOST=127.0.0.1
-   DB_PORT=3306
-   DB_DATABASE=your_database
-   DB_USERNAME=your_username
-   DB_PASSWORD=your_password
-   ```
-
-6. **Run migrations**
-   ```bash
-   php artisan migrate
-   ```
-
-7. **Build assets**
-   ```bash
-   npm run build
-   ```
-
-8. **Start the development server**
-   ```bash
-   php artisan serve
-   ```
-
-   Visit: http://localhost:8000
+```bash
+git clone <repository-url>
+cd solutionsdelivered.co.uk
+composer install
+npm install
+cp .env.example .env
+php artisan key:generate
+npm run build
+php artisan serve   # visit http://localhost:8000
+```
 
 ## Development
 
-### Running in development mode
-
-**Backend:**
 ```bash
-php artisan serve
-```
-
-**Frontend (with hot reload):**
-```bash
-npm run dev
-```
-
-### Running tests
-```bash
-php artisan test
-# or
-./vendor/bin/pest
-```
-
-### Code style
-```bash
-./vendor/bin/pint
+php artisan serve        # backend
+npm run dev              # frontend with hot reload
+php artisan test         # run the Pest suite
+./vendor/bin/pint        # code style
 ```
 
 ## Deployment
 
-### Building for production
+Production needs both a Composer install and an asset build (the compiled assets in
+`public/build` are not committed):
 
-1. **Install dependencies**
-   ```bash
-   composer install --no-dev --optimize-autoloader
-   npm ci
-   ```
+```bash
+composer install --no-dev --optimize-autoloader
+npm ci && npm run build
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+```
 
-2. **Optimize Laravel**
-   ```bash
-   php artisan config:cache
-   php artisan route:cache
-   php artisan view:cache
-   ```
+### Key production environment variables
 
-3. **Build assets**
-   ```bash
-   npm run build
-   ```
-
-4. **Set permissions**
-   ```bash
-   chmod -R 755 storage bootstrap/cache
-   ```
-
-### Environment Variables
-
-Key production environment variables:
 ```env
 APP_ENV=production
 APP_DEBUG=false
 APP_URL=https://solutionsdelivered.co.uk
 
-# Email configuration for contact form
 MAIL_MAILER=smtp
 MAIL_HOST=your-smtp-host
 MAIL_PORT=587
@@ -192,89 +101,34 @@ MAIL_FROM_ADDRESS=noreply@solutionsdelivered.co.uk
 MAIL_FROM_NAME="Solutions Delivered"
 ```
 
-## Project Structure
+## Project structure
 
 ```
 ├── app/
-│   └── Http/
-│       └── Controllers/
-│           └── PageController.php    # Main page controller
+│   ├── Http/Controllers/PageController.php   # All page routes
+│   ├── Http/Requests/ContactFormRequest.php  # Contact validation
+│   ├── Mail/ContactFormSubmitted.php
+│   └── View/Composers/BrandComposer.php      # Shares nav/company config to views
+├── config/
+│   ├── brand.php                             # Company, contact and nav config
+│   └── packages.php                          # Productised consultancy engagements
 ├── resources/
-│   ├── css/
-│   │   └── app.css                   # Tailwind CSS with WCAG colors
-│   ├── js/
-│   │   └── app.js                    # Alpine.js initialization
-│   └── views/
-│       ├── layouts/
-│       │   └── app.blade.php         # Main layout with navigation
-│       ├── home.blade.php
-│       ├── about.blade.php
-│       ├── solutions.blade.php
-│       ├── careers.blade.php
-│       └── get-started.blade.php
-├── routes/
-│   └── web.php                       # Application routes
-├── tests/                            # Pest tests
-├── WCAG_COMPLIANCE.md               # Accessibility compliance report
-└── README.md                        # This file
+│   ├── css/app.css                           # Tokens, fonts, dark mode
+│   ├── js/app.js                             # Alpine + dark-mode store
+│   └── views/                                # Pages, partials and the component kit
+├── routes/web.php                            # Routes and redirects
+├── tests/                                    # Pest feature tests
+├── DESIGN.md                                 # Design system (source of truth)
+└── README.md
 ```
 
-## Contact Form
+## Contact form
 
-The contact form on the "Get Started" page includes:
-- Form validation (name, email, company, message)
-- CSRF protection
-- Accessible error messages
-- Success notifications
-- Email delivery support (configure MAIL_ variables in .env)
-
-To customize email handling, modify the `contact()` method in `app/Http/Controllers/PageController.php`.
-
-## Customization
-
-### Colors
-Update the color scheme in `resources/css/app.css`:
-```css
-@theme {
-    --color-primary: #198bd9;
-    --color-secondary: #65bd7d;
-    /* ... */
-}
-```
-
-**Note**: Ensure any color changes maintain WCAG AA contrast ratios (minimum 4.5:1).
-
-### Content
-All page content is in Blade templates under `resources/views/`. Edit these files to update content.
-
-### Navigation
-Modify the navigation in `resources/views/layouts/app.blade.php`.
-
-## Browser Support
-
-- Chrome/Edge (latest 2 versions)
-- Firefox (latest 2 versions)
-- Safari (latest 2 versions)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## Accessibility Testing
-
-Recommended tools:
-- [axe DevTools](https://www.deque.com/axe/devtools/)
-- [WAVE Browser Extension](https://wave.webaim.org/extension/)
-- Lighthouse (built into Chrome DevTools)
-- Screen readers (NVDA, JAWS, VoiceOver)
+The contact form posts to a throttled, honeypot-protected route, validates input via
+`ContactFormRequest`, and emails the enquiry. Arriving from a Consultancy engagement
+(`?package=<slug>`) or a product page (`?topic=<slug>`) prefills the message. Configure the
+`MAIL_*` variables in `.env` for delivery.
 
 ## License
 
 Proprietary - Solutions Delivered Ltd
-
-## Support
-
-For technical support or questions:
-- Visit: https://solutionsdelivered.co.uk/get-started
-- Email: info@solutionsdelivered.co.uk
-
----
-
-**Built with accessibility in mind** | WCAG 2.2 AA/AAA Compliant
