@@ -25,10 +25,12 @@
 
     <title>@yield('title', config('brand.company.name').' | '.config('brand.company.tagline'))</title>
 
-    {{-- Favicons: the SD monogram. --}}
-    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon-sd.svg') }}">
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
+    {{-- Favicons: the SD monogram. The ?v query busts the Cloudflare/browser
+         cache when the icon files change; bump it on any future icon update. --}}
+    @php($iconVersion = '2')
+    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon-sd.svg') }}?v={{ $iconVersion }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}?v={{ $iconVersion }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}?v={{ $iconVersion }}">
 
     <link rel="canonical" href="{{ url()->current() }}">
 
