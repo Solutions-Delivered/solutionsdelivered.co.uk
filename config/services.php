@@ -40,4 +40,9 @@ return [
         'gtm_id' => env('GOOGLE_TAG_MANAGER_ID'),
     ],
 
+    'polar' => [
+        'token' => env('POLAR_ACCESS_TOKEN'),
+        'base_url' => env('POLAR_API_BASE_URL', 'https://sandbox-api.polar.sh'),
+    ],
+
 ];

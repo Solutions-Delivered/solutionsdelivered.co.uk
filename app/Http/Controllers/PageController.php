@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactFormRequest;
 use App\Mail\ContactFormSubmitted;
+use App\Services\Polar\PolarCheckout;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 
@@ -46,6 +48,28 @@ class PageController extends Controller
     public function contact(): View
     {
         return view('contact');
+    }
+
+    public function thankYou(Request $request, string $product, PolarCheckout $polar): View
+    {
+        $config = config("polar.products.{$product}");
+
+        abort_unless(
+            is_array($config) && filled($config['product_id'] ?? null) && view()->exists("thank-you.{$product}"),
+            404,
+        );
+
+        $checkoutId = $request->query('checkout_id');
+
+        $confirmation = $polar->confirm(
+            checkoutId: is_string($checkoutId) ? $checkoutId : null,
+            expectedProductId: $config['product_id'],
+        );
+
+        return view("thank-you.{$product}", [
+            'slug' => $product,
+            'confirmation' => $confirmation,
+        ]);
     }
 
     public function privacy(): View

@@ -14,6 +14,10 @@ Route::get('/how-it-works', [PageController::class, 'howItWorks'])->name('how-it
 Route::get('/consultancy', [PageController::class, 'consultancy'])->name('consultancy');
 Route::get('/about', [PageController::class, 'about'])->name('about');
 
+// Post-purchase confirmation. {product} maps to a slug in config/polar.php;
+// Polar appends ?checkout_id={CHECKOUT_ID}, which we verify server-side.
+Route::get('/thank-you/{product}', [PageController::class, 'thankYou'])->name('thank-you');
+
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::post('/contact', [PageController::class, 'submitContact'])
     ->name('contact.submit')
