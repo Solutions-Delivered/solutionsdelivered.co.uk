@@ -1,6 +1,7 @@
 {{-- Dark-mode toggle. Reads/writes the Alpine theme store (resources/js/app.js);
      the .dark class itself is set pre-paint by partials/theme-script. --}}
 <button type="button"
+        x-data
         @click="$store.theme.toggle()"
         class="inline-flex h-10 w-10 items-center justify-center rounded-md text-muted transition-colors hover:text-ink"
         :aria-pressed="$store.theme ? $store.theme.dark.toString() : 'false'"
