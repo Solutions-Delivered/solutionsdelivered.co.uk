@@ -21,19 +21,20 @@
 
             <div class="mt-8">
                 <x-process-step :number="1" title="Download your workspace">
-                    Grab the Foundations OS workspace from the link in your purchase email.
-                    It is a single folder — no install, nothing to configure.
+                    Your Foundations OS download is in the order confirmation email from Polar.
+                    Open the link to grab the zip — and you can re-access it any time from the
+                    customer portal link in that same email.
                     <div class="mt-4">
-                        <x-button href="{{ config('brand.contact.general') ? 'mailto:'.config('brand.contact.general') : route('contact') }}">
-                            Download link not arrived? Email us
+                        <x-button href="mailto:{{ config('brand.contact.general') }}">
+                            Download not arrived? Email us
                         </x-button>
                     </div>
                 </x-process-step>
 
                 <x-process-step :number="2" title="Point your AI at it">
-                    Open the workspace in Claude (or your assistant of choice) and follow the short
-                    prompts. You will spend 20 to 40 minutes telling it how your business works — your
-                    voice, your customers, your offers.
+                    Unzip it and open the folder in Claude (or your assistant of choice), then follow
+                    the short prompts. You will spend 20 to 40 minutes telling it how your business
+                    works — your voice, your customers, your offers.
                 </x-process-step>
 
                 <x-process-step :number="3" title="Work from a head start">
