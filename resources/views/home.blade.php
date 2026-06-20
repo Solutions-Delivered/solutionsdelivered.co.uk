@@ -47,18 +47,20 @@
     <x-section-heading
         id="offer-heading"
         eyebrow="What we offer"
-        lead="Two ways to get there, depending on whether you would rather do it yourself or build it with us. We are refining both right now, so the detail below is short on purpose.">
+        lead="Two ways to get there, depending on whether you would rather do it yourself or build it with us.">
         Start where it suits you
     </x-section-heading>
 
     <div class="mt-10 grid gap-6 sm:grid-cols-2">
         <x-offer-card
             name="The Foundations OS"
-            promise="A ready-made workspace you point your AI at, so it stops starting from scratch every time."
+            promise="A ready-built Claude workspace you set up once. From then on every chat opens already knowing your business."
+            price="£197"
+            priceNote="+ VAT, one-time"
             :href="route('foundations-os')"
-            cta="What's coming"
+            cta="Get the Foundations OS"
             :items="[
-                'A self-serve workspace you download and set up yourself',
+                'A self-serve workspace you download and set up in 20 to 40 minutes',
                 'Capture your business once, then every chat already knows it',
                 'For owners who already use Claude and want to move quickly',
             ]" />
@@ -77,8 +79,8 @@
     </div>
 
     <p class="mt-6 text-sm text-muted">
-        Prices are shown ex-VAT. The Foundations OS and AI Foundations pages are being finalised; in the
-        meantime, <a href="{{ route('contact') }}" class="text-blue hover:text-blue-deep">tell us what you are after</a>
+        Prices are shown ex-VAT. The Foundations OS is available now; AI Foundations is being finalised. Not sure
+        which fits? <a href="{{ route('contact') }}" class="text-blue hover:text-blue-deep">Tell us what you are after</a>
         and we will point you to the right one.
     </p>
 </section>
