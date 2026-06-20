@@ -21,6 +21,15 @@ return [
 
         'foundations-os' => [
             'product_id' => env('POLAR_PRODUCT_FOUNDATIONS_OS'),
+
+            // Hosted Polar checkout link the buy button points at. Its
+            // success_url is configured in Polar to return to
+            // /thank-you/foundations-os?checkout_id={CHECKOUT_ID}.
+            'checkout_url' => env('POLAR_CHECKOUT_FOUNDATIONS_OS'),
+
+            // Display price for the product page (the charge itself is set in
+            // Polar). Integer GBP.
+            'price' => 197,
         ],
 
     ],

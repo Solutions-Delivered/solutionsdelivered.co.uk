@@ -25,7 +25,9 @@ class PageController extends Controller
 
     public function foundationsOs(): View
     {
-        return view('foundations-os');
+        return view('foundations-os', [
+            'product' => config('polar.products.foundations-os'),
+        ]);
     }
 
     public function howItWorks(): View
