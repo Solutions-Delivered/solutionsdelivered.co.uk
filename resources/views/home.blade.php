@@ -51,14 +51,15 @@
         Start where it suits you
     </x-section-heading>
 
+    @php($fosOnSale = config('polar.products.foundations-os.on_sale', false))
     <div class="mt-10 grid gap-6 sm:grid-cols-2">
         <x-offer-card
             name="The Foundations OS"
             promise="A ready-built Claude workspace you set up once. From then on every chat opens already knowing your business."
             price="£197"
-            priceNote="+ VAT, one-time"
+            :priceNote="$fosOnSale ? '+ VAT, one-time' : '+ VAT · launching soon'"
             :href="route('foundations-os')"
-            cta="Get the Foundations OS"
+            :cta="$fosOnSale ? 'Get the Foundations OS' : 'Register your interest'"
             :items="[
                 'A self-serve workspace you download and set up in 20 to 40 minutes',
                 'Capture your business once, then every chat already knows it',
@@ -79,8 +80,9 @@
     </div>
 
     <p class="mt-6 text-sm text-muted">
-        Prices are shown ex-VAT. The Foundations OS is available now; AI Foundations is being finalised. Not sure
-        which fits? <a href="{{ route('contact') }}" class="text-blue hover:text-blue-deep">Tell us what you are after</a>
+        Prices are shown ex-VAT.
+        {{ $fosOnSale ? 'The Foundations OS is available now; AI Foundations is being finalised.' : 'The Foundations OS is launching shortly and AI Foundations is being finalised.' }}
+        Not sure which fits? <a href="{{ route('contact') }}" class="text-blue hover:text-blue-deep">Tell us what you are after</a>
         and we will point you to the right one.
     </p>
 </section>

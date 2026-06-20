@@ -30,6 +30,11 @@ return [
             // Display price for the product page (the charge itself is set in
             // Polar). Integer GBP.
             'price' => 197,
+
+            // Master switch for the buy buttons. While false, every CTA falls
+            // back to "register your interest" and the checkout link above is
+            // not exposed. Flip to true to go on sale (pending Polar approval).
+            'on_sale' => false,
         ],
 
     ],

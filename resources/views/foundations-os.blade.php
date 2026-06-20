@@ -11,10 +11,23 @@
 @endpush
 
 @php
-    $buyUrl = $product['checkout_url'] ?? null;
+    $onSale = $product['on_sale'] ?? false;
+    $buyUrl = $onSale ? ($product['checkout_url'] ?? null) : null;
+    $registerUrl = route('contact', ['topic' => 'foundations-os']);
 @endphp
 
 @section('content')
+
+@unless ($onSale)
+{{-- Holding state: sale paused, capture interest. --}}
+<div class="border-b border-border bg-blue-tint">
+    <div class="mx-auto max-w-6xl px-4 py-3 text-center text-sm text-ink sm:px-6 lg:px-8">
+        The Foundations OS is launching shortly.
+        <a href="{{ $registerUrl }}" class="font-medium text-blue underline-offset-2 hover:underline">Register your interest</a>
+        and we'll email you the moment it opens.
+    </div>
+</div>
+@endunless
 
 {{-- HERO --}}
 <section class="border-b border-border">
@@ -33,7 +46,7 @@
                 @if ($buyUrl)
                     <x-button :href="$buyUrl">Get the Foundations OS, £197 + VAT</x-button>
                 @else
-                    <x-button href="#buy">Get the Foundations OS, £197 + VAT</x-button>
+                    <x-button :href="$registerUrl">Register your interest</x-button>
                 @endif
                 <x-button variant="link" :href="route('ai-foundations')">
                     Rather have it built with you?
