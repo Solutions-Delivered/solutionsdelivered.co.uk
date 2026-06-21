@@ -18,6 +18,12 @@ Route::get('/about', [PageController::class, 'about'])->name('about');
 // Polar appends ?checkout_id={CHECKOUT_ID}, which we verify server-side.
 Route::get('/thank-you/{product}', [PageController::class, 'thankYou'])->name('thank-you');
 
+// Digital business card. The AI Starter Kit form is wired to MailerLite later.
+Route::get('/card', [PageController::class, 'card'])->name('card');
+Route::post('/card/ai-starter-kit', [PageController::class, 'subscribeToStarterKit'])
+    ->name('card.subscribe')
+    ->middleware(['throttle:5,1', 'honeypot']);
+
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::post('/contact', [PageController::class, 'submitContact'])
     ->name('contact.submit')
