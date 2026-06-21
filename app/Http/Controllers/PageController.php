@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\AiStarterKitRequest;
 use App\Http\Requests\ContactFormRequest;
 use App\Mail\ContactFormSubmitted;
 use App\Services\Polar\PolarCheckout;
@@ -51,26 +50,6 @@ class PageController extends Controller
     public function contact(): View
     {
         return view('contact');
-    }
-
-    public function card(): View
-    {
-        return view('card');
-    }
-
-    public function subscribeToStarterKit(AiStarterKitRequest $request): RedirectResponse
-    {
-        $email = $request->validated()['email'];
-
-        // TODO: hook into MailerLite (add subscriber + trigger the AI Starter Kit
-        // automation). For now the page validates and confirms; no list capture
-        // happens yet, so this is the next step before promoting /card.
-        Log::info('AI Starter Kit request', ['email' => $email]);
-
-        return redirect()
-            ->route('card')
-            ->with('card_kit_sent', true)
-            ->with('card_kit_email', $email);
     }
 
     public function thankYou(Request $request, string $product, PolarCheckout $polar): View
