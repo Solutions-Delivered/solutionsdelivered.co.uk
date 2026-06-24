@@ -3,6 +3,14 @@
 @section('title', 'Solutions Delivered | Practical AI for small businesses')
 @section('meta_description', 'We help small businesses get real, daily value from AI, and we still deliver the IT and project work behind it. Real work, not clicks.')
 
+{{-- Preload the LCP hero image so it starts downloading before the CSS resolves it.
+     AVIF-typed: browsers without AVIF support ignore this and fall back to the <picture> sources. --}}
+@push('head')
+<link rel="preload" as="image" type="image/avif"
+      imagesrcset="{{ asset('images/sam-presenting-800.avif') }} 800w, {{ asset('images/sam-presenting-1100.avif') }} 1100w"
+      imagesizes="(min-width: 1024px) 470px, 100vw" fetchpriority="high">
+@endpush
+
 @section('content')
 {{-- Hero --}}
 <section class="border-b border-border">
@@ -33,10 +41,18 @@
         </div>
 
         <figure class="rise-in">
-            <img src="{{ asset('images/sam-presenting.jpeg') }}"
-                 width="1600" height="1200" fetchpriority="high"
-                 alt="Sam Jenkins presenting on practical AI for business, his slides on the screen behind him."
-                 class="w-full rounded-lg border border-border object-cover">
+            <picture>
+                <source type="image/avif"
+                        srcset="{{ asset('images/sam-presenting-800.avif') }} 800w, {{ asset('images/sam-presenting-1100.avif') }} 1100w"
+                        sizes="(min-width: 1024px) 470px, 100vw">
+                <source type="image/webp"
+                        srcset="{{ asset('images/sam-presenting-800.webp') }} 800w, {{ asset('images/sam-presenting-1100.webp') }} 1100w"
+                        sizes="(min-width: 1024px) 470px, 100vw">
+                <img src="{{ asset('images/sam-presenting.jpeg') }}"
+                     width="1100" height="825" fetchpriority="high"
+                     alt="Sam Jenkins presenting on practical AI for business, his slides on the screen behind him."
+                     class="w-full rounded-lg border border-border object-cover">
+            </picture>
             <figcaption class="mt-3 text-sm text-faint">Sam Jenkins, speaking on practical AI for small businesses.</figcaption>
         </figure>
     </div>
