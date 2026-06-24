@@ -39,6 +39,11 @@ Route::get('/sitemap.xml', function () {
     return response()->view('sitemap')->header('Content-Type', 'application/xml');
 });
 
+// llms.txt: a plain-text summary for AI assistants and crawlers.
+Route::get('/llms.txt', function () {
+    return response()->view('llms')->header('Content-Type', 'text/plain; charset=utf-8');
+})->name('llms');
+
 // Logo URL preservation - serve the SVG logo for old PNG requests.
 foreach (['/logo.png', '/logo@2x.png'] as $legacyLogo) {
     Route::get($legacyLogo, function () {
