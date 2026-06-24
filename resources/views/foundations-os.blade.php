@@ -3,18 +3,58 @@
 @section('title', 'The Foundations OS | Solutions Delivered')
 @section('meta_description', 'A ready-built Claude workspace you set up once. From then on every chat opens already knowing your business, your customers and how you sound. £197 + VAT, one-time.')
 
+@php
+    $onSale = $product['on_sale'] ?? false;
+    $buyUrl = $onSale ? ($product['checkout_url'] ?? null) : null;
+    $registerUrl = route('contact', ['topic' => 'foundations-os']);
+
+    // Single source for the FAQ: drives both the visible accordion and the FAQPage schema.
+    $faqs = [
+        ['question' => 'Do I need Claude already, and which plan?', 'answer' => 'Yes, and you will need at least a Claude Pro plan. The Foundations OS runs in Claude Cowork, which is not available on the free tier. If you have not used Claude yet, start there first, then come back. The value is in solving problems you have already hit.'],
+        ['question' => 'Where does my business data go? Can you see it?', 'answer' => 'We never get access to your files or your data. The Foundations OS is just a workspace; we cannot see what you put in it. When you use it, your content is sent to Anthropic, the company behind Claude, because that is what powers Claude Cowork, the same as any normal Claude session. It does not pass through Solutions Delivered or Sam at any point.'],
+        ['question' => 'What if I am not technical?', 'answer' => 'You do not write any code. The setup, and everything after it, is a conversation in plain English. You can talk rather than type.'],
+        ['question' => 'Can I add my own workflows?', 'answer' => 'Absolutely, and we would love to see what you build. Describe a workflow in plain English and the OS writes it into a skill you can reuse, so the workspace grows with how you work. If you come up with something clever, tell us. We are keen to feature and promote the best workflows our buyers create.'],
+        ['question' => 'What is the difference between this and AI Foundations?', 'answer' => 'The Foundations OS is the self-serve version: you set it up yourself in one sitting. AI Foundations (£1,500 + VAT) is the done-with-you build. Over four weekly evening calls we work alongside you to get it genuinely right, then run you through the activities and homework that turn it into a habit. You finish with a workspace built to a higher standard and the confidence to use it every day. The Foundations OS is included.'],
+        ['question' => 'What is your refund policy?', 'answer' => 'Covered by the 30-day One-Workflow Guarantee above. If your AI is not doing at least one piece of work noticeably better within 30 days, we fix it with you or refund you in full.'],
+    ];
+@endphp
+
 @push('schema')
 <x-schema.breadcrumb :items="[
     ['name' => 'Home', 'url' => route('home')],
     ['name' => 'The Foundations OS'],
 ]" />
+<script type="application/ld+json">
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'Product',
+    'name' => 'The Foundations OS',
+    'description' => 'A ready-built Claude workspace you set up once. From then on every chat opens already knowing your business, your customers and how you sound.',
+    'brand' => ['@type' => 'Brand', 'name' => config('brand.company.name')],
+    'image' => asset('og-image.png'),
+    'offers' => [
+        '@type' => 'Offer',
+        'price' => (string) ($product['price'] ?? 197),
+        'priceCurrency' => 'GBP',
+        'url' => $buyUrl ?? route('foundations-os'),
+        'availability' => $buyUrl ? 'https://schema.org/InStock' : 'https://schema.org/PreOrder',
+        'seller' => ['@type' => 'Organization', 'name' => config('brand.company.legal_name')],
+    ],
+], JSON_UNESCAPED_SLASHES) !!}
+</script>
+{{-- FAQPage: added for AI/LLM citability, not Google rich results (FAQ rich results were retired May 2026). --}}
+<script type="application/ld+json">
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'FAQPage',
+    'mainEntity' => collect($faqs)->map(fn ($faq) => [
+        '@type' => 'Question',
+        'name' => $faq['question'],
+        'acceptedAnswer' => ['@type' => 'Answer', 'text' => $faq['answer']],
+    ])->all(),
+], JSON_UNESCAPED_SLASHES) !!}
+</script>
 @endpush
-
-@php
-    $onSale = $product['on_sale'] ?? false;
-    $buyUrl = $onSale ? ($product['checkout_url'] ?? null) : null;
-    $registerUrl = route('contact', ['topic' => 'foundations-os']);
-@endphp
 
 @section('content')
 
@@ -392,37 +432,9 @@
         </div>
         <div class="mt-8">
             <x-faq>
-                <x-faq-item question="Do I need Claude already, and which plan?">
-                    Yes, and you will need at least a Claude Pro plan. The Foundations OS runs in Claude Cowork, which
-                    is not available on the free tier. If you have not used Claude yet, start there first, then come
-                    back. The value is in solving problems you have already hit.
-                </x-faq-item>
-                <x-faq-item question="Where does my business data go? Can you see it?">
-                    We never get access to your files or your data. The Foundations OS is just a workspace; we cannot
-                    see what you put in it. When you use it, your content is sent to Anthropic, the company behind
-                    Claude, because that is what powers Claude Cowork, the same as any normal Claude session. It does
-                    not pass through Solutions Delivered or Sam at any point.
-                </x-faq-item>
-                <x-faq-item question="What if I am not technical?">
-                    You do not write any code. The setup, and everything after it, is a conversation in plain English.
-                    You can talk rather than type.
-                </x-faq-item>
-                <x-faq-item question="Can I add my own workflows?">
-                    Absolutely, and we would love to see what you build. Describe a workflow in plain English and the
-                    OS writes it into a skill you can reuse, so the workspace grows with how you work. If you come up
-                    with something clever, tell us. We are keen to feature and promote the best workflows our buyers create.
-                </x-faq-item>
-                <x-faq-item question="What is the difference between this and AI Foundations?">
-                    The Foundations OS is the self-serve version: you set it up yourself in one sitting. AI Foundations
-                    (£1,500 + VAT) is the done-with-you build. Over four weekly evening calls we work alongside you to
-                    get it genuinely right, then run you through the activities and homework that turn it into a habit.
-                    You finish with a workspace built to a higher standard and the confidence to use it every day. The
-                    Foundations OS is included.
-                </x-faq-item>
-                <x-faq-item question="What is your refund policy?">
-                    Covered by the 30-day One-Workflow Guarantee above. If your AI is not doing at least one piece of
-                    work noticeably better within 30 days, we fix it with you or refund you in full.
-                </x-faq-item>
+                @foreach ($faqs as $faq)
+                    <x-faq-item :question="$faq['question']">{{ $faq['answer'] }}</x-faq-item>
+                @endforeach
             </x-faq>
         </div>
     </div>

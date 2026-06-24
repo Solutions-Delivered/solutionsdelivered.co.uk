@@ -8,6 +8,44 @@
     ['name' => 'Home', 'url' => route('home')],
     ['name' => 'Consultancy'],
 ]" />
+<script type="application/ld+json">
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'Service',
+    'name' => 'IT, web and project delivery consultancy',
+    'description' => 'Fifteen years of software, IT and project delivery: bespoke web and software development, ITIL service management, PRINCE2 project management, and business change.',
+    'serviceType' => ['Web and software development', 'Service management', 'Project management', 'Business change'],
+    'provider' => [
+        '@type' => 'Organization',
+        'name' => config('brand.company.legal_name'),
+        'url' => url('/'),
+    ],
+    'areaServed' => ['@type' => 'Country', 'name' => 'United Kingdom'],
+    'hasOfferCatalog' => [
+        '@type' => 'OfferCatalog',
+        'name' => 'Fixed-scope engagements',
+        'itemListElement' => collect($packages)->map(function ($pkg) {
+            $offer = [
+                '@type' => 'Offer',
+                'name' => $pkg['name'],
+                'description' => $pkg['outcome'],
+                'itemOffered' => [
+                    '@type' => 'Service',
+                    'name' => $pkg['name'],
+                    'description' => $pkg['outcome'],
+                ],
+            ];
+
+            if ($pkg['price'] !== null) {
+                $offer['price'] = (string) $pkg['price'];
+                $offer['priceCurrency'] = $pkg['currency'] ?? 'GBP';
+            }
+
+            return $offer;
+        })->values()->all(),
+    ],
+], JSON_UNESCAPED_SLASHES) !!}
+</script>
 @endpush
 
 @section('content')

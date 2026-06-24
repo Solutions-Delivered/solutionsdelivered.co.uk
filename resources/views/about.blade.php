@@ -8,6 +8,29 @@
     ['name' => 'Home', 'url' => route('home')],
     ['name' => 'About'],
 ]" />
+<script type="application/ld+json">
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'Person',
+    'name' => 'Sam Jenkins',
+    'jobTitle' => 'Founder',
+    'description' => 'Founder of Solutions Delivered. Fifteen years delivering software and IT that businesses depend on, now helping small businesses get real, daily value from AI.',
+    'url' => route('about'),
+    'image' => asset('images/sam-headshot.png'),
+    'worksFor' => [
+        '@type' => 'Organization',
+        'name' => config('brand.company.legal_name'),
+        'url' => url('/'),
+    ],
+    'knowsAbout' => ['Practical AI for business', 'AI adoption', 'Web development', 'Project management', 'ITIL service management', 'Business change'],
+    'hasCredential' => [
+        ['@type' => 'EducationalOccupationalCredential', 'credentialCategory' => 'degree', 'name' => 'MEng Computer Science'],
+        ['@type' => 'EducationalOccupationalCredential', 'credentialCategory' => 'certificate', 'name' => 'PRINCE2'],
+        ['@type' => 'EducationalOccupationalCredential', 'credentialCategory' => 'certificate', 'name' => 'ITIL'],
+    ],
+    'sameAs' => array_values(array_filter([config('brand.social.linkedin')])),
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
+</script>
 @endpush
 
 @section('content')
@@ -61,10 +84,18 @@
         </div>
 
         <figure class="lg:sticky lg:top-24">
-            <img src="{{ asset('images/sam-headshot.png') }}"
-                 width="760" height="570"
-                 alt="Sam Jenkins, founder of Solutions Delivered."
-                 class="w-full rounded-lg border border-border bg-panel object-cover">
+            <picture>
+                <source type="image/avif"
+                        srcset="{{ asset('images/sam-headshot-400.avif') }} 400w, {{ asset('images/sam-headshot-760.avif') }} 760w"
+                        sizes="(min-width: 1024px) 360px, 100vw">
+                <source type="image/webp"
+                        srcset="{{ asset('images/sam-headshot-400.webp') }} 400w, {{ asset('images/sam-headshot-760.webp') }} 760w"
+                        sizes="(min-width: 1024px) 360px, 100vw">
+                <img src="{{ asset('images/sam-headshot.png') }}"
+                     width="760" height="570"
+                     alt="Sam Jenkins, founder of Solutions Delivered."
+                     class="w-full rounded-lg border border-border bg-panel object-cover">
+            </picture>
             <figcaption class="mt-3 text-sm text-faint">Sam Jenkins, Solutions Delivered.</figcaption>
         </figure>
     </div>
