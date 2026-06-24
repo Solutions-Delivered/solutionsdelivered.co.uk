@@ -19,6 +19,8 @@ return [
         'description' => 'We help small businesses get real, daily value from AI, and we still deliver the IT and project work behind it. Real work, not clicks.',
         'positioning' => 'We don\'t just talk about AI. We use it in our day-to-day work. Real work, not clicks.',
         'company_number' => '12063264',
+        'vat_number' => 'GB325782389',
+        'ico_number' => 'ZA680688',
         'founded' => '2019-06-21',
         'address' => [
             'street' => 'Belmont Suite, Paragon Business Park, Chorley New Road',
@@ -55,7 +57,7 @@ return [
     */
 
     'social' => [
-        'linkedin' => null,
+        'linkedin' => 'https://www.linkedin.com/in/sam-jenkins/',
     ],
 
     /*

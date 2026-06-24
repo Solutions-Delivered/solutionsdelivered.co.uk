@@ -96,7 +96,8 @@
         <h2>15. Contact</h2>
         <p>For questions about these terms, please contact us:</p>
         <div class="note">
-            <p><strong>Solutions Delivered</strong></p>
+            <p><strong>{{ config('brand.company.legal_name') }}</strong></p>
+            <p>Registered in England and Wales, Company No. {{ config('brand.company.company_number') }}. VAT No. {{ config('brand.company.vat_number') }}.</p>
             <p>Email: <a href="mailto:{{ config('brand.contact.general') }}">{{ config('brand.contact.general') }}</a></p>
             <p>Or use our <a href="{{ route('contact') }}">contact form</a>.</p>
         </div>

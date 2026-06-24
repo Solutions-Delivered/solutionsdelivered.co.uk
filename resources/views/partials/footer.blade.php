@@ -49,7 +49,7 @@
         <div class="mt-12 flex flex-col gap-4 border-t border-border pt-8 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
             <div>
                 <p>&copy; {{ date('Y') }} {{ config('brand.company.legal_name') }}</p>
-                <p class="mt-1 text-xs text-faint">Registered in England and Wales. Company No. {{ config('brand.company.company_number') }}. Built to WCAG 2.2 AA.</p>
+                <p class="mt-1 text-xs text-faint">Registered in England and Wales. Company No. {{ config('brand.company.company_number') }}. VAT No. {{ config('brand.company.vat_number') }}. Built to WCAG 2.2 AA.</p>
             </div>
             <div class="flex items-center gap-5">
                 <a href="{{ route('privacy') }}" class="transition-colors hover:text-blue">Privacy</a>

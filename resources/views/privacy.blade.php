@@ -12,6 +12,7 @@
 
         <h2>Introduction</h2>
         <p>Solutions Delivered ("we", "our", or "us") is committed to protecting your privacy. This policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>
+        <p>{{ config('brand.company.legal_name') }} is the data controller for the personal data described in this policy and is registered with the UK Information Commissioner's Office (ICO) under registration reference {{ config('brand.company.ico_number') }}.</p>
 
         <h2>Information we collect</h2>
         <h3>Information you provide</h3>

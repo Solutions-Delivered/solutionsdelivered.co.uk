@@ -38,6 +38,9 @@
     <link rel="preload" href="{{ asset('fonts/hanken-grotesk-400.woff2') }}" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="{{ asset('fonts/hanken-grotesk-600.woff2') }}" as="font" type="font/woff2" crossorigin>
 
+    {{-- Page-specific head links, e.g. an LCP image preload. --}}
+    @stack('head')
+
     @if(config('services.analytics.enabled') && config('services.analytics.gtm_id'))
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
@@ -86,8 +89,31 @@
             'url' => route('contact'),
         ],
         'areaServed' => ['@type' => 'Country', 'name' => 'United Kingdom'],
-        'taxID' => config('brand.company.company_number'),
+        'vatID' => config('brand.company.vat_number'),
+        'identifier' => [
+            '@type' => 'PropertyValue',
+            'name' => 'UK company registration number',
+            'value' => config('brand.company.company_number'),
+        ],
+        'sameAs' => array_values(array_filter([
+            'https://find-and-update.company-information.service.gov.uk/company/'.config('brand.company.company_number'),
+            config('brand.social.linkedin'),
+        ])),
         'knowsAbout' => ['Practical AI for business', 'AI adoption', 'Web development', 'Project management', 'ITIL service management', 'Business change'],
+    ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
+    </script>
+
+    {{-- WebSite schema --}}
+    <script type="application/ld+json">
+    {!! json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'WebSite',
+        'name' => config('brand.company.name'),
+        'url' => url('/'),
+        'publisher' => [
+            '@type' => 'Organization',
+            'name' => config('brand.company.legal_name'),
+        ],
     ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
     </script>
 
