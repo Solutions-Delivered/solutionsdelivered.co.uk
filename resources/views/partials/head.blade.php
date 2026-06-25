@@ -15,6 +15,8 @@
     <!-- End Google Tag Manager -->
     @endif
 
+    @include('partials.analytics')
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="description" content="@yield('meta_description', config('brand.company.description'))">
     <meta name="robots" content="@yield('robots', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1')">

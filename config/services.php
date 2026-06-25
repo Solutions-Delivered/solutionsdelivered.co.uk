@@ -38,6 +38,7 @@ return [
     'analytics' => [
         'enabled' => env('ANALYTICS_ENABLED', false),
         'gtm_id' => env('GOOGLE_TAG_MANAGER_ID'),
+        'ga4_measurement_id' => env('GOOGLE_ANALYTICS_ID'),
     ],
 
     'polar' => [
