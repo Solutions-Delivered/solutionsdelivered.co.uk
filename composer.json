@@ -54,6 +54,11 @@
             "@php artisan config:clear --ansi",
             "@php artisan test"
         ],
+        "check": [
+            "pint --dirty",
+            "phpstan analyse --no-progress",
+            "@php artisan test"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
