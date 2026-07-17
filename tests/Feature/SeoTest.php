@@ -10,6 +10,14 @@ it('serves llms.txt as plain text with key business facts', function () {
     $response->assertSee(config('brand.contact.general'), false);
 });
 
+it('serves the brochure PDF with a noindex header', function () {
+    $response = $this->get('/brochure.pdf');
+
+    $response->assertOk();
+    expect($response->headers->get('Content-Type'))->toBe('application/pdf');
+    expect($response->headers->get('X-Robots-Tag'))->toBe('noindex');
+});
+
 it('includes the Foundations OS sales page in the sitemap', function () {
     $this->get('/sitemap.xml')
         ->assertOk()

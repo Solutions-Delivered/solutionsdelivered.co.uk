@@ -54,6 +54,18 @@ foreach (['/logo.png', '/logo@2x.png'] as $legacyLogo) {
     });
 }
 
+// Brochure PDF. Served through the app rather than from public/ so the
+// noindex header can be attached: Caddy serves any file that exists on disk
+// directly, so a file in public/ never reaches PHP.
+Route::get('/brochure.pdf', function () {
+    return response()->file(resource_path('pdf/brochure.pdf'), [
+        'Content-Type' => 'application/pdf',
+        'Content-Disposition' => 'inline; filename="technical-partner-packages.pdf"',
+        'X-Robots-Tag' => 'noindex',
+        'Cache-Control' => 'public, max-age=3600',
+    ]);
+})->name('brochure');
+
 Route::get('/health', function () {
     $checks = ['app' => true];
 
