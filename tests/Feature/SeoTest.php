@@ -16,6 +16,8 @@ it('serves the brochure PDF with a noindex header', function () {
     $response->assertOk();
     expect($response->headers->get('Content-Type'))->toBe('application/pdf');
     expect($response->headers->get('X-Robots-Tag'))->toBe('noindex');
+    // Set-Cookie would stop Cloudflare edge-caching the response.
+    expect($response->headers->getCookies())->toBeEmpty();
 });
 
 it('includes the Foundations OS sales page in the sitemap', function () {

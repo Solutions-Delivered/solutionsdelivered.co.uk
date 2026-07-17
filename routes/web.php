@@ -1,8 +1,12 @@
 <?php
 
 use App\Http\Controllers\PageController;
+use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
+use Illuminate\Foundation\Http\Middleware\PreventRequestForgery;
+use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+use Illuminate\View\Middleware\ShareErrorsFromSession;
 
 Route::get('/', [PageController::class, 'home'])->name('home');
 
@@ -64,7 +68,15 @@ Route::get('/brochure.pdf', function () {
         'X-Robots-Tag' => 'noindex',
         'Cache-Control' => 'public, max-age=3600',
     ]);
-})->name('brochure');
+})->name('brochure')
+    // A static asset needs no session. Dropping these keeps Set-Cookie off the
+    // response, which would otherwise stop Cloudflare edge-caching it.
+    ->withoutMiddleware([
+        StartSession::class,
+        ShareErrorsFromSession::class,
+        PreventRequestForgery::class,
+        AddQueuedCookiesToResponse::class,
+    ]);
 
 Route::get('/health', function () {
     $checks = ['app' => true];
