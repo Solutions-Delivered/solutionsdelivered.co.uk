@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /brochure.pdf
 
 Sitemap: https://solutionsdelivered.co.uk/sitemap.xml
