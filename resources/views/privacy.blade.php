@@ -24,6 +24,8 @@
             <li>Message content</li>
             <li>Any other information you choose to provide</li>
         </ul>
+        <p><strong>Webinar and event registrations:</strong> when you register for one of our webinars, workshops or online events, we collect what you enter on the registration form — your name, email address and your answers to any registration questions (including whether you opt in to our newsletter). Our events are hosted on Microsoft Teams.</p>
+        <p><strong>Newsletter:</strong> if you opt in, we collect your name and email address to send you our Practically AI email.</p>
 
         <h3>Automatically collected information</h3>
         <p>When you visit our website, we may automatically collect certain information about your device and usage, including:</p>
@@ -54,10 +56,13 @@
             <li><strong>Consent:</strong> when you submit information through our contact form</li>
             <li><strong>Legitimate interests:</strong> to operate and improve our website and services</li>
             <li><strong>Legal obligation:</strong> to comply with applicable laws and regulations</li>
+            <li><strong>Webinar and event registration:</strong> taking steps at your request, and our legitimate interests in running the event you signed up for</li>
+            <li><strong>Newsletter and marketing emails:</strong> your consent, which you can withdraw at any time via the unsubscribe link in any email or by contacting us</li>
         </ul>
 
         <h2>Data retention</h2>
         <p>We retain your personal information only for as long as necessary to fulfil the purposes set out in this policy, unless a longer retention period is required by law. Contact form submissions are typically retained for up to two years unless you request earlier deletion.</p>
+        <p>Webinar and event registration data is kept for up to 12 months after the event. Newsletter data is kept until you unsubscribe or ask us to remove it.</p>
 
         <h2>Information sharing and disclosure</h2>
         <p>We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:</p>
@@ -66,6 +71,7 @@
             <li><strong>Legal requirements:</strong> when required by law or to protect our rights</li>
             <li><strong>Business transfers:</strong> in connection with any merger, sale, or acquisition of our business</li>
         </ul>
+        <p>We use the following processors, who handle personal data on our behalf under contract: Microsoft (Teams events, email and hosting) and MailerLite (email newsletter). Where a provider processes data outside the UK, we rely on appropriate safeguards such as UK-approved data-transfer mechanisms.</p>
 
         <h2>Your rights (UK GDPR)</h2>
         <p>Under UK data protection law, you have the right to access, rectify, erase, restrict processing of, and port your personal data, as well as to object to processing and to withdraw consent at any time. To exercise any of these rights, please contact us using the details below.</p>
