@@ -23,3 +23,9 @@ Homestead.json
 Homestead.yaml
 Thumbs.db
 /temp/*
+
+# env backup file safety (retro item 19)
+.env.bak.*
+.env.backup*
+.env.*.bak
+*.env.bak
