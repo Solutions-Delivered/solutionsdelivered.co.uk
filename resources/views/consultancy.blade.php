@@ -1,16 +1,22 @@
 @extends('layouts.app')
 
 @section('title', 'Consultancy | Solutions Delivered')
-@section('meta_description', 'The IT, web and project delivery we have done for fifteen years. It is the proof behind our AI work: real work, not clicks. Productised engagements with clear scope and price.')
+@section('meta_description', 'The IT, web and project delivery we have done for fifteen years, and the proof behind our AI work. Productised engagements with clear scope and price.')
+@section('og_title', 'The delivery work behind the AI')
+@section('og_description', 'The IT, web and project delivery we have done for fifteen years, and the proof behind our AI work. Productised engagements with clear scope and price.')
+@section('twitter_title', 'The delivery work behind the AI')
+@section('twitter_description', 'The IT, web and project delivery we have done for fifteen years, and the proof behind our AI work. Productised engagements with clear scope and price.')
 
 @push('schema')
 <x-schema.breadcrumb :items="[
     ['name' => 'Home', 'url' => route('home')],
     ['name' => 'Consultancy'],
 ]" />
+{{-- Laravel 13 compiles a literal at-context key as a Blade
+    directive, which corrupts the JSON-LD. Build the key at runtime. --}}
 <script type="application/ld+json">
 {!! json_encode([
-    '@context' => 'https://schema.org',
+    '@'.'context' => 'https://schema.org',
     '@type' => 'Service',
     'name' => 'IT, web and project delivery consultancy',
     'description' => 'Fifteen years of software, IT and project delivery: bespoke web and software development, ITIL service management, PRINCE2 project management, and business change.',

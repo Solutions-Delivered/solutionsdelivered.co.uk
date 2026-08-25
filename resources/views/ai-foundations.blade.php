@@ -3,6 +3,10 @@
 @section('title', 'AI Foundations | Solutions Delivered')
 @section('meta_description', 'AI Foundations is a guided, done-with-you build of an AI workspace for your business, over four weeks in a small group. We are finalising the details.')
 @section('robots', 'noindex, follow')
+@section('og_title', 'AI Foundations')
+@section('og_description', 'AI Foundations is a guided, done-with-you build of an AI workspace for your business, over four weeks in a small group. We are finalising the details.')
+@section('twitter_title', 'AI Foundations')
+@section('twitter_description', 'AI Foundations is a guided, done-with-you build of an AI workspace for your business, over four weeks in a small group. We are finalising the details.')
 
 @section('content')
 <x-page-header

@@ -71,8 +71,8 @@ return [
     */
 
     'nav' => [
-        ['route' => 'ai-foundations', 'label' => 'AI Foundations'],
         ['route' => 'foundations-os', 'label' => 'The Foundations OS'],
+        ['route' => 'ai-foundations', 'label' => 'AI Foundations'],
         ['route' => 'how-it-works', 'label' => 'How it works'],
         ['route' => 'consultancy', 'label' => 'Consultancy'],
         ['route' => 'about', 'label' => 'About'],

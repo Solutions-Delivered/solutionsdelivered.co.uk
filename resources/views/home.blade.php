@@ -2,6 +2,10 @@
 
 @section('title', 'Solutions Delivered | Practical AI for small businesses')
 @section('meta_description', 'We help small businesses get real, daily value from AI, and we still deliver the IT and project work behind it. Real work, not clicks.')
+@section('og_title', 'AI that knows your business and actually gets used')
+@section('og_description', 'We help small businesses get real, daily value from AI, and we still deliver the IT and project work behind it. Real work, not clicks.')
+@section('twitter_title', 'AI that knows your business and actually gets used')
+@section('twitter_description', 'We help small businesses get real, daily value from AI, and we still deliver the IT and project work behind it. Real work, not clicks.')
 
 {{-- Preload the LCP hero image so it starts downloading before the CSS resolves it.
      AVIF-typed: browsers without AVIF support ignore this and fall back to the <picture> sources. --}}

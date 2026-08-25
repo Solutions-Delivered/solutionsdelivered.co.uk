@@ -105,3 +105,24 @@ it('renders Service and OfferCatalog schema on the consultancy page', function (
         ->assertSee('"@type":"OfferCatalog"', false)
         ->assertSee('SaaS Discovery', false);
 });
+
+// Laravel 13 added a built-in Blade directive that shares its name with the
+// JSON-LD context key, so a literal key in a Blade array compiles to raw PHP
+// and silently invalidates the whole block. Substring assertions miss this
+// because every other key still renders, so parse the JSON instead.
+it('renders valid, parseable JSON-LD on every public page', function (string $route) {
+    $html = $this->get(route($route))->assertOk()->getContent();
+
+    preg_match_all('#<script type="application/ld\+json">(.*?)</script>#s', $html, $matches);
+
+    expect($matches[1])->not->toBeEmpty();
+
+    foreach ($matches[1] as $block) {
+        $decoded = json_decode(trim($block), true);
+
+        expect(json_last_error())->toBe(JSON_ERROR_NONE)
+            ->and($decoded)->toBeArray()
+            ->and($decoded)->toHaveKey('@context')
+            ->and($decoded['@context'])->toBe('https://schema.org');
+    }
+})->with(['home', 'about', 'consultancy', 'foundations-os', 'how-it-works', 'contact']);

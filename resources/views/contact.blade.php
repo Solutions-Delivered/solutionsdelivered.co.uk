@@ -2,6 +2,10 @@
 
 @section('title', 'Contact | Solutions Delivered')
 @section('meta_description', 'Tell us what you are trying to do with AI, or about the IT and project work you need. One honest conversation, a reply within 24 hours, no obligation.')
+@section('og_title', "Tell us what you're trying to do")
+@section('og_description', 'Tell us what you are trying to do with AI, or about the IT and project work you need. One honest conversation, a reply within 24 hours, no obligation.')
+@section('twitter_title', "Tell us what you're trying to do")
+@section('twitter_description', 'Tell us what you are trying to do with AI, or about the IT and project work you need. One honest conversation, a reply within 24 hours, no obligation.')
 
 @php
     $packageSlug = request('package');

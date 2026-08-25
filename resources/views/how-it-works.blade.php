@@ -2,6 +2,10 @@
 
 @section('title', 'How it works | Solutions Delivered')
 @section('meta_description', 'How we work: a straight conversation, a clear proposal, delivery done with you, and support afterwards. The same approach whether it is AI or IT work.')
+@section('og_title', 'A clear path from first conversation to working AI')
+@section('og_description', 'How we work: a straight conversation, a clear proposal, delivery done with you, and support afterwards. The same approach whether it is AI or IT work.')
+@section('twitter_title', 'A clear path from first conversation to working AI')
+@section('twitter_description', 'How we work: a straight conversation, a clear proposal, delivery done with you, and support afterwards. The same approach whether it is AI or IT work.')
 
 @push('schema')
 <x-schema.breadcrumb :items="[

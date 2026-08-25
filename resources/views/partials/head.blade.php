@@ -66,9 +66,11 @@
     <meta name="twitter:image" content="{{ asset('og-image.png') }}">
 
     {{-- Organisation schema --}}
+    {{-- Laravel 13 compiles a literal at-context key as a Blade
+        directive, which corrupts the JSON-LD. Build the key at runtime. --}}
     <script type="application/ld+json">
     {!! json_encode([
-        '@context' => 'https://schema.org',
+        '@'.'context' => 'https://schema.org',
         '@type' => 'Organization',
         'name' => config('brand.company.legal_name'),
         'legalName' => config('brand.company.legal_name'),
@@ -108,7 +110,7 @@
     {{-- WebSite schema --}}
     <script type="application/ld+json">
     {!! json_encode([
-        '@context' => 'https://schema.org',
+        '@'.'context' => 'https://schema.org',
         '@type' => 'WebSite',
         'name' => config('brand.company.name'),
         'url' => url('/'),

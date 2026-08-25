@@ -2,15 +2,21 @@
 
 @section('title', 'About | Solutions Delivered')
 @section('meta_description', 'Solutions Delivered is Sam Jenkins: fifteen years delivering software and IT that businesses depend on, now helping small businesses get real value from AI.')
+@section('og_title', 'Practical AI from people who still do the work')
+@section('og_description', 'Solutions Delivered is Sam Jenkins: fifteen years delivering software and IT that businesses depend on, now helping small businesses get real value from AI.')
+@section('twitter_title', 'Practical AI from people who still do the work')
+@section('twitter_description', 'Solutions Delivered is Sam Jenkins: fifteen years delivering software and IT that businesses depend on, now helping small businesses get real value from AI.')
 
 @push('schema')
 <x-schema.breadcrumb :items="[
     ['name' => 'Home', 'url' => route('home')],
     ['name' => 'About'],
 ]" />
+{{-- Laravel 13 compiles a literal at-context key as a Blade
+    directive, which corrupts the JSON-LD. Build the key at runtime. --}}
 <script type="application/ld+json">
 {!! json_encode([
-    '@context' => 'https://schema.org',
+    '@'.'context' => 'https://schema.org',
     '@type' => 'Person',
     'name' => 'Sam Jenkins',
     'jobTitle' => 'Founder',
@@ -28,7 +34,7 @@
         ['@type' => 'EducationalOccupationalCredential', 'credentialCategory' => 'certificate', 'name' => 'PRINCE2'],
         ['@type' => 'EducationalOccupationalCredential', 'credentialCategory' => 'certificate', 'name' => 'ITIL'],
     ],
-    'sameAs' => array_values(array_filter([config('brand.social.linkedin')])),
+    'sameAs' => array_values(array_filter([config('brand.social.linkedin'), 'https://samjenkins.com'])),
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
 </script>
 @endpush
@@ -59,6 +65,10 @@
                     rather show you the same system we use ourselves, set it up so it knows your business, and
                     leave you able to run it. We still take on the IT, web and project work too; it is the proof,
                     not a competing message.
+                </p>
+                <p>
+                    Sam also writes about AI-assisted delivery at
+                    <a href="https://samjenkins.com" rel="me" class="text-blue underline-offset-2 hover:underline">samjenkins.com</a>.
                 </p>
             </div>
 

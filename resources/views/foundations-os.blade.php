@@ -1,7 +1,11 @@
 @extends('layouts.app')
 
 @section('title', 'The Foundations OS | Solutions Delivered')
-@section('meta_description', 'A ready-built Claude workspace you set up once. From then on every chat opens already knowing your business, your customers and how you sound. £197 + VAT, one-time.')
+@section('meta_description', 'A ready-built Claude workspace you set up once. Every chat opens already knowing your business, your customers and how you sound. £197 + VAT, one-time.')
+@section('og_title', 'Set your AI up once. Never re-explain your business again.')
+@section('og_description', 'A ready-built Claude workspace you set up once. Every chat opens already knowing your business, your customers and how you sound. £197 + VAT, one-time.')
+@section('twitter_title', 'Set your AI up once. Never re-explain your business again.')
+@section('twitter_description', 'A ready-built Claude workspace you set up once. Every chat opens already knowing your business, your customers and how you sound. £197 + VAT, one-time.')
 
 @php
     $onSale = $product['on_sale'] ?? false;
@@ -24,9 +28,11 @@
     ['name' => 'Home', 'url' => route('home')],
     ['name' => 'The Foundations OS'],
 ]" />
+{{-- Laravel 13 compiles a literal at-context key as a Blade
+    directive, which corrupts the JSON-LD. Build the key at runtime. --}}
 <script type="application/ld+json">
 {!! json_encode([
-    '@context' => 'https://schema.org',
+    '@'.'context' => 'https://schema.org',
     '@type' => 'Product',
     'name' => 'The Foundations OS',
     'description' => 'A ready-built Claude workspace you set up once. From then on every chat opens already knowing your business, your customers and how you sound.',
@@ -45,7 +51,7 @@
 {{-- FAQPage: added for AI/LLM citability, not Google rich results (FAQ rich results were retired May 2026). --}}
 <script type="application/ld+json">
 {!! json_encode([
-    '@context' => 'https://schema.org',
+    '@'.'context' => 'https://schema.org',
     '@type' => 'FAQPage',
     'mainEntity' => collect($faqs)->map(fn ($faq) => [
         '@type' => 'Question',
