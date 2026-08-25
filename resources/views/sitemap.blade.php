@@ -40,6 +40,12 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>{{ route('outsourced-it-director') }}</loc>
+        <lastmod>{{ $lastmod('outsourced-it-director') }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
         <loc>{{ route('guides.index') }}</loc>
         <lastmod>{{ $lastmod('guides/index') }}</lastmod>
         <changefreq>weekly</changefreq>

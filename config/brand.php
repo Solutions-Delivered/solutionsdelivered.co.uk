@@ -74,6 +74,7 @@ return [
         ['route' => 'foundations-os', 'label' => 'The Foundations OS'],
         ['route' => 'ai-foundations', 'label' => 'AI Foundations'],
         ['route' => 'how-it-works', 'label' => 'How it works'],
+        ['route' => 'outsourced-it-director', 'label' => 'Outsourced IT director'],
         ['route' => 'consultancy', 'label' => 'Consultancy'],
         ['route' => 'guides.index', 'label' => 'Guides'],
         ['route' => 'about', 'label' => 'About'],

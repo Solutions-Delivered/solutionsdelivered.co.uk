@@ -125,4 +125,18 @@ it('renders valid, parseable JSON-LD on every public page', function (string $ro
             ->and($decoded)->toHaveKey('@context')
             ->and($decoded['@context'])->toBe('https://schema.org');
     }
-})->with(['home', 'about', 'consultancy', 'foundations-os', 'how-it-works', 'contact']);
+})->with(['home', 'about', 'consultancy', 'outsourced-it-director', 'foundations-os', 'how-it-works', 'contact']);
+
+it('renders Service and FAQPage schema on the outsourced IT director page', function () {
+    $this->get(route('outsourced-it-director'))
+        ->assertOk()
+        ->assertSee('"@type":"Service"', false)
+        ->assertSee('"@type":"FAQPage"', false)
+        ->assertSee('Outsourced IT director', false);
+});
+
+it('lists the outsourced IT director page in the sitemap', function () {
+    $this->get('/sitemap.xml')
+        ->assertOk()
+        ->assertSee(route('outsourced-it-director'), false);
+});

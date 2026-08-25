@@ -18,6 +18,11 @@ Route::get('/foundations-os', [PageController::class, 'foundationsOs'])->name('f
 Route::get('/how-it-works', [PageController::class, 'howItWorks'])->name('how-it-works');
 Route::get('/consultancy', [PageController::class, 'consultancy'])->name('consultancy');
 
+// The outsourced IT director service page. Targets the UK-native buyer
+// vocabulary; see docs in ~/code/solopreneur/docs/TRAFFIC-PLAN.md (A1).
+Route::get('/outsourced-it-director', [PageController::class, 'outsourcedItDirector'])
+    ->name('outsourced-it-director');
+
 Route::get('/guides', [GuidesController::class, 'index'])->name('guides.index');
 Route::get('/guides/{slug}', [GuidesController::class, 'show'])->name('guides.show');
 

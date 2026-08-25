@@ -18,6 +18,7 @@ it('returns 200 for how it works page', function () {
 
 it('returns 200 for consultancy page', function () {
     $this->get(route('consultancy'))->assertOk();
+    $this->get(route('outsourced-it-director'))->assertOk();
 });
 
 it('returns 200 for about page', function () {
