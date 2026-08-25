@@ -1,6 +1,14 @@
 <?php
 
 use Illuminate\Support\Str;
+use Pdo\Mysql;
+
+// PDO::MYSQL_ATTR_SSL_CA is deprecated since PHP 8.5 in favour of the
+// driver-specific Pdo\Mysql::ATTR_SSL_CA, which only exists from PHP 8.4
+// (this app supports PHP 8.3+, so we can't reference it unconditionally).
+$mysqlSslCaOption = PHP_VERSION_ID >= 80400
+    ? Mysql::ATTR_SSL_CA
+    : PDO::MYSQL_ATTR_SSL_CA;
 
 return [
 
@@ -59,7 +67,7 @@ return [
             'strict' => true,
             'engine' => null,
             'options' => extension_loaded('pdo_mysql') ? array_filter([
-                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+                $mysqlSslCaOption => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
 
@@ -79,7 +87,7 @@ return [
             'strict' => true,
             'engine' => null,
             'options' => extension_loaded('pdo_mysql') ? array_filter([
-                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+                $mysqlSslCaOption => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
 
