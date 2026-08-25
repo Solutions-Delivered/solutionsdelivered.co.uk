@@ -75,6 +75,7 @@ return [
         ['route' => 'ai-foundations', 'label' => 'AI Foundations'],
         ['route' => 'how-it-works', 'label' => 'How it works'],
         ['route' => 'consultancy', 'label' => 'Consultancy'],
+        ['route' => 'guides.index', 'label' => 'Guides'],
         ['route' => 'about', 'label' => 'About'],
     ],
 

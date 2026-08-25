@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GuidesController;
 use App\Http\Controllers\PageController;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Foundation\Http\Middleware\PreventRequestForgery;
@@ -16,6 +17,10 @@ Route::get('/foundations-os', [PageController::class, 'foundationsOs'])->name('f
 
 Route::get('/how-it-works', [PageController::class, 'howItWorks'])->name('how-it-works');
 Route::get('/consultancy', [PageController::class, 'consultancy'])->name('consultancy');
+
+Route::get('/guides', [GuidesController::class, 'index'])->name('guides.index');
+Route::get('/guides/{slug}', [GuidesController::class, 'show'])->name('guides.show');
+
 Route::get('/about', [PageController::class, 'about'])->name('about');
 
 // Post-purchase confirmation. {product} maps to a slug in config/polar.php;

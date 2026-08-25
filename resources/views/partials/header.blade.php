@@ -12,7 +12,7 @@
         {{-- Desktop links --}}
         <div class="hidden items-center gap-1 md:flex">
             @foreach ($navItems as $item)
-                @php($active = request()->routeIs($item['route']))
+                @php($active = request()->routeIs($item['route']) || request()->routeIs($item['route'].'.*'))
                 <a href="{{ route($item['route']) }}"
                    class="rounded-md px-3 py-2 text-sm transition-colors {{ $active ? 'font-medium text-ink' : 'text-muted hover:text-ink' }}"
                    @if($active) aria-current="page" @endif>
@@ -48,7 +48,7 @@
                      class="absolute inset-x-0 top-16 border-b border-border bg-surface shadow-sm">
                     <nav class="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-4 sm:px-6" aria-label="Mobile navigation">
                         @foreach ($navItems as $item)
-                            @php($active = request()->routeIs($item['route']))
+                            @php($active = request()->routeIs($item['route']) || request()->routeIs($item['route'].'.*'))
                             <a href="{{ route($item['route']) }}"
                                class="rounded-md px-3 py-2.5 text-base transition-colors {{ $active ? 'font-medium text-ink' : 'text-text hover:text-ink' }}"
                                @if($active) aria-current="page" @endif>

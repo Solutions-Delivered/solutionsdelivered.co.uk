@@ -6,6 +6,12 @@
     // exactly what lastmod is meant to signal. Deploys that touch unrelated
     // files don't bump it, and it can never show a fake recent date.
     $lastmod = fn (string $view) => date('Y-m-d', filemtime(resource_path("views/{$view}.blade.php")));
+
+    // Guides carry their own reviewed-date discipline in front matter
+    // ('updated', falling back to 'date'), which is a more honest signal than
+    // the view file's mtime: it moves only when someone deliberately re-verifies
+    // or rewrites the guide, not on every unrelated deploy.
+    $guides = app(\App\Services\GuideRepository::class)->all();
 @endphp
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {{-- AI Foundations is a noindex holding state and is intentionally omitted. --}}
@@ -33,6 +39,20 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>{{ route('guides.index') }}</loc>
+        <lastmod>{{ $lastmod('guides/index') }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    @foreach($guides as $guide)
+    <url>
+        <loc>{{ route('guides.show', $guide->slug) }}</loc>
+        <lastmod>{{ $guide->updated->toDateString() }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    @endforeach
     <url>
         <loc>{{ route('about') }}</loc>
         <lastmod>{{ $lastmod('about') }}</lastmod>
