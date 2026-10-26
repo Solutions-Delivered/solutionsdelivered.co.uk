@@ -30,7 +30,7 @@
                 <h2 class="text-xs font-medium uppercase tracking-wide text-faint">Get in touch</h2>
                 <ul class="mt-4 flex flex-col gap-2.5 text-sm">
                     <li>
-                        <a href="mailto:{{ brand.contact.general }}" class="text-text transition-colors hover:text-blue">{{ brand.contact.general }}</a>
+                        <a href="{{ route('contact') }}" class="text-text transition-colors hover:text-blue">Use our contact form</a>
                     </li>
                     <li class="text-muted">We reply within {{ brand.contact.response_time }}.</li>
                     {% for platform, url in brand.social %}

@@ -13,7 +13,7 @@ navKey: contact
     <div class="rounded-md border border-error/40 bg-error/5 px-4 py-3" role="alert" aria-live="assertive">
         <p class="text-sm font-medium text-error">Sorry, your message could not be sent.</p>
         <p id="error-detail" class="mt-2 text-sm text-error">Something went wrong. Please try again.</p>
-        <p class="mt-2 text-sm text-error">Please try again, or email <a class="underline" href="mailto:{{ brand.contact.general }}">{{ brand.contact.general }}</a> directly.</p>
+        <p class="mt-2 text-sm text-error">Please try again, or come back later.</p>
     </div>
     <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
         {% call button({ href: route('contact') }) %}Try again{% endcall %}

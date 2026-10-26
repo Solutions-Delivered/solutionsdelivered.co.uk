@@ -27,8 +27,8 @@ navKey: none
                 Open the link to grab the zip — and you can re-access it any time from the
                 customer portal link in that same email.
                 <div class="mt-4">
-                    {% call button({ href: 'mailto:' ~ brand.contact.general }) %}
-                        Download not arrived? Email us
+                    {% call button({ href: route('contact') }) %}
+                        Download not arrived? Contact us
                     {% endcall %}
                 </div>
             {% endcall %}
@@ -46,8 +46,8 @@ navKey: none
         </div>
 
         <div class="mt-10 rounded-md border border-border bg-surface p-6 text-sm leading-relaxed text-muted">
-            Stuck, or want a hand getting set up? Email
-            <a class="text-blue hover:text-blue-deep" href="mailto:{{ brand.contact.general }}">{{ brand.contact.general }}</a>
+            Stuck, or want a hand getting set up? Use our
+            <a class="text-blue hover:text-blue-deep" href="{{ route('contact') }}">contact form</a>
             and we will reply within {{ brand.contact.response_time }}.
         </div>
     </div>
