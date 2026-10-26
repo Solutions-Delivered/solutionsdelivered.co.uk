@@ -1,0 +1,23 @@
+{
+  "name": "solutionsdelivered-static",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static (Eleventy) build of solutionsdelivered.co.uk",
+  "type": "module",
+  "scripts": {
+    "build:css": "tailwindcss -i css/app.css -o dist/assets/app.css --minify",
+    "build:js": "node scripts/build-js.mjs",
+    "build": "node scripts/build.mjs",
+    "serve": "eleventy --serve",
+    "check": "node scripts/check-build.mjs",
+    "parity": "node scripts/parity.mjs"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@tailwindcss/cli": "^4.1.17",
+    "alpinejs": "^3.15.2",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^14.1.0",
+    "tailwindcss": "^4.1.17"
+  }
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Circle outline -->
+  <circle cx="16" cy="16" r="14" fill="none" stroke="#198fd9" stroke-width="2"/>
+
+  <!-- SD Text in blue -->
+  <text x="16" y="22" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#198fd9" text-anchor="middle">SD</text>
+</svg>

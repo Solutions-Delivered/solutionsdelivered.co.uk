@@ -1,0 +1,46 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- set entries = [
+    { loc: site.url, file: 'home', freq: 'weekly', prio: '1.0' },
+    { loc: route('foundations-os'), file: 'foundations-os', freq: 'weekly', prio: '0.9' },
+    { loc: route('how-it-works'), file: 'how-it-works', freq: 'monthly', prio: '0.8' },
+    { loc: route('consultancy'), file: 'consultancy', freq: 'monthly', prio: '0.8' },
+    { loc: route('outsourced-it-director'), file: 'outsourced-it-director', freq: 'monthly', prio: '0.9' },
+    { loc: route('guides.index'), file: 'guides', freq: 'weekly', prio: '0.8' }
+] %}
+{%- set tail = [
+    { loc: route('about'), file: 'about', freq: 'monthly', prio: '0.7' },
+    { loc: route('contact'), file: 'contact', freq: 'monthly', prio: '0.7' },
+    { loc: route('privacy'), file: 'privacy', freq: 'yearly', prio: '0.3' },
+    { loc: route('terms'), file: 'terms', freq: 'yearly', prio: '0.3' }
+] %}
+{# AI Foundations is a noindex holding state and is intentionally omitted. #}
+{%- for e in entries %}
+    <url>
+        <loc>{{ e.loc }}</loc>
+        <lastmod>{{ e.file | lastmod }}</lastmod>
+        <changefreq>{{ e.freq }}</changefreq>
+        <priority>{{ e.prio }}</priority>
+    </url>
+{%- endfor %}
+{%- for guide in guides %}
+    <url>
+        <loc>{{ route('guides.show', guide.slug) }}</loc>
+        <lastmod>{{ guide.dateModified | truncate(10, true, '') }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+{%- endfor %}
+{%- for e in tail %}
+    <url>
+        <loc>{{ e.loc }}</loc>
+        <lastmod>{{ e.file | lastmod }}</lastmod>
+        <changefreq>{{ e.freq }}</changefreq>
+        <priority>{{ e.prio }}</priority>
+    </url>
+{%- endfor %}
+</urlset>

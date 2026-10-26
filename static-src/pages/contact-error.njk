@@ -1,0 +1,40 @@
+---
+title: "Message not sent | Solutions Delivered"
+meta_description: "Something went wrong sending your message."
+robots: "noindex, nofollow"
+permalink: /contact/error/
+navKey: contact
+---
+{% extends "layouts/app.njk" %}
+{% from "components.njk" import button, card, eyebrow, faq, faq_item, offer_card, page_header, process_step, section_heading, brand_monogram, schema_breadcrumb, error_page, field with context %}
+{% block content %}
+<section class="mx-auto flex max-w-3xl flex-col items-start px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
+    <h1 class="mb-6 text-3xl font-semibold tracking-tight text-ink sm:text-4xl">Message not sent</h1>
+    <div class="rounded-md border border-error/40 bg-error/5 px-4 py-3" role="alert" aria-live="assertive">
+        <p class="text-sm font-medium text-error">Sorry, your message could not be sent.</p>
+        <p id="error-detail" class="mt-2 text-sm text-error">Something went wrong. Please try again.</p>
+        <p class="mt-2 text-sm text-error">Please try again, or email <a class="underline" href="mailto:{{ brand.contact.general }}">{{ brand.contact.general }}</a> directly.</p>
+    </div>
+    <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+        {% call button({ href: route('contact') }) %}Try again{% endcall %}
+        {% call button({ variant: 'link', href: route('home') }) %}Back to home{% endcall %}
+    </div>
+</section>
+    <script>
+        (function () {
+            var messages = {
+                verification: 'We could not verify you are human, or the check expired. Please go back and try again.',
+                missing_field: 'Some required details were missing. Please check the form and try again.',
+                invalid_email: 'That email address does not look right. Please check it and try again.',
+                too_long: 'One of your answers was too long. Please shorten it and try again.',
+                too_large: 'Your message was too large. Please shorten it and try again.',
+                rate_limited: 'Too many attempts. Please wait a little while and try again.',
+                bad_request: 'Something was wrong with the request. Please try again.',
+                server: 'Something went wrong on our side. Please try again shortly.'
+            };
+            var code = new URLSearchParams(window.location.search).get('error');
+            var el = document.getElementById('error-detail');
+            if (el && code && Object.prototype.hasOwnProperty.call(messages, code)) el.textContent = messages[code];
+        })();
+    </script>
+{% endblock %}

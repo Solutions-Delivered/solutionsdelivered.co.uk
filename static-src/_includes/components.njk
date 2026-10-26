@@ -1,0 +1,196 @@
+{# Ports of the Blade components. Each takes one props object; `class` is appended
+   to the component's default classes, as Blade's $attributes->merge() does. #}
+
+{% macro button(p) %}
+{%- set variants = {
+    primary: 'bg-blue-strong px-5 py-2.5 text-white hover:bg-blue-strong-hover',
+    secondary: 'border border-border-strong bg-surface px-5 py-2.5 text-ink hover:border-ink',
+    link: 'gap-1.5 text-blue hover:text-blue-deep'
+} -%}
+{%- set classes = 'inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium transition-colors ' ~ (variants[p.variant] or variants.primary) ~ ((' ' ~ p.class) if p.class else '') -%}
+{%- if p.href -%}
+<a href="{{ p.href }}" class="{{ classes }}">{% if caller %}{{ caller() }}{% endif %}</a>
+{%- else -%}
+<button class="{{ classes }}" type="{{ p.type or 'button' }}">{% if caller %}{{ caller() }}{% endif %}</button>
+{%- endif -%}
+{% endmacro %}
+
+{% macro card(p) %}
+<div class="rounded-md border border-border bg-surface p-6 sm:p-7{{ (' ' ~ p.class) if p.class }}">
+    {% if caller %}{{ caller() }}{% endif %}
+</div>
+{% endmacro %}
+
+{% macro eyebrow(p) %}
+<p class="text-xs font-medium uppercase tracking-wide text-muted{{ (' ' ~ p.class) if p.class }}">{% if caller %}{{ caller() }}{% endif %}</p>
+{% endmacro %}
+
+{% macro faq(p) %}
+<div class="divide-y divide-border border-y border-border{{ (' ' ~ p.class) if p.class }}">
+    {% if caller %}{{ caller() }}{% endif %}
+</div>
+{% endmacro %}
+
+{% macro faq_item(p) %}
+{%- set uid = 'faq-' ~ (p.question | length) ~ (p.question | first) ~ (p.question | last) -%}
+<div x-data="{ open: false }">
+    <h3>
+        <button type="button" @click="open = !open"
+                class="flex w-full items-center justify-between gap-4 py-5 text-left"
+                :aria-expanded="open.toString()" aria-controls="{{ uid }}">
+            <span class="font-medium text-ink">{{ p.question }}</span>
+            <svg class="h-5 w-5 shrink-0 text-muted transition-transform" :class="open && 'rotate-180'" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6" />
+            </svg>
+        </button>
+    </h3>
+    <div id="{{ uid }}" x-show="open" x-cloak>
+        <div class="pb-5 pr-9 leading-relaxed text-muted">{% if caller %}{{ caller() }}{% endif %}</div>
+    </div>
+</div>
+{% endmacro %}
+
+{% macro offer_card(p) %}
+<div class="relative flex h-full flex-col rounded-md border bg-surface p-6 sm:p-7 {{ 'border-2 border-blue' if p.recommended else 'border-border' }}">
+    {% if p.recommended %}
+        <span class="absolute -top-3 left-6 rounded-sm bg-blue-strong px-2.5 py-1 text-xs font-medium text-white">Start here</span>
+    {% endif %}
+
+    <h3 class="text-xl font-semibold tracking-tight text-ink">{{ p.name }}</h3>
+    {% if p.promise %}
+        <p class="mt-2 text-text">{{ p.promise }}</p>
+    {% endif %}
+
+    {% if p.price %}
+        <p class="mt-5 text-2xl font-semibold text-ink">{{ p.price }}
+            {% if p.priceNote %}<span class="text-sm font-normal text-muted">{{ p.priceNote }}</span>{% endif %}
+        </p>
+    {% endif %}
+
+    {% if p.items and p.items.length %}
+        <ul class="mt-5 flex flex-col gap-3 text-sm text-text">
+            {% for item in p.items %}
+                <li class="flex gap-3">
+                    <svg class="mt-0.5 h-4 w-4 shrink-0 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7" />
+                    </svg>
+                    <span>{{ item }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    {% if caller %}{{ caller() }}{% endif %}
+
+    <div class="mt-7 pt-1">
+        {% call button({ href: p.href, class: 'w-full' }) %}{{ p.cta or 'Learn more' }}{% endcall %}
+    </div>
+</div>
+{% endmacro %}
+
+{% macro page_header(p) %}
+<section class="border-b border-border">
+    <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
+        <div class="max-w-3xl rise-in">
+            {% if p.eyebrow %}
+                {% call eyebrow({ class: 'mb-3' }) %}{{ p.eyebrow }}{% endcall %}
+            {% endif %}
+            <h1 class="text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-4xl">{{ p.title }}</h1>
+            {% if p.lead %}
+                <p class="mt-5 text-lg leading-relaxed text-muted">{{ p.lead }}</p>
+            {% endif %}
+            {% if caller %}{{ caller() }}{% endif %}
+        </div>
+    </div>
+</section>
+{% endmacro %}
+
+{% macro process_step(p) %}
+<div class="flex gap-5 border-t border-border py-6{{ (' ' ~ p.class) if p.class }}">
+    <span class="shrink-0 font-mono text-sm text-faint" aria-hidden="true">{{ p.number | pad2 }}</span>
+    <div>
+        <h3 class="text-lg font-semibold tracking-tight text-ink">{{ p.title }}</h3>
+        <div class="mt-2 leading-relaxed text-muted">{% if caller %}{{ caller() }}{% endif %}</div>
+    </div>
+</div>
+{% endmacro %}
+
+{% macro section_heading(p) %}
+<div class="max-w-2xl{{ (' ' ~ p.class) if p.class }}">
+    {% if p.eyebrow %}
+        {% call eyebrow({ class: 'mb-3' }) %}{{ p.eyebrow }}{% endcall %}
+    {% endif %}
+    <h2 {% if p.id %}id="{{ p.id }}" {% endif %}class="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
+        {% if caller %}{{ caller() }}{% endif %}
+    </h2>
+    {% if p.lead %}
+        <p class="mt-4 text-lg leading-relaxed text-muted">{{ p.lead }}</p>
+    {% endif %}
+</div>
+{% endmacro %}
+
+{% macro brand_monogram(p) %}
+<svg class="{{ p.class or 'h-8 w-8' }}" viewBox="0 0 64 64" role="img" aria-label="Solutions Delivered" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="64" height="64" rx="15" fill="#16223A" />
+    <text x="32" y="33" text-anchor="middle" dominant-baseline="central"
+          font-family="'Hanken Grotesk','Helvetica Neue',Arial,sans-serif"
+          font-weight="700" font-size="28" letter-spacing="-1.5" fill="#FBFAF7">SD</text>
+    <circle cx="50" cy="50" r="5.5" fill="#DC7A3C" />
+</svg>
+{% endmacro %}
+
+{% macro schema_breadcrumb(p) %}
+{% if p.items and p.items.length > 0 %}
+<script type="application/ld+json">
+{{ ld({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: p.items | breadcrumbItems }) | safe }}
+</script>
+{% endif %}
+{% endmacro %}
+
+{% macro error_page(p) %}
+<section class="mx-auto flex max-w-3xl flex-col items-start px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
+    <p class="font-mono text-sm text-faint" aria-hidden="true">{{ p.code }}</p>
+    <h1 class="mt-3 text-3xl font-semibold tracking-tight text-ink sm:text-4xl">{{ p.title }}</h1>
+    <div class="mt-4 max-w-xl leading-relaxed text-muted">{% if caller %}{{ caller() }}{% endif %}</div>
+    <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+        {% call button({ href: route('home') }) %}Back to home{% endcall %}
+        {% call button({ variant: 'link', href: route('contact') }) %}
+            Contact us
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m0 0-5-5m5 5-5 5" />
+            </svg>
+        {% endcall %}
+    </div>
+</section>
+{% endmacro %}
+
+{% macro theme_toggle() %}
+<button type="button"
+        x-data
+        @click="$store.theme.toggle()"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-md text-muted transition-colors hover:text-ink"
+        :aria-pressed="$store.theme ? $store.theme.dark.toString() : 'false'"
+        aria-label="Toggle dark mode">
+    <svg x-show="$store.theme && $store.theme.dark" x-cloak class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+        <circle cx="12" cy="12" r="4" />
+        <path stroke-linecap="round" d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41" />
+    </svg>
+    <svg x-show="!$store.theme || !$store.theme.dark" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
+    </svg>
+</button>
+{% endmacro %}
+
+{% macro field(p) %}
+<div class="flex flex-col gap-2{{ (' ' ~ p.class) if p.class }}">
+    <label for="{{ p.name }}" class="text-sm font-medium text-ink">
+        {{ p.label }}{% if not p.required %}<span class="font-normal text-faint"> (optional)</span>{% endif %}
+    </label>
+    {%- set base = 'w-full rounded-md border bg-surface px-3.5 py-2.5 text-text placeholder:text-faint transition-colors focus:border-blue border-border' %}
+    {% if p.as == 'textarea' %}
+        <textarea id="{{ p.name }}" name="{{ p.name }}" rows="{{ p.rows or 5 }}"{% if p.maxlength %} maxlength="{{ p.maxlength }}"{% endif %}{% if p.required %} required{% endif %} class="{{ base }}"></textarea>
+    {% else %}
+        <input id="{{ p.name }}" name="{{ p.name }}" type="{{ p.type or 'text' }}" value=""{% if p.maxlength %} maxlength="{{ p.maxlength }}"{% endif %}{% if p.autocomplete %} autocomplete="{{ p.autocomplete }}"{% endif %}{% if p.required %} required{% endif %} class="{{ base }}">
+    {% endif %}
+</div>
+{% endmacro %}

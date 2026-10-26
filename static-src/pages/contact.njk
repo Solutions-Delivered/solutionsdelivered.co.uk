@@ -1,0 +1,61 @@
+---
+title: "Contact | Solutions Delivered"
+meta_description: "Tell us what you are trying to do with AI, or about the IT and project work you need. One honest conversation, a reply within 24 hours, no obligation."
+og_title: "Tell us what you're trying to do"
+og_description: "Tell us what you are trying to do with AI, or about the IT and project work you need. One honest conversation, a reply within 24 hours, no obligation."
+twitter_title: "Tell us what you're trying to do"
+twitter_description: "Tell us what you are trying to do with AI, or about the IT and project work you need. One honest conversation, a reply within 24 hours, no obligation."
+---
+{% extends "layouts/app.njk" %}
+{% from "components.njk" import button, card, eyebrow, faq, faq_item, offer_card, page_header, process_step, section_heading, brand_monogram, schema_breadcrumb, error_page, field with context %}
+{% set topics = { 'ai-foundations': 'AI Foundations', 'foundations-os': 'The Foundations OS' } %}
+{% set packageNames = packages | packageNames %}
+{% block schema %}
+{{ schema_breadcrumb({ items: [{ 'name': 'Home', 'url': route('home') }, { 'name': 'Contact' }] }) }}
+{% endblock %}
+{% block content %}
+{% call page_header({ eyebrow: 'Contact', title: 'Tell us what you\'re trying to do', lead: 'Whether it\'s getting real value from AI or the IT and project work behind it, start with a straight conversation. We reply within 24 hours, and we\'ll tell you plainly whether we can help.' }) %}{% endcall %}
+
+<section class="mx-auto max-w-2xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
+    <form id="contact-form" method="POST" action="{{ site.formEndpoint }}" class="flex flex-col gap-6" data-prefill="{{ { packages: packageNames, topics: topics } | json }}">
+        {# Honeypot: hidden from people, left empty. Name must match the form worker config. #}
+        <div style="position:absolute;left:-10000px" aria-hidden="true">
+            <label for="website">Leave this field empty</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        {# Page-load time in ms, set by js/app.js. #}
+        <input type="hidden" name="_t" value="">
+
+        {# Shown by js/app.js when ?package=<slug> names a known package. #}
+        <div id="package-box" class="rounded-md border border-border bg-panel px-4 py-3" role="status" hidden>
+            <p class="text-sm text-text">
+                <span class="font-medium text-ink">Enquiring about:</span> <span data-package-name></span>.
+                Feel free to edit the message before sending.
+            </p>
+        </div>
+        <input type="hidden" name="package" value="" disabled>
+
+        {{ field({ name: 'name', maxlength: 100, label: 'Your name', required: true, autocomplete: 'name' }) }}
+        {{ field({ name: 'email', maxlength: 254, label: 'Email address', type: 'email', required: true, autocomplete: 'email' }) }}
+        {{ field({ name: 'company', maxlength: 100, label: 'Company name', autocomplete: 'organization' }) }}
+        {{ field({ name: 'message', maxlength: 5000, label: 'How can we help?', as: 'textarea', required: true }) }}
+
+        <div class="flex items-start gap-3">
+            <input id="privacy_consent" name="privacy_consent" type="checkbox" value="1" required class="mt-1 h-4 w-4 shrink-0 rounded-sm border-border">
+            <label for="privacy_consent" class="text-sm text-text">I agree to the <a href="{{ route('privacy') }}" target="_blank" rel="noopener" class="text-blue hover:text-blue-deep">Privacy Policy</a> and consent to my data being used to respond to my enquiry</label>
+        </div>
+
+        <div class="cf-turnstile" data-sitekey="{{ site.turnstileSiteKey }}"></div>
+
+        <div class="flex flex-wrap items-center gap-4">
+            {% call button({ type: 'submit' }) %}Send message{% endcall %}
+            <p class="text-sm text-muted">We reply within {{ brand.contact.response_time }}.</p>
+        </div>
+
+    </form>
+    <script>
+        document.querySelector('#contact-form input[name="_t"]').value = Date.now();
+    </script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</section>
+{% endblock %}

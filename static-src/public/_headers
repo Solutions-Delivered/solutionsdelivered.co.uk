@@ -1,0 +1,18 @@
+# HTML is not listed: Workers static assets serve it with max-age=0, must-revalidate by default,
+# and _headers rules are cumulative so a catch-all would also apply to the assets below.
+
+# Fingerprinted via ?v= query, so safe to cache hard
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/images/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+/favicon.ico
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# Brochure: keep it out of search results
+/brochure.pdf
+  X-Robots-Tag: noindex
+  Cache-Control: public, max-age=3600

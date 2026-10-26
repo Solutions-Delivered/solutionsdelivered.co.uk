@@ -1,0 +1,23 @@
+---
+title: "Message sent | Solutions Delivered"
+meta_description: "Thanks for getting in touch. We reply within 24 hours."
+robots: "noindex, nofollow"
+permalink: /contact/thanks/
+navKey: contact
+---
+{% extends "layouts/app.njk" %}
+{% from "components.njk" import button, card, eyebrow, faq, faq_item, offer_card, page_header, process_step, section_heading, brand_monogram, schema_breadcrumb, error_page, field with context %}
+{% block content %}
+<section class="mx-auto flex max-w-3xl flex-col items-start px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
+    <h1 class="mb-6 text-3xl font-semibold tracking-tight text-ink sm:text-4xl">Message sent</h1>
+    <div class="flex items-start gap-3 rounded-md border border-blue/30 bg-blue-tint px-4 py-3" role="status" aria-live="polite">
+        <svg class="mt-0.5 h-5 w-5 shrink-0 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg>
+        <p class="text-sm text-ink">Thanks, your message has been sent. We reply within {{ brand.contact.response_time }}.</p>
+    </div>
+    <div class="mt-8">
+        {% call button({ href: route('home') }) %}Back to home{% endcall %}
+    </div>
+</section>
+{% endblock %}

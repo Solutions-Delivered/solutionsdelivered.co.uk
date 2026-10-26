@@ -1,0 +1,110 @@
+---
+title: "Consultancy | Solutions Delivered"
+meta_description: "The IT, web and project delivery we have done for fifteen years, and the proof behind our AI work. Productised engagements with clear scope and price."
+og_title: "The delivery work behind the AI"
+og_description: "The IT, web and project delivery we have done for fifteen years, and the proof behind our AI work. Productised engagements with clear scope and price."
+twitter_title: "The delivery work behind the AI"
+twitter_description: "The IT, web and project delivery we have done for fifteen years, and the proof behind our AI work. Productised engagements with clear scope and price."
+---
+{% extends "layouts/app.njk" %}
+{% from "components.njk" import button, card, eyebrow, faq, faq_item, offer_card, page_header, process_step, section_heading, brand_monogram, schema_breadcrumb, error_page with context %}
+
+{% block schema %}
+{{ schema_breadcrumb({ items: [{ 'name': 'Home', 'url': route('home') }, { 'name': 'Consultancy' }] }) }}
+{# Laravel 13 compiles a literal at-context key as a Blade
+    directive, which corrupts the JSON-LD. Build the key at runtime. #}
+<script type="application/ld+json">
+{{ ld({ '@context': 'https://schema.org', '@type': 'Service', 'name': 'IT, web and project delivery consultancy', 'description': 'Fifteen years of software, IT and project delivery: bespoke web and software development, ITIL service management, PRINCE2 project management, and business change.', 'serviceType': ['Web and software development', 'Service management', 'Project management', 'Business change'], 'provider': { '@type': 'Organization', 'name': brand.company.legal_name, 'url': site.url }, 'areaServed': { '@type': 'Country', 'name': 'United Kingdom' }, 'hasOfferCatalog': { '@type': 'OfferCatalog', 'name': 'Fixed-scope engagements', 'itemListElement': package_offers(packages) } }) | safe }}
+</script>
+{% endblock %}
+{% block content %}
+{% call page_header({ eyebrow: 'Consultancy', title: 'The delivery work behind the AI', lead: 'We lead with AI because we use it every day. This is the work that earns us the right to: fifteen years of software, IT and project delivery that businesses depend on. Real work, not clicks.' }) %}
+    <div class="mt-8">
+        {% call button({ href: route('contact') }) %}Discuss a project{% endcall %}
+    </div>
+{% endcall %}
+
+{# What we do #}
+<section class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8" aria-labelledby="services-heading">
+    {% call section_heading({ id: 'services-heading', eyebrow: 'What we do', lead: 'Four areas we have delivered in for years. Project management in particular is not always about IT; if you have a programme that needs running properly, we can run it.' }) %}
+        Areas we deliver in
+    {% endcall %}
+
+    <div class="mt-10 grid gap-6 sm:grid-cols-2">
+        {% call card({  }) %}
+            <h3 class="text-lg font-semibold tracking-tight text-ink">Web and software development</h3>
+            <p class="mt-2 leading-relaxed text-muted">Bespoke web applications, built carefully on a modern Laravel stack, accessible to WCAG 2.2 AA, and maintained properly rather than abandoned at launch.</p>
+        {% endcall %}
+        {% call card({  }) %}
+            <h3 class="text-lg font-semibold tracking-tight text-ink">Service management</h3>
+            <p class="mt-2 leading-relaxed text-muted">ITIL-aligned service delivery and support: incident, change and problem handled with the discipline of someone who has run it at scale.</p>
+        {% endcall %}
+        {% call card({  }) %}
+            <h3 class="text-lg font-semibold tracking-tight text-ink">Project management</h3>
+            <p class="mt-2 leading-relaxed text-muted">PRINCE2 and agile delivery for projects that need a steady hand, clear stage gates and honest reporting. Not always IT; whatever needs delivering.</p>
+        {% endcall %}
+        {% call card({  }) %}
+            <h3 class="text-lg font-semibold tracking-tight text-ink">Business change</h3>
+            <p class="mt-2 leading-relaxed text-muted">Helping a business adopt new ways of working so the change actually sticks, rather than a process document nobody opens twice.</p>
+        {% endcall %}
+    </div>
+</section>
+
+{# Productised engagements #}
+<section class="border-y border-border bg-panel" aria-labelledby="packages-heading">
+    <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        {% call section_heading({ id: 'packages-heading', eyebrow: 'Productised engagements', lead: 'Some work is easier to buy when the scope and price are fixed up front. These are sharply-scoped pieces with clear deliverables and no surprises.' }) %}
+            Fixed-scope ways to work with us
+        {% endcall %}
+
+        <div class="mt-10 grid gap-6 lg:grid-cols-3">
+            {% for slug, pkg in packages %}
+                {% set priceLine = (('£' ~ (pkg.price | numberFormat) ~ ' ' ~ (pkg.price_suffix or 'ex-VAT')) if pkg.price !== null else 'Price on request') %}
+                <div class="flex h-full flex-col rounded-md border border-border bg-surface p-6 sm:p-7">
+                    {% call eyebrow({  }) %}{{ pkg.eyebrow }}{% endcall %}
+                    <h3 class="mt-2 text-lg font-semibold tracking-tight text-ink">{{ pkg.name }}</h3>
+                    <p class="mt-2 text-sm leading-relaxed text-text">{{ pkg.outcome }}</p>
+
+                    <dl class="mt-4 flex flex-col gap-1 text-sm">
+                        <div class="flex justify-between gap-3">
+                            <dt class="text-muted">Duration</dt>
+                            <dd class="text-text">{{ pkg.duration }}</dd>
+                        </div>
+                        <div class="flex justify-between gap-3">
+                            <dt class="text-muted">Price</dt>
+                            <dd class="font-medium text-ink">{{ priceLine }}</dd>
+                        </div>
+                    </dl>
+
+                    <p class="mt-4 text-xs font-medium uppercase tracking-wide text-faint">What's included</p>
+                    <ul class="mt-2 flex flex-col gap-2 text-sm text-text">
+                        {% for item in pkg.included %}
+                            <li class="flex gap-2.5">
+                                <svg class="mt-0.5 h-4 w-4 shrink-0 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7" />
+                                </svg>
+                                <span>{{ item }}</span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+
+                    <p class="mt-4 text-sm text-muted"><span class="font-medium text-ink">Best for:</span> {{ pkg.best_for }}</p>
+
+                    <div class="mt-6 pt-1">
+                        {% call button({ href: route('contact', { 'package': slug }), class: 'w-full' }) %}Enquire about {{ pkg.name }}{% endcall %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{# CTA #}
+<section class="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-8">
+    <h2 class="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">Something that doesn't fit a box?</h2>
+    <p class="mx-auto mt-4 max-w-xl leading-relaxed text-muted">Most work sits between the lines. Tell us what you need and we will scope it honestly.</p>
+    <div class="mt-8 flex justify-center">
+        {% call button({ href: route('contact') }) %}Get in touch{% endcall %}
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,55 @@
+---
+title: "Thank you | The Foundations OS | Solutions Delivered"
+meta_description: "Your Foundations OS purchase is confirmed. Here is how to get set up."
+robots: "noindex, nofollow"
+permalink: /thank-you/foundations-os/
+navKey: none
+---
+{% extends "layouts/app.njk" %}
+{% from "components.njk" import button, card, eyebrow, faq, faq_item, offer_card, page_header, process_step, section_heading, brand_monogram, schema_breadcrumb, error_page, field with context %}
+{% block content %}
+{% call page_header({ eyebrow: 'The Foundations OS', title: 'Thank you — your workspace is ready', lead: 'If you\'ve just bought, here is how to get set up so your AI opens already knowing your business.' }) %}{% endcall %}
+
+<section class="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+    {% call card({ class: 'border-blue-strong/30 bg-blue-strong/5' }) %}
+        <p class="text-sm font-medium text-ink">If you've just bought The Foundations OS, thank you.</p>
+        <p class="mt-1 text-sm text-muted">A receipt is on its way to your inbox. Your next steps are below.</p>
+    {% endcall %}
+
+    <div class="mt-12">
+        {% call section_heading({ eyebrow: 'Getting started' }) %}
+            Set up in three steps
+        {% endcall %}
+
+        <div class="mt-8">
+            {% call process_step({ number: 1, title: 'Download your workspace' }) %}
+                Your Foundations OS download is in the order confirmation email from Polar.
+                Open the link to grab the zip — and you can re-access it any time from the
+                customer portal link in that same email.
+                <div class="mt-4">
+                    {% call button({ href: 'mailto:' ~ brand.contact.general }) %}
+                        Download not arrived? Email us
+                    {% endcall %}
+                </div>
+            {% endcall %}
+
+            {% call process_step({ number: 2, title: 'Point your AI at it' }) %}
+                Unzip it and open the folder in Claude (or your assistant of choice), then follow
+                the short prompts. You will spend 20 to 40 minutes telling it how your business
+                works — your voice, your customers, your offers.
+            {% endcall %}
+
+            {% call process_step({ number: 3, title: 'Work from a head start' }) %}
+                From then on, every new chat opens already knowing your business. No re-explaining,
+                no copy-pasting context. Just ask and go.
+            {% endcall %}
+        </div>
+
+        <div class="mt-10 rounded-md border border-border bg-surface p-6 text-sm leading-relaxed text-muted">
+            Stuck, or want a hand getting set up? Email
+            <a class="text-blue hover:text-blue-deep" href="mailto:{{ brand.contact.general }}">{{ brand.contact.general }}</a>
+            and we will reply within {{ brand.contact.response_time }}.
+        </div>
+    </div>
+</section>
+{% endblock %}
