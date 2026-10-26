@@ -26,7 +26,7 @@ const guideSlugs = fs.readdirSync(path.resolve('..', 'content', 'guides')).filte
 const pages = ['', 'ai-foundations', 'foundations-os', 'how-it-works', 'consultancy', 'outsourced-it-director', 'guides', 'about',
   'contact', 'contact/thanks', 'contact/error', 'privacy', 'terms', 'thank-you/foundations-os', ...guideSlugs.map((s) => `guides/${s}`)];
 for (const p of pages) check(exists(path.join(p, 'index.html')), `page missing: /${p}`);
-for (const f of ['404.html', 'sitemap.xml', 'llms.txt', 'robots.txt', 'brochure.pdf', 'logo.svg', 'og-image.png', '_redirects', '_headers', 'assets/app.css', 'assets/app.js', 'assets/alpine.js']) {
+for (const f of ['404.html', 'sitemap.xml', 'llms.txt', 'robots.txt', 'brochure.pdf', 'logo.svg', 'logo.png', 'logo@2x.png', 'og-image.png', '_redirects', '_headers', 'assets/app.css', 'assets/app.js', 'assets/alpine.js']) {
   check(exists(f), `file missing: ${f}`);
 }
 
