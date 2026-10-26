@@ -29,3 +29,8 @@ Thumbs.db
 .env.backup*
 .env.*.bak
 *.env.bak
+
+# static site build
+/static-src/node_modules
+/static-src/dist
+.wrangler

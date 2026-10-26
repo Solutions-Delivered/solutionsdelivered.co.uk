@@ -1,0 +1,14 @@
+{
+  "$schema": "./static-src/node_modules/wrangler/config-schema.json",
+  "name": "solutionsdelivered",
+  "compatibility_date": "2026-10-01",
+  // Reachable on *.workers.dev until cutover; no duplicate copies on preview URLs
+  "workers_dev": true,
+  "preview_urls": false,
+  "assets": {
+    "directory": "./static-src/dist",
+    // Extensionless URLs, no trailing slash, as the Laravel site served them
+    "html_handling": "drop-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}

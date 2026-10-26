@@ -129,6 +129,19 @@ The contact form posts to a throttled, honeypot-protected route, validates input
 (`?package=<slug>`) or a product page (`?topic=<slug>`) prefills the message. Configure the
 `MAIL_*` variables in `.env` for delivery.
 
+## Static site
+
+An Eleventy 3 port of the public site lives in `static-src/`, built for Cloudflare Workers (static assets). The Laravel app is unchanged.
+
+- Build: `./build.sh` (runs `npm ci`, Tailwind, Eleventy; output in `static-src/dist`).
+- Local build without reinstalling: `cd static-src && npm run build`.
+- Checks: `npm run check` (structure, form contract, sitemap) and `npm run parity -- <base-url>` (compares each live sitemap URL with the same path on the base URL).
+- Serve locally: `npx wrangler@4 dev` from the repo root, then run parity against the printed URL.
+- Deploy: `npx wrangler deploy` from the repo root (config in `wrangler.jsonc`).
+- Workers Builds: root directory `/`, build command `./build.sh`, deploy command `npx wrangler deploy`.
+- Contact form posts to `https://form.solutionsdelivered.co.uk/`; thanks and error pages are `/contact/thanks` and `/contact/error`.
+- Redirects and headers: `static-src/public/_redirects` and `_headers`.
+
 ## License
 
 Proprietary - Solutions Delivered Ltd
